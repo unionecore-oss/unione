@@ -26,81 +26,101 @@ export default function CardShowcase() {
             </h2>
 
             {/* App Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row gap-4 mt-10 max-w-4xl">
               {/* Google Play Button */}
               <motion.a
                 href="#"
-                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
                 style={{
                   background: '#000000',
-                  border: 'none',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                 }}
-                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)' }}
+                whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-white text-xs mb-1">Download The APP</div>
-                  <div className="text-white text-2xl font-bold">Google Play</div>
+                  <div className="text-white/80 text-sm font-medium mb-0.5">Download The APP</div>
+                  <div className="text-white text-3xl font-bold tracking-tight">Google Play</div>
                 </div>
-                <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
-                  <path d="M8 8L32 24L8 40V8Z" fill="#00D9FF" />
-                  <path d="M32 24L40 32L8 40L32 24Z" fill="#10B981" />
-                  <path d="M8 8L40 16L32 24L8 8Z" fill="#FF006E" />
-                  <path d="M32 24L40 16V32L32 24Z" fill="#8B00FF" />
+                <svg className="w-14 h-14 ml-4" viewBox="0 0 64 64" fill="none">
+                  <defs>
+                    <linearGradient id="playBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00D9FF" />
+                      <stop offset="100%" stopColor="#0099CC" />
+                    </linearGradient>
+                    <linearGradient id="playGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#10B981" />
+                      <stop offset="100%" stopColor="#059669" />
+                    </linearGradient>
+                    <linearGradient id="playYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#FFC107" />
+                      <stop offset="100%" stopColor="#FF9800" />
+                    </linearGradient>
+                    <linearGradient id="playRed" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#FF006E" />
+                      <stop offset="100%" stopColor="#D81B60" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M10 10 L42 32 L10 54 V10Z" fill="url(#playBlue)" />
+                  <path d="M42 32 L52 42 L10 54 L42 32Z" fill="url(#playGreen)" />
+                  <path d="M10 10 L52 22 L42 32 L10 10Z" fill="url(#playYellow)" />
+                  <path d="M42 32 L52 22 L52 42 L42 32Z" fill="url(#playRed)" />
                 </svg>
               </motion.a>
 
               {/* Android APK Button */}
               <motion.a
                 href="#"
-                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
                 style={{
                   background: '#000000',
-                  border: 'none',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
                 }}
-                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.2)' }}
+                whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-white text-xs mb-1">Download The APP</div>
-                  <div className="text-white text-2xl font-bold">Android APK</div>
+                  <div className="text-white/80 text-sm font-medium mb-0.5">Download The APP</div>
+                  <div className="text-white text-3xl font-bold tracking-tight">Android APK</div>
                 </div>
-                <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
+                <svg className="w-14 h-14 ml-4" viewBox="0 0 64 64" fill="none">
                   <path
-                    d="M14 10L12 8C8 12 6 17 6 22H10C10 17.5 11.5 13.5 14 10Z"
-                    fill="#10B981"
+                    d="M20 14L17 10C12 16 9 23 9 30H14C14 23.5 16 17.5 20 14Z"
+                    fill="#A4DC6C"
                   />
                   <path
-                    d="M34 10C36.5 13.5 38 17.5 38 22H42C42 17 40 12 36 8L34 10Z"
-                    fill="#10B981"
+                    d="M44 14C48 17.5 50 23.5 50 30H55C55 23 52 16 47 10L44 14Z"
+                    fill="#A4DC6C"
                   />
-                  <rect x="10" y="22" width="28" height="18" rx="2" fill="#10B981" />
-                  <circle cx="16" cy="18" r="1.5" fill="#10B981" />
-                  <circle cx="32" cy="18" r="1.5" fill="#10B981" />
-                  <path d="M7 26V36C7 37.1 7.9 38 9 38C10.1 38 11 37.1 11 36V26H7Z" fill="#10B981" />
-                  <path d="M37 26V36C37 37.1 37.9 38 39 38C40.1 38 41 37.1 41 36V26H37Z" fill="#10B981" />
+                  <rect x="14" y="30" width="36" height="24" rx="3" fill="#A4DC6C" />
+                  <circle cx="22" cy="24" r="2" fill="#A4DC6C" />
+                  <circle cx="42" cy="24" r="2" fill="#A4DC6C" />
+                  <rect x="8" y="34" width="6" height="14" rx="3" fill="#A4DC6C" />
+                  <rect x="50" y="34" width="6" height="14" rx="3" fill="#A4DC6C" />
                 </svg>
               </motion.a>
 
               {/* App Store Button */}
               <motion.a
                 href="#"
-                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
                 style={{
                   background: '#FFFFFF',
-                  border: '2px solid #000000',
+                  border: '3px solid #000000',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
                 }}
-                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)' }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
+                whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-black text-xs mb-1">Download The APP</div>
-                  <div className="text-black text-2xl font-bold">App Store</div>
+                  <div className="text-black/70 text-sm font-medium mb-0.5">Download The APP</div>
+                  <div className="text-black text-3xl font-bold tracking-tight">App Store</div>
                 </div>
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-black font-bold text-sm"
+                  className="w-14 h-14 ml-4 rounded-2xl flex items-center justify-center text-white font-black text-2xl"
                   style={{
-                    background: 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
+                    background: 'linear-gradient(135deg, #A4DC6C 0%, #7CB342 100%)',
+                    boxShadow: '0 4px 12px rgba(164, 220, 108, 0.3)',
                   }}
                 >
                   U
