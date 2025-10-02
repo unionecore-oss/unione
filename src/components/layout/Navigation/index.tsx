@@ -22,7 +22,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
   }
 
   return (
-    <nav className={`flex items-center gap-8 ${className}`}>
+    <nav className={`flex items-center gap-10 ${className}`}>
       {NAVIGATION_LINKS.map((link) => {
         const isActive = isActivePath(link.href)
 
@@ -37,9 +37,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
               <button
                 className="text-sm font-medium transition-colors flex items-center gap-1"
                 style={{
-                  color: isActive
-                    ? 'var(--color-text-primary)'
-                    : 'var(--color-text-secondary)',
+                  color: isActive ? '#1d1d1f' : '#86868b',
                 }}
               >
                 {link.label}
@@ -70,9 +68,10 @@ export default function Navigation({ className = '' }: NavigationProps) {
           <Link
             key={link.label}
             href={link.href}
-            className="text-sm font-medium transition-colors"
+            className="text-sm font-medium transition-all hover:opacity-100"
             style={{
-              color: isActive ? 'var(--color-text-primary)' : 'var(--color-text-secondary)',
+              color: isActive ? '#1d1d1f' : '#86868b',
+              opacity: isActive ? 1 : 0.85,
             }}
           >
             {link.label}

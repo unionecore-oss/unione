@@ -21,7 +21,16 @@ export default function Header() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <button className="btn-primary text-sm px-6 py-2">Get Started</button>
+              <button
+                className="text-sm px-6 py-2.5 rounded-full font-medium transition-all hover:opacity-90 hover:scale-[1.02]"
+                style={{
+                  background: '#000000',
+                  color: '#ffffff',
+                  boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
+                }}
+              >
+                Get Started
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -29,7 +38,7 @@ export default function Header() {
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
-              style={{ color: 'var(--color-text-primary)' }}
+              style={{ color: '#1d1d1f' }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
