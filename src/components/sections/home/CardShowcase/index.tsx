@@ -42,7 +42,7 @@ export default function CardShowcase() {
                   <div className="text-white/80 text-xs font-medium mb-0.5">Download The APP</div>
                   <div className="text-white text-xl font-bold tracking-tight">Google Play</div>
                 </div>
-                <svg className="w-10 h-10 ml-3" viewBox="0 0 64 64" fill="none">
+                <svg className="w-10 h-10 ml-3" viewBox="-4 -4 72 72" fill="none">
                   <defs>
                     <linearGradient id="playBlue" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#00D9FF" />
