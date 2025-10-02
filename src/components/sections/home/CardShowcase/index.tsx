@@ -24,6 +24,89 @@ export default function CardShowcase() {
             >
               Unione is the bridge between your crypto and the real world powered by a USDT card that works globally.
             </h2>
+
+            {/* App Download Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              {/* Google Play Button */}
+              <motion.a
+                href="#"
+                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                style={{
+                  background: '#000000',
+                  border: 'none',
+                }}
+                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="flex-1">
+                  <div className="text-white text-xs mb-1">Download The APP</div>
+                  <div className="text-white text-2xl font-bold">Google Play</div>
+                </div>
+                <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
+                  <path d="M8 8L32 24L8 40V8Z" fill="#00D9FF" />
+                  <path d="M32 24L40 32L8 40L32 24Z" fill="#10B981" />
+                  <path d="M8 8L40 16L32 24L8 8Z" fill="#FF006E" />
+                  <path d="M32 24L40 16V32L32 24Z" fill="#8B00FF" />
+                </svg>
+              </motion.a>
+
+              {/* Android APK Button */}
+              <motion.a
+                href="#"
+                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                style={{
+                  background: '#000000',
+                  border: 'none',
+                }}
+                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="flex-1">
+                  <div className="text-white text-xs mb-1">Download The APP</div>
+                  <div className="text-white text-2xl font-bold">Android APK</div>
+                </div>
+                <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none">
+                  <path
+                    d="M14 10L12 8C8 12 6 17 6 22H10C10 17.5 11.5 13.5 14 10Z"
+                    fill="#10B981"
+                  />
+                  <path
+                    d="M34 10C36.5 13.5 38 17.5 38 22H42C42 17 40 12 36 8L34 10Z"
+                    fill="#10B981"
+                  />
+                  <rect x="10" y="22" width="28" height="18" rx="2" fill="#10B981" />
+                  <circle cx="16" cy="18" r="1.5" fill="#10B981" />
+                  <circle cx="32" cy="18" r="1.5" fill="#10B981" />
+                  <path d="M7 26V36C7 37.1 7.9 38 9 38C10.1 38 11 37.1 11 36V26H7Z" fill="#10B981" />
+                  <path d="M37 26V36C37 37.1 37.9 38 39 38C40.1 38 41 37.1 41 36V26H37Z" fill="#10B981" />
+                </svg>
+              </motion.a>
+
+              {/* App Store Button */}
+              <motion.a
+                href="#"
+                className="flex items-center gap-4 px-6 py-4 rounded-2xl transition-all"
+                style={{
+                  background: '#FFFFFF',
+                  border: '2px solid #000000',
+                }}
+                whileHover={{ scale: 1.02, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)' }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <div className="flex-1">
+                  <div className="text-black text-xs mb-1">Download The APP</div>
+                  <div className="text-black text-2xl font-bold">App Store</div>
+                </div>
+                <div
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-black font-bold text-sm"
+                  style={{
+                    background: 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
+                  }}
+                >
+                  U
+                </div>
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Right: Phone Mockup */}
