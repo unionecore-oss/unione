@@ -26,11 +26,11 @@ export default function CardShowcase() {
             </h2>
 
             {/* App Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mt-10 max-w-4xl">
+            <div className="flex flex-col sm:flex-row gap-3 mt-8 max-w-3xl">
               {/* Google Play Button */}
               <motion.a
                 href="#"
-                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
+                className="flex items-center justify-between px-6 py-3.5 rounded-2xl transition-all"
                 style={{
                   background: '#000000',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
@@ -39,10 +39,10 @@ export default function CardShowcase() {
                 whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-white/80 text-sm font-medium mb-0.5">Download The APP</div>
-                  <div className="text-white text-3xl font-bold tracking-tight">Google Play</div>
+                  <div className="text-white/80 text-xs font-medium mb-0.5">Download The APP</div>
+                  <div className="text-white text-xl font-bold tracking-tight">Google Play</div>
                 </div>
-                <svg className="w-14 h-14 ml-4" viewBox="0 0 64 64" fill="none">
+                <svg className="w-10 h-10 ml-3" viewBox="0 0 64 64" fill="none">
                   <defs>
                     <linearGradient id="playBlue" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#00D9FF" />
@@ -71,7 +71,7 @@ export default function CardShowcase() {
               {/* Android APK Button */}
               <motion.a
                 href="#"
-                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
+                className="flex items-center justify-between px-6 py-3.5 rounded-2xl transition-all"
                 style={{
                   background: '#000000',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
@@ -80,10 +80,10 @@ export default function CardShowcase() {
                 whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-white/80 text-sm font-medium mb-0.5">Download The APP</div>
-                  <div className="text-white text-3xl font-bold tracking-tight">Android APK</div>
+                  <div className="text-white/80 text-xs font-medium mb-0.5">Download The APP</div>
+                  <div className="text-white text-xl font-bold tracking-tight">Android APK</div>
                 </div>
-                <svg className="w-14 h-14 ml-4" viewBox="0 0 64 64" fill="none">
+                <svg className="w-10 h-10 ml-3" viewBox="0 0 64 64" fill="none">
                   <path
                     d="M20 14L17 10C12 16 9 23 9 30H14C14 23.5 16 17.5 20 14Z"
                     fill="#A4DC6C"
@@ -103,21 +103,21 @@ export default function CardShowcase() {
               {/* App Store Button */}
               <motion.a
                 href="#"
-                className="flex items-center justify-between px-8 py-5 rounded-3xl transition-all min-w-[280px]"
+                className="flex items-center justify-between px-6 py-3.5 rounded-2xl transition-all"
                 style={{
                   background: '#FFFFFF',
-                  border: '3px solid #000000',
+                  border: '2px solid #000000',
                   boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
                 }}
                 whileHover={{ scale: 1.03, boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)' }}
                 whileTap={{ scale: 0.97 }}
               >
                 <div className="flex-1">
-                  <div className="text-black/70 text-sm font-medium mb-0.5">Download The APP</div>
-                  <div className="text-black text-3xl font-bold tracking-tight">App Store</div>
+                  <div className="text-black/70 text-xs font-medium mb-0.5">Download The APP</div>
+                  <div className="text-black text-xl font-bold tracking-tight">App Store</div>
                 </div>
                 <div
-                  className="w-14 h-14 ml-4 rounded-2xl flex items-center justify-center text-white font-black text-2xl"
+                  className="w-10 h-10 ml-3 rounded-xl flex items-center justify-center text-white font-black text-lg"
                   style={{
                     background: 'linear-gradient(135deg, #A4DC6C 0%, #7CB342 100%)',
                     boxShadow: '0 4px 12px rgba(164, 220, 108, 0.3)',
