@@ -1,0 +1,166 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import "tailwindcss";
+
+@theme {
+  /* Background Colors (Light Theme) */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f5f5f7;
+  --color-background-accent: #e5e5ea;
+  --color-background-card: #ffffff;
+
+  /* Text Colors */
+  --color-text-primary: #1d1d1f;
+  --color-text-secondary: #86868b;
+  --color-text-tertiary: #c7c7cc;
+  --color-text-inverse: #ffffff;
+
+  /* Accent Colors */
+  --color-accent-pink: #ff006e;
+  --color-accent-purple: #8b00ff;
+  --color-accent-hover: #e5007a;
+
+  /* UI Elements */
+  --color-border: #e5e5e7;
+  --color-button-primary: #000000;
+  --color-button-secondary: #f5f5f7;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-soft-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-inner-soft: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Border Radius */
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full-btn: 40px;
+
+  /* Backdrop Blur */
+  --blur-md: 12px;
+  --blur-lg: 16px;
+  --blur-20: 20px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-family: var(--font-inter), "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Navigation Bar */
+  .navbar {
+    background-color: rgb(255 255 255 / 0.8);
+    backdrop-filter: blur(var(--blur-md));
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Primary Button (iOS Style) */
+  .btn-primary {
+    background-color: var(--color-button-primary);
+    color: var(--color-text-inverse);
+    border-radius: var(--radius-full-btn);
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    background-color: var(--color-button-secondary);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-full-btn);
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease-out;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-background-accent);
+  }
+
+  /* Card Component */
+  .card {
+    background-color: var(--color-background-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease-out;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-soft-lg);
+    transform: translateY(-4px);
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background-image: linear-gradient(135deg, rgba(255, 0, 110, 0.1) 0%, rgba(139, 0, 255, 0.1) 100%);
+  }
+
+  /* Gradient Text */
+  .bg-gradient-pink-purple {
+    background-image: linear-gradient(135deg, var(--color-accent-pink) 0%, var(--color-accent-purple) 100%);
+  }
+
+  /* 3D Elements (rain.xyz style) */
+  .sphere-3d {
+    background-image: linear-gradient(135deg, var(--color-accent-pink) 0%, var(--color-accent-purple) 100%);
+    filter: blur(100px);
+    opacity: 0.6;
+  }
+
+  /* Container */
+  .container-custom {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  /* Section Padding */
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+@layer utilities {
+  /* Text Balance */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Smooth Animations */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}

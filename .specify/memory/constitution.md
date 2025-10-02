@@ -1,92 +1,50 @@
-<!-- Sync Impact Report
-Version change: N/A → 1.0.0 (Initial constitution with 5 core principles)
-Modified principles: N/A (First version)
-Added sections: All sections are new
-Removed sections: N/A
-Templates requiring updates:
-  ✅ .specify/templates/plan-template.md (to be checked)
-  ✅ .specify/templates/spec-template.md (to be checked)
-  ✅ .specify/templates/tasks-template.md (to be checked)
-  ✅ .specify/templates/commands/*.md (to be checked)
-Follow-up TODOs: None
--->
-
-# UNIONE Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. 클린 코드 원칙
-모든 코드는 읽기 쉽고, 이해하기 쉽고, 수정하기 쉽게 작성되어야 합니다. 함수는 한 가지 일만 수행하고, 클래스는 단일 책임을 가지며, 코드는 자체 문서화되어야 합니다. 복잡한 로직은 명확한 추상화로 단순화하고, 주석은 '왜'를 설명하는데 사용합니다.
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-**근거**: 클린 코드는 유지보수 비용을 줄이고, 팀 협업을 원활하게 하며, 버그 발생 가능성을 최소화합니다.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### II. 일관된 코딩 스타일
-프로젝트 전체에서 동일한 코딩 컨벤션과 스타일을 유지해야 합니다. 들여쓰기, 명명 규칙, 파일 구조, 코드 구성 등 모든 측면에서 일관성을 유지합니다. ESLint, Prettier 등의 도구를 활용하여 자동화합니다.
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-**근거**: 일관성은 코드 가독성을 높이고, 컨텍스트 스위칭 비용을 줄이며, 팀 생산성을 향상시킵니다.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### III. 명확한 변수명
-변수, 함수, 클래스의 이름은 그 목적과 용도를 명확하게 나타내야 합니다. 약어 사용을 최소화하고, 의도를 전달하는 서술적 이름을 사용합니다. 매직 넘버는 명명된 상수로 대체합니다.
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-**근거**: 명확한 이름은 코드를 자체 문서화하며, 이해와 유지보수를 용이하게 합니다.
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-### IV. 함수 재사용성
-동일하거나 유사한 기능을 수행하는 코드는 하나의 재사용 가능한 함수로 통합합니다. 중복 코드를 제거하고, 공통 기능은 유틸리티 함수나 공유 모듈로 추출합니다. DRY(Don't Repeat Yourself) 원칙을 엄격히 적용합니다.
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-**근거**: 코드 재사용은 버그 수정과 기능 개선을 한 곳에서 처리할 수 있게 하며, 일관성과 유지보수성을 향상시킵니다.
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-### V. 유지보수 가능한 아키텍처
-시스템은 모듈화되고 확장 가능하며 테스트 가능한 구조로 설계되어야 합니다. 관심사를 명확히 분리하고, 의존성을 최소화하며, 인터페이스를 통해 통신합니다. 기술 부채를 지속적으로 관리하고 리팩토링을 정기적으로 수행합니다.
-
-**근거**: 좋은 아키텍처는 장기적인 프로젝트 건전성을 보장하고, 변경과 확장을 용이하게 합니다.
-
-## 개발 워크플로우
-
-### 코드 리뷰
-- 모든 코드 변경은 병합 전 리뷰를 거쳐야 합니다
-- 리뷰어는 클린 코드 원칙 준수를 확인해야 합니다
-- 건설적이고 구체적인 피드백을 제공합니다
-
-### 테스팅
-- 새로운 기능은 테스트와 함께 구현되어야 합니다
-- 기존 기능 수정 시 관련 테스트를 업데이트합니다
-- 코드 커버리지 목표를 유지합니다
-
-### 문서화
-- API와 주요 기능은 문서화되어야 합니다
-- 복잡한 비즈니스 로직은 설명을 포함합니다
-- README와 개발 가이드를 최신으로 유지합니다
-
-## 품질 표준
-
-### 성능
-- 응답 시간과 리소스 사용을 모니터링합니다
-- 성능 최적화는 측정 데이터를 기반으로 합니다
-- 조기 최적화를 피하고 명확한 병목 지점에 집중합니다
-
-### 보안
-- 보안 모범 사례를 따릅니다
-- 민감한 데이터는 암호화하여 저장합니다
-- 정기적인 보안 감사를 수행합니다
-
-### 접근성
-- 웹 접근성 가이드라인(WCAG)을 준수합니다
-- 다양한 사용자 환경을 고려합니다
-- 점진적 향상 원칙을 적용합니다
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-프로젝트 거버넌스는 다음 원칙을 따릅니다:
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-- 이 Constitution은 프로젝트의 모든 다른 관행보다 우선합니다
-- 원칙 수정은 팀 합의와 문서화된 근거가 필요합니다
-- 주요 변경사항은 마이그레이션 계획과 함께 제안되어야 합니다
-- 모든 PR과 코드 리뷰는 이 원칙들과의 준수를 검증해야 합니다
-- 복잡성 증가는 명확한 비즈니스 가치로 정당화되어야 합니다
-
-### 버전 관리
-- MAJOR: 원칙의 제거 또는 근본적 재정의
-- MINOR: 새로운 원칙 또는 섹션 추가
-- PATCH: 명확성 개선, 오타 수정, 부수적 개선
-
-**Version**: 1.0.0 | **Ratified**: 2025-10-02 | **Last Amended**: 2025-10-02
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

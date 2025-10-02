@@ -65,25 +65,25 @@ Rain.xyz와 Tevau.io를 레퍼런스로 한 모던하고 프리미엄한 회사�
 
 ### Technology Stack
 - **Frontend**:
-  - React.js 18+ 또는 Next.js 14+
+  - Next.js 14+ (App Router)
   - TypeScript
-  - Tailwind CSS 또는 styled-components
+  - Tailwind CSS v3+
   - Framer Motion (애니메이션)
-  - React Query 또는 SWR (데이터 페칭)
+  - @tanstack/react-query (데이터 페칭)
 
 - **Backend**:
-  - Node.js with Express 또는 Next.js API Routes
+  - Next.js API Routes
   - Headless CMS (Strapi, Contentful) 고려
 
 - **Database**:
   - PostgreSQL 또는 MongoDB (컨텐츠 관리용)
 
 - **Infrastructure**:
-  - Vercel 또는 AWS (S3 + CloudFront)
+  - Vercel
   - GitHub Actions (CI/CD)
 
 ### Integration Requirements
-- Google Analytics 또는 Mixpanel 통합
+- Google Analytics 4 통합
 - SEO 메타 태그 관리 시스템
 - 이미지 최적화 (WebP, lazy loading)
 - 웹 폰트 최적화
@@ -92,10 +92,10 @@ Rain.xyz와 Tevau.io를 레퍼런스로 한 모던하고 프리미엄한 회사�
 ## UI/UX Requirements
 ### Design Principles
 - **Minimalist & Premium**: 깔끔하고 여백을 활용한 프리미엄 디자인
-- **Dark/Light Mode**: 다크 모드 중심의 세련된 색상 팔레트
+- **Premium Light Theme**: 밝은 iOS 스타일의 모던한 색상 팔레트
 - **Motion & Interaction**: 부드러운 트랜지션과 마이크로 인터랙션
 - **Typography First**: 명확한 타이포그래피 계층 구조
-- **Glass Morphism**: 현대적인 글래스모피즘 효과 활용
+- **Soft Shadows & Blur**: 부드러운 그림자와 블러 효과 활용
 
 ### Key Components
 #### 헤더 네비게이션
@@ -139,7 +139,6 @@ Rain.xyz와 Tevau.io를 레퍼런스로 한 모던하고 프리미엄한 회사�
 - 접근성 기본 요구사항 준수 (WCAG 2.1 Level AA)
 
 ### Should Have
-- 다크/라이트 테마 전환
 - 스크롤 진행 표시기
 - 뒤로가기 최상단 버튼
 - 이미지 갤러리 또는 캐러셀
@@ -205,11 +204,11 @@ Rain.xyz와 Tevau.io를 레퍼런스로 한 모던하고 프리미엄한 회사�
 | 배포 준비 | Week 10 | 최종 검토 및 프로덕션 배포 |
 
 ## Open Questions
-- 정확한 브랜드 컬러와 로고 디자인은?
-- Platform 서비스 (Reward, Wallet, Earn)의 구체적인 컨텐츠는?
+- 정확한 브랜드 컬러와 로고 디자인은? → 로고: Unione_Logo.ai 파일 사용
+- Platform 서비스 (Reward, Wallet, Earn)의 구체적인 컨텐츠는? → 정적 컨텐츠로 하드코딩
 - 다국어 지원이 초기 버전에 필요한가?
 - 관리자가 컨텐츠를 직접 수정할 수 있는 CMS가 필요한가?
-- 애널리틱스 도구 선택 (Google Analytics vs Mixpanel vs Amplitude)?
+- 애널리틱스 도구 선택 (Google Analytics vs Mixpanel vs Amplitude)? → Google Analytics 4 사용
 - 폼 제출 시 이메일 알림 또는 CRM 연동이 필요한가?
 
 ## References
@@ -232,13 +231,12 @@ Rain.xyz와 Tevau.io를 레퍼런스로 한 모던하고 프리미엄한 회사�
 │   ├── wallet (월렛 서비스)
 │   └── earn (수익 창출 서비스)
 ├── company (회사 소개)
-├── contact (연락처)
 └── 404 (에러 페이지)
 ```
 
 ### 주요 디자인 참고사항
-- 그래디언트 배경: 보라색-파란색 계열의 그래디언트
-- 카드 디자인: 3D 틸트 효과, 홀로그램 느낌
+- 그래디언트 배경: 밝은 파스텔 톤의 그래디언트 (핑크-퍼플 계열)
+- 카드 디자인: 3D 틸트 효과, 부드러운 그림자
 - 타이포그래피: Inter, Pretendard 등 모던한 폰트
 - 아이콘: Phosphor Icons, Heroicons 활용
-- 애니메이션: AOS, Framer Motion으로 스크롤 트리거 애니메이션
+- 애니메이션: Framer Motion으로 스크롤 트리거 애니메이션
