@@ -35,14 +35,14 @@ export default function Navigation({ className = '' }: NavigationProps) {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className="text-sm font-medium transition-colors flex items-center gap-1"
+                className="text-base font-medium transition-colors flex items-center gap-1"
                 style={{
                   color: isActive ? '#1d1d1f' : '#86868b',
                 }}
               >
                 {link.label}
                 <svg
-                  className="w-4 h-4 transition-transform"
+                  className="w-5 h-5 transition-transform"
                   style={{
                     transform: openDropdown === link.label ? 'rotate(180deg)' : 'rotate(0deg)',
                   }}
@@ -68,7 +68,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
           <Link
             key={link.label}
             href={link.href}
-            className="text-sm font-medium transition-all hover:opacity-100"
+            className="text-base font-medium transition-all hover:opacity-100"
             style={{
               color: isActive ? '#1d1d1f' : '#86868b',
               opacity: isActive ? 1 : 0.85,

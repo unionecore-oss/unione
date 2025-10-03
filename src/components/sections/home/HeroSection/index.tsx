@@ -1,29 +1,51 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { fadeInUp, staggerContainer } from '@/lib/animations'
+import dynamic from 'next/dynamic'
+import BackgroundGradient from './BackgroundGradient'
+import FloatingOrbs from './FloatingOrbs'
+import Badge from './Badge'
 import AnimatedHeadline from './AnimatedHeadline'
-import AnimatedLogo3D from './AnimatedLogo3D'
-import Button from '@/components/common/Button'
+import CTAButtons from './CTAButtons'
+import SocialProof from './SocialProof'
+
+// 3D Scene을 dynamic import로 로드 (SSR 방지)
+const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
+  ssr: false,
+  loading: () => null,
+})
 
 export default function HeroSection() {
   return (
-    <section className="hero-gradient min-h-screen flex items-center overflow-hidden py-20 lg:py-32">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section className="relative min-h-screen flex items-center overflow-hidden py-20 lg:py-32">
+      {/* Animated Background */}
+      <BackgroundGradient />
+
+      {/* Floating Orbs */}
+      <FloatingOrbs />
+
+      {/* Content */}
+      <div className="container-custom relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text Content */}
           <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+            className="text-left"
           >
             <AnimatedHeadline />
           </motion.div>
 
-          {/* Right: 3D Animated Logo */}
-          <div className="hidden lg:block relative h-[550px]">
-            <AnimatedLogo3D />
-          </div>
+          {/* Right: 3D Scene */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
+            className="relative h-[500px] lg:h-[600px]"
+          >
+            <Scene3D />
+          </motion.div>
         </div>
       </div>
     </section>

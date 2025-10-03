@@ -1,36 +1,50 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from './Logo'
 import Navigation from '../Navigation'
 import MobileMenu from '../MobileMenu'
+import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
-      <header className="navbar fixed top-0 left-0 right-0 z-50">
+      <header
+        className={`navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? 'backdrop-blur-xl bg-white/80' : 'bg-transparent'
+        }`}
+        style={{
+          boxShadow: isScrolled
+            ? '0 1px 3px rgba(0, 0, 0, 0.05), 0 0 20px rgba(99, 91, 255, 0.1)'
+            : 'none',
+          borderBottom: isScrolled
+            ? '1px solid rgba(99, 91, 255, 0.1)'
+            : '1px solid transparent',
+        }}
+      >
         <div className="container-custom">
-          <nav className="flex items-center justify-between h-16">
+          <nav className="flex items-center justify-between h-20">
             {/* Logo */}
             <Logo />
 
             {/* Desktop Navigation */}
             <Navigation className="hidden md:flex" />
 
-            {/* CTA Button */}
-            <div className="hidden md:block">
-              <button
-                className="text-sm px-6 py-2.5 rounded-full font-medium transition-all hover:opacity-90 hover:scale-[1.02]"
-                style={{
-                  background: '#000000',
-                  color: '#ffffff',
-                  boxShadow: '0 1px 2px rgba(0, 0, 0, 0.05)',
-                }}
-              >
-                Get Started
-              </button>
+            {/* Language Switcher */}
+            <div className="hidden md:flex items-center gap-4">
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}

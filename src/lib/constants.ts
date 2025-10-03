@@ -17,6 +17,13 @@ export const COLORS = {
     pink: '#FF006E',
     purple: '#8B00FF',
   },
+  stripe: {
+    purple: '#635bff',
+    pink: '#a960ee',
+    blue: '#90e0ff',
+    yellow: '#ffcb57',
+    red: '#ff333d',
+  },
 } as const
 
 export const BREAKPOINTS = {

@@ -6,7 +6,7 @@ export default function Logo() {
       {/* Temporary text logo - will be replaced with actual logo image */}
       <div className="flex items-center">
         <span
-          className="text-2xl font-bold"
+          className="text-3xl font-bold"
           style={{
             color: '#1d1d1f',
             letterSpacing: '-0.02em',
