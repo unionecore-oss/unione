@@ -9,13 +9,13 @@ export default function AnimatedHeadline() {
     { text: 'new', gradient: false },
     { text: 'Web3', gradient: true },
     { text: 'payment', gradient: true },
-    { text: 'paradigm', gradient: true },
+    { text: 'paradigm', gradient: false },
   ]
 
   const wordsLine2 = [
     { text: 'in', gradient: false },
     { text: 'one', gradient: false },
-    { text: 'Unione', gradient: false },
+    { text: 'Unione', gradient: true },
     { text: 'platform.', gradient: false },
   ]
 
@@ -24,7 +24,7 @@ export default function AnimatedHeadline() {
       <motion.h1
         className="font-bold mb-8"
         style={{
-          fontSize: 'clamp(48px, 6vw, 80px)',
+          fontSize: 'clamp(56px, 6.5vw, 88px)',
           lineHeight: '1.15',
           letterSpacing: '-0.04em',
           fontWeight: 800,
@@ -43,15 +43,18 @@ export default function AnimatedHeadline() {
               style={
                 word.gradient
                   ? {
-                      background:
-                        'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%)',
+                      background: 'linear-gradient(135deg, #00ffff 0%, #b100ff 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
                       backgroundSize: '200% 200%',
-                      animation: 'shimmer 3s linear infinite',
+                      animation: 'shimmer 3s linear infinite, neonPulse 2s ease-in-out infinite',
+                      filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(177, 0, 255, 0.6))',
                     }
-                  : { color: '#1d1d1f' }
+                  : {
+                      color: '#ffffff',
+                      textShadow: '0 0 20px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.8)',
+                    }
               }
             >
               {word.text}
@@ -65,7 +68,22 @@ export default function AnimatedHeadline() {
             <motion.span
               key={index}
               variants={wordReveal}
-              style={{ color: '#1d1d1f' }}
+              style={
+                word.gradient
+                  ? {
+                      background: 'linear-gradient(135deg, #00ffff 0%, #b100ff 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      backgroundSize: '200% 200%',
+                      animation: 'shimmer 3s linear infinite, neonPulse 2s ease-in-out infinite',
+                      filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(177, 0, 255, 0.6))',
+                    }
+                  : {
+                      color: '#ffffff',
+                      textShadow: '0 0 20px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.8)',
+                    }
+              }
             >
               {word.text}
             </motion.span>
@@ -80,6 +98,14 @@ export default function AnimatedHeadline() {
           }
           100% {
             background-position: -200% center;
+          }
+        }
+        @keyframes neonPulse {
+          0%, 100% {
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(177, 0, 255, 0.6));
+          }
+          50% {
+            filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1)) drop-shadow(0 0 60px rgba(177, 0, 255, 0.9));
           }
         }
       `}</style>

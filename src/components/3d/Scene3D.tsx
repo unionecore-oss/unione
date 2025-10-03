@@ -2,7 +2,7 @@
 
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useEffect, useState } from 'react'
-import { Environment } from '@react-three/drei'
+import { Environment, ContactShadows } from '@react-three/drei'
 import { EffectComposer, Bloom, ChromaticAberration } from '@react-three/postprocessing'
 import { BlendFunction } from 'postprocessing'
 import FloatingGeometry from './FloatingGeometry'
@@ -86,18 +86,18 @@ export default function Scene3D() {
         <FloatingGeometry />
         <ParticleField />
 
-        {/* Ultra Premium Post-Processing */}
+        {/* Neon Post-Processing */}
         <EffectComposer multisampling={8}>
-          {/* Strong Bloom for Glow */}
+          {/* Enhanced Neon Bloom */}
           <Bloom
             intensity={2.5}
-            luminanceThreshold={0.15}
-            luminanceSmoothing={0.95}
-            height={400}
+            luminanceThreshold={0.25}
+            luminanceSmoothing={0.9}
+            height={300}
             blendFunction={BlendFunction.ADD}
-            radius={0.8}
+            radius={0.6}
           />
-          {/* Chromatic Aberration for Prism Effect */}
+          {/* Stronger Chromatic Aberration */}
           <ChromaticAberration
             offset={[0.001, 0.001]}
             blendFunction={BlendFunction.NORMAL}
