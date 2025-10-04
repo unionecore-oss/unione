@@ -17,7 +17,7 @@ const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden py-20 lg:py-32">
+    <section className="relative min-h-screen flex items-center overflow-visible pt-16 pb-20 lg:pt-20 lg:pb-24">
       {/* Animated Background */}
       <BackgroundGradient />
 
@@ -42,7 +42,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
-            className="relative h-[500px] lg:h-[600px]"
+            className="relative h-[600px] lg:h-[700px] -mt-20"
           >
             <Scene3D />
           </motion.div>
