@@ -17,11 +17,12 @@ export default function CardHero() {
             animate="animate"
           >
             <motion.h1
-              className="text-5xl md:text-6xl font-bold mb-6"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
               style={{ color: 'var(--color-text-primary)' }}
               variants={fadeInUp}
             >
-              The <GradientText>Card</GradientText> for the Modern Era
+              Unione Card opens the door to{' '}
+              <GradientText>borderless payments</GradientText>
             </motion.h1>
 
             <motion.p
@@ -29,9 +30,7 @@ export default function CardHero() {
               style={{ color: 'var(--color-text-secondary)' }}
               variants={fadeInUp}
             >
-              프리미엄 메탈 카드로 특별한 금융 경험을 시작하세요.
-              <br />
-              전 세계 어디서나 사용 가능하며, 최고의 보안과 리워드를 제공합니다.
+              Enjoy the convenience of using your USDT digital assets instantly, wherever and whenever around the world.
             </motion.p>
 
             <motion.div
@@ -39,10 +38,7 @@ export default function CardHero() {
               variants={fadeInUp}
             >
               <Button variant="primary" size="lg">
-                Apply Now
-              </Button>
-              <Button variant="secondary" size="lg">
-                Learn More
+                Get your Card
               </Button>
             </motion.div>
           </motion.div>
