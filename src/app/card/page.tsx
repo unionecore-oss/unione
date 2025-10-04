@@ -2,8 +2,6 @@ import { Metadata } from 'next'
 import CardHero from '@/components/sections/card/CardHero'
 import FeaturesBreakdown from '@/components/sections/card/FeaturesBreakdown'
 import HowItWorks from '@/components/sections/card/HowItWorks'
-import SecuritySection from '@/components/sections/card/SecuritySection'
-import CTASection from '@/components/sections/home/CTASection'
 
 export const metadata: Metadata = {
   title: 'Premium Metal Card',
@@ -16,8 +14,6 @@ export default function CardPage() {
       <CardHero />
       <FeaturesBreakdown />
       <HowItWorks />
-      <SecuritySection />
-      <CTASection />
     </main>
   )
 }

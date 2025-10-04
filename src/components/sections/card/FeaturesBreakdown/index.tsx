@@ -2,85 +2,85 @@
 
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import Card from '@/components/common/Card'
 
-const features = [
+const stats = [
   {
-    title: 'Global Acceptance',
-    description: '전 세계 200개 이상의 국가에서 자유롭게 사용하세요',
+    value: '200+',
+    label: 'Countries Supported',
     icon: '🌍',
   },
   {
-    title: 'Premium Rewards',
-    description: '모든 구매에 대해 최대 3% 캐시백을 받으세요',
-    icon: '💎',
-  },
-  {
-    title: 'No Foreign Fees',
-    description: '해외 결제 시 추가 수수료가 없습니다',
-    icon: '✈️',
-  },
-  {
-    title: 'Metal Card',
-    description: '프리미엄 메탈 소재의 고급스러운 카드',
-    icon: '💳',
-  },
-  {
-    title: 'Instant Notifications',
-    description: '모든 거래에 대한 실시간 알림',
+    value: '1sec',
+    label: 'Transaction Speed',
     icon: '⚡',
   },
   {
-    title: 'Virtual Cards',
-    description: '온라인 쇼핑을 위한 가상 카드 무제한 생성',
-    icon: '🔒',
+    value: '99%',
+    label: 'Security Uptime',
+    icon: '🛡️',
+  },
+  {
+    value: '100k+',
+    label: 'Users & Growing',
+    icon: '👥',
   },
 ]
 
 export default function FeaturesBreakdown() {
   return (
-    <section
-      className="section-padding"
-      style={{ backgroundColor: 'var(--color-background-secondary)' }}
-    >
+    <section className="py-20">
       <div className="container-custom">
+        {/* Hero Section */}
         <motion.div
-          className="text-center mb-16"
+          className="rounded-3xl p-12 mb-12"
+          style={{
+            background: 'linear-gradient(135deg, #A4DC6C 0%, #8BC34A 100%)',
+          }}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUp}
         >
-          <h2
-            className="text-4xl md:text-5xl font-bold mb-4"
-            style={{ color: 'var(--color-text-primary)' }}
-          >
-            Card Features
+          <p className="text-sm font-medium mb-2" style={{ color: 'rgba(0,0,0,0.7)' }}>
+            Place to use Unione Card
+          </p>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#000' }}>
+            Spend Everywhere
           </h2>
-          <p className="text-xl" style={{ color: 'var(--color-text-secondary)' }}>
-            특별함이 담긴 프리미엄 카드의 모든 것
+          <p className="text-lg max-w-3xl" style={{ color: 'rgba(0,0,0,0.8)' }}>
+            Unione Card is designed for your everyday life — simple, limitless, and effortless. Spend your assets wherever you go, anytime you need.
           </p>
         </motion.div>
 
+        {/* Stats Grid */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-2 gap-8"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {features.map((feature) => (
-            <motion.div key={feature.title} variants={fadeInUp}>
-              <Card className="p-6 h-full">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3
-                  className="text-xl font-bold mb-2"
-                  style={{ color: 'var(--color-text-primary)' }}
-                >
-                  {feature.title}
-                </h3>
-                <p style={{ color: 'var(--color-text-secondary)' }}>{feature.description}</p>
-              </Card>
+          {stats.map((stat) => (
+            <motion.div
+              key={stat.label}
+              variants={fadeInUp}
+              className="text-center"
+            >
+              <div className="text-3xl mb-4">{stat.icon}</div>
+              <div
+                className="text-5xl md:text-6xl font-bold mb-2"
+                style={{
+                  background: 'linear-gradient(135deg, #8B5CF6 0%, #D946EF 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                {stat.value}
+              </div>
+              <p className="text-sm font-medium" style={{ color: 'var(--color-text-secondary)' }}>
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </motion.div>
