@@ -62,11 +62,11 @@ export default function EarnPage() {
       <section className="py-0 bg-white">
         <div className="w-full">
           <div className="space-y-0">
-            {/* Row 1: Instant card connections */}
+            {/* Row 1: Flexible Entry and Exit Anytime */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
               <div className="px-12 md:px-20 py-16">
-                <h2 className="text-4xl font-bold mb-4 text-gray-900">Instant card connections</h2>
-                <p className="text-gray-600 text-lg">Embed the accounts needed for card programs directly into your user experience.</p>
+                <h2 className="text-4xl font-bold mb-4 text-gray-900">Flexible Entry and Exit Anytime</h2>
+                <p className="text-gray-600 text-lg">Total control of your wealth with instant access and management</p>
               </div>
               <div className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden">
                 {/* Gradient Accent */}
@@ -79,7 +79,7 @@ export default function EarnPage() {
               </div>
             </div>
 
-            {/* Row 2: Keep, and grow, value on-platform */}
+            {/* Row 2: Make your idle money work for you */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
               <div className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden">
                 {/* Gradient Accent */}
@@ -92,16 +92,16 @@ export default function EarnPage() {
                 </svg>
               </div>
               <div className="px-12 md:px-20 py-16">
-                <h2 className="text-4xl font-bold mb-4 text-gray-900">Keep, and grow, value on-platform</h2>
-                <p className="text-gray-600 text-lg">Reduce cash outs, improve retention, and monetize float with stablecoin-native accounts.</p>
+                <h2 className="text-4xl font-bold mb-4 text-gray-900">Make your idle money work for you</h2>
+                <p className="text-gray-600 text-lg">Begin your journey with only $1 Unlock unlimited growth</p>
               </div>
             </div>
 
-            {/* Row 3: Tailored to your platform */}
+            {/* Row 3: Rewards paid out every hour */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
               <div className="px-12 md:px-20 py-16">
-                <h2 className="text-4xl font-bold mb-4 text-gray-900">Tailored to your platform</h2>
-                <p className="text-gray-600 text-lg">Support stablecoins or fiat, select your preferred chains, and customize the UX to match your brand.</p>
+                <h2 className="text-4xl font-bold mb-4 text-gray-900">Rewards paid out every hour</h2>
+                <p className="text-gray-600 text-lg">Calculated accurately, down to the very minute</p>
               </div>
               <div className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden">
                 {/* Gradient Accent */}
