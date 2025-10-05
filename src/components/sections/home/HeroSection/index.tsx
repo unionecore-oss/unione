@@ -4,10 +4,7 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import BackgroundGradient from './BackgroundGradient'
 import FloatingOrbs from './FloatingOrbs'
-import Badge from './Badge'
 import AnimatedHeadline from './AnimatedHeadline'
-import CTAButtons from './CTAButtons'
-import SocialProof from './SocialProof'
 
 // 3D Scene을 dynamic import로 로드 (SSR 방지)
 const Scene3D = dynamic(() => import('@/components/3d/Scene3D'), {

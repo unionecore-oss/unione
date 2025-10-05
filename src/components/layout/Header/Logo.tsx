@@ -8,7 +8,10 @@ export default function Logo() {
         <span
           className="text-3xl font-bold"
           style={{
-            color: '#1d1d1f',
+            background: 'linear-gradient(135deg, #00ffff 0%, #ff0080 50%, #b100ff 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
             letterSpacing: '-0.02em',
             fontWeight: 700,
           }}

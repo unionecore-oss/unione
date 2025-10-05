@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
-import { useFrame, useThree } from '@react-three/fiber'
+import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
 // 프리미엄 3D 도형 컴포넌트
@@ -53,7 +53,7 @@ function FloatingShape({
       case 'sphere':
         return <sphereGeometry args={[1.2, 128, 128]} />
       case 'torus':
-        return <torusGeometry args={[2.2, 0.6, 64, 200]} />
+        return <torusGeometry args={[2.5, 0.65, 64, 200]} />
       case 'icosahedron':
         return <icosahedronGeometry args={[1.5, 5]} />
       case 'octahedron':
@@ -90,34 +90,34 @@ function FloatingShape({
         return {
           color: baseColor,
           metalness: 0,
-          roughness: 0,
-          transmission: 0.98,
-          thickness: 1.5,
-          envMapIntensity: 3.0,
+          roughness: 0.05,
+          transmission: 0.92,
+          thickness: 1.2,
+          envMapIntensity: 2.5,
           clearcoat: 1.0,
-          clearcoatRoughness: 0,
-          ior: 2.8,
-          reflectivity: 1.0,
-          iridescence: 0.8,
-          iridescenceIOR: 2.0,
-          sheen: 1.0,
-          sheenColor: new THREE.Color(color).multiplyScalar(0.8),
-          specularIntensity: 1.5,
+          clearcoatRoughness: 0.1,
+          ior: 2.2,
+          reflectivity: 0.8,
+          iridescence: 0.6,
+          iridescenceIOR: 1.8,
+          sheen: 0.8,
+          sheenColor: new THREE.Color(color).multiplyScalar(0.6),
+          specularIntensity: 1.2,
           specularColor: new THREE.Color('#ffffff'),
         }
       case 'metallic':
         return {
           color: baseColor,
           metalness: 1.0,
-          roughness: 0.08,
-          envMapIntensity: 3.5,
+          roughness: 0.15,
+          envMapIntensity: 2.8,
           clearcoat: 1.0,
-          clearcoatRoughness: 0.1,
-          iridescence: 0.5,
+          clearcoatRoughness: 0.15,
+          iridescence: 0.4,
           iridescenceIOR: 1.5,
-          sheen: 0.8,
-          sheenColor: new THREE.Color(color).multiplyScalar(0.6),
-          specularIntensity: 1.2,
+          sheen: 0.6,
+          sheenColor: new THREE.Color(color).multiplyScalar(0.5),
+          specularIntensity: 1.0,
           specularColor: new THREE.Color(color).offsetHSL(0, 0, 0.2),
         }
     }
@@ -131,36 +131,18 @@ function FloatingShape({
   )
 }
 
-// 마우스 인터랙티브 링 그룹
-function InteractiveRingGroup({
+// 정적 링 그룹
+function StaticRingGroup({
   children,
   position,
   baseRotation,
-  reactivity = 1.0
 }: {
   children: React.ReactNode
   position: [number, number, number]
   baseRotation: [number, number, number]
-  reactivity?: number
 }) {
-  const groupRef = useRef<THREE.Group>(null)
-  const { pointer } = useThree()
-
-  useFrame(() => {
-    if (!groupRef.current) return
-
-    // 마우스 위치에 따라 부드럽게 회전
-    const targetRotationY = baseRotation[1] + pointer.x * 0.3 * reactivity
-    const targetRotationX = baseRotation[0] + pointer.y * 0.2 * reactivity
-
-    // 부드러운 easing
-    groupRef.current.rotation.y += (targetRotationY - groupRef.current.rotation.y) * 0.05
-    groupRef.current.rotation.x += (targetRotationX - groupRef.current.rotation.x) * 0.05
-    groupRef.current.rotation.z = baseRotation[2]
-  })
-
   return (
-    <group ref={groupRef} position={position}>
+    <group position={position} rotation={baseRotation}>
       {children}
     </group>
   )
@@ -172,10 +154,9 @@ export default function FloatingGeometry() {
       {/* 인터로킹 링 - "Unione" (하나로 통합) 시각화 */}
 
       {/* Ring 1 - 보라 크리스탈 (Web3) */}
-      <InteractiveRingGroup
-        position={[-0.9, 0.4, -3]}
+      <StaticRingGroup
+        position={[-0.9, 1.0, -3]}
         baseRotation={[0.4, 0.2, 0.1]}
-        reactivity={1.0}
       >
         <FloatingShape
           position={[0, 0, 0]}
@@ -184,13 +165,12 @@ export default function FloatingGeometry() {
           color="#8b5cf6"
           materialType="crystal"
         />
-      </InteractiveRingGroup>
+      </StaticRingGroup>
 
-      {/* Ring 2 - 황금 메탈 (Real World) - 반대 회전 및 반대 반응 */}
-      <InteractiveRingGroup
-        position={[0.9, -0.4, -3.3]}
+      {/* Ring 2 - 황금 메탈 (Real World) */}
+      <StaticRingGroup
+        position={[0.9, 0.0, -3.3]}
         baseRotation={[-0.3, -0.2, -0.15]}
-        reactivity={-0.8}
       >
         <FloatingShape
           position={[0, 0, 0]}
@@ -199,7 +179,7 @@ export default function FloatingGeometry() {
           color="#fbbf24"
           materialType="metallic"
         />
-      </InteractiveRingGroup>
+      </StaticRingGroup>
     </group>
   )
 }

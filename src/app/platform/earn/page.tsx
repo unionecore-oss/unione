@@ -2,12 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import GradientText from '@/components/common/GradientText'
-import Button from '@/components/common/Button'
-import EarnOpportunities from '@/components/sections/platform/earn/EarnOpportunities'
-import APYCalculator from '@/components/sections/platform/earn/APYCalculator'
-import ComparisonTable from '@/components/sections/platform/earn/ComparisonTable'
-import CTASection from '@/components/sections/home/CTASection'
 
 export default function EarnPage() {
   return (

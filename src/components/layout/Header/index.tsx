@@ -23,15 +23,15 @@ export default function Header() {
     <>
       <header
         className={`navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'backdrop-blur-xl bg-white/80' : 'bg-transparent'
+          isScrolled ? 'backdrop-blur-xl bg-black/60' : 'backdrop-blur-md bg-black/40'
         }`}
         style={{
           boxShadow: isScrolled
-            ? '0 1px 3px rgba(0, 0, 0, 0.05), 0 0 20px rgba(99, 91, 255, 0.1)'
-            : 'none',
+            ? '0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 0, 128, 0.2)'
+            : '0 0 20px rgba(0, 255, 255, 0.1)',
           borderBottom: isScrolled
-            ? '1px solid rgba(99, 91, 255, 0.1)'
-            : '1px solid transparent',
+            ? '1px solid rgba(0, 255, 255, 0.3)'
+            : '1px solid rgba(0, 255, 255, 0.1)',
         }}
       >
         <div className="container-custom">
@@ -42,9 +42,28 @@ export default function Header() {
             {/* Desktop Navigation */}
             <Navigation className="hidden md:flex" />
 
-            {/* Language Switcher */}
-            <div className="hidden md:flex items-center gap-4">
+            {/* Language Switcher & CTA */}
+            <div className="hidden md:flex items-center gap-6">
               <LanguageSwitcher />
+              <a
+                href="/app"
+                className="px-6 py-2.5 rounded-full font-medium transition-all duration-300 relative overflow-hidden group"
+                style={{
+                  background: 'linear-gradient(135deg, #00ffff 0%, #ff0080 100%)',
+                  color: '#000000',
+                  boxShadow: '0 0 20px rgba(0, 255, 255, 0.5)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 128, 0.6)'
+                  e.currentTarget.style.transform = 'scale(1.05)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.5)'
+                  e.currentTarget.style.transform = 'scale(1)'
+                }}
+              >
+                Launch App
+              </a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -52,7 +71,7 @@ export default function Header() {
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
-              style={{ color: '#1d1d1f' }}
+              style={{ color: '#ffffff' }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (

@@ -31,11 +31,11 @@ export default function Dropdown({ items, isOpen }: DropdownProps) {
           transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
           className="absolute top-full left-0 mt-2 py-2 rounded-2xl backdrop-blur-xl"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.95)',
-            border: '1px solid rgba(0, 0, 0, 0.08)',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+            border: '1px solid rgba(0, 255, 255, 0.3)',
             minWidth: '200px',
             zIndex: 50,
-            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.12)',
+            boxShadow: '0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 0, 128, 0.2)',
           }}
         >
           {items.map((item, index) => (
@@ -49,9 +49,9 @@ export default function Dropdown({ items, isOpen }: DropdownProps) {
                 href={item.href}
                 className="block px-4 py-2.5 text-base font-medium transition-all rounded-lg mx-2 hover:scale-[1.02]"
                 style={{
-                  color: isActivePath(item.href) ? '#1d1d1f' : '#86868b',
+                  color: isActivePath(item.href) ? '#00ffff' : '#ffffff',
                   backgroundColor: isActivePath(item.href)
-                    ? 'rgba(99, 91, 255, 0.08)'
+                    ? 'rgba(0, 255, 255, 0.1)'
                     : 'transparent',
                 }}
               >

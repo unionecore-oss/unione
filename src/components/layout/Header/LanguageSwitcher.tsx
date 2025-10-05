@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="text-base font-medium transition-colors flex items-center gap-1"
         style={{
-          color: '#86868b',
+          color: '#ffffff',
           opacity: 0.85,
         }}
       >
@@ -60,11 +60,11 @@ export default function LanguageSwitcher() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="absolute right-0 mt-2 w-32 rounded-lg overflow-hidden"
+            className="absolute right-0 mt-2 w-32 rounded-lg overflow-hidden backdrop-blur-xl"
             style={{
-              backgroundColor: 'white',
-              boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-              border: '1px solid rgba(0, 0, 0, 0.06)',
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              boxShadow: '0 0 20px rgba(0, 255, 255, 0.3)',
+              border: '1px solid rgba(0, 255, 255, 0.3)',
             }}
           >
             {languages.map((lang, index) => (
@@ -79,8 +79,8 @@ export default function LanguageSwitcher() {
                 }}
                 className="w-full text-left px-4 py-2.5 text-base font-medium transition-colors"
                 style={{
-                  color: language === lang.code ? '#1d1d1f' : '#86868b',
-                  backgroundColor: language === lang.code ? 'rgba(0, 0, 0, 0.03)' : 'transparent',
+                  color: language === lang.code ? '#00ffff' : '#ffffff',
+                  backgroundColor: language === lang.code ? 'rgba(0, 255, 255, 0.1)' : 'transparent',
                 }}
               >
                 {lang.label}

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import GradientText from '@/components/common/GradientText'
 
 const features = [
   {

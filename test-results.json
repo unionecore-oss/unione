@@ -1,0 +1,14 @@
+{
+  "canvasExists": {
+    "exists": true,
+    "width": 584,
+    "height": 600
+  },
+  "threeDLoaded": true,
+  "fps": 121,
+  "consoleLogs": [
+    "[info] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"
+  ],
+  "errors": [],
+  "timestamp": "2025-10-03T12:25:54.552Z"
+}
