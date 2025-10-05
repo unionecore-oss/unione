@@ -6,14 +6,14 @@ import { floatSlow, floatMedium, floatFast } from '@/lib/animations'
 export default function FloatingOrbs() {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Orb 1 - Large Cyan Neon with Glow */}
+      {/* Orb 1 - Subtle Purple */}
       <motion.div
         className="absolute"
         style={{
           top: '15%',
           left: '10%',
-          width: '300px',
-          height: '300px',
+          width: '350px',
+          height: '350px',
         }}
         variants={floatSlow}
         initial="initial"
@@ -22,22 +22,22 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.4) 0%, rgba(0, 200, 255, 0.25) 100%)',
-            filter: 'blur(60px)',
-            opacity: 0.5,
-            boxShadow: '0 0 100px 40px rgba(0, 255, 255, 0.3)',
+            background: 'linear-gradient(135deg, rgba(150, 102, 255, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%)',
+            filter: 'blur(70px)',
+            opacity: 0.25,
+            boxShadow: '0 0 80px 30px rgba(150, 102, 255, 0.1)',
           }}
         />
       </motion.div>
 
-      {/* Orb 2 - Large Pink Neon with Glow */}
+      {/* Orb 2 - Subtle Indigo */}
       <motion.div
         className="absolute"
         style={{
-          top: '60%',
+          top: '55%',
           right: '15%',
-          width: '350px',
-          height: '350px',
+          width: '400px',
+          height: '400px',
         }}
         variants={floatMedium}
         initial="initial"
@@ -46,22 +46,22 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(255, 0, 128, 0.35) 0%, rgba(255, 0, 200, 0.2) 100%)',
-            filter: 'blur(70px)',
-            opacity: 0.45,
-            boxShadow: '0 0 120px 50px rgba(255, 0, 128, 0.25)',
+            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(79, 70, 229, 0.08) 100%)',
+            filter: 'blur(80px)',
+            opacity: 0.22,
+            boxShadow: '0 0 90px 35px rgba(99, 102, 241, 0.08)',
           }}
         />
       </motion.div>
 
-      {/* Orb 3 - Extra Large Purple Neon with Glow */}
+      {/* Orb 3 - Subtle Violet */}
       <motion.div
         className="absolute"
         style={{
           top: '35%',
-          right: '25%',
-          width: '400px',
-          height: '400px',
+          right: '30%',
+          width: '450px',
+          height: '450px',
         }}
         variants={floatFast}
         initial="initial"
@@ -70,10 +70,10 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(177, 0, 255, 0.35) 0%, rgba(139, 0, 255, 0.2) 100%)',
-            filter: 'blur(80px)',
-            opacity: 0.4,
-            boxShadow: '0 0 140px 60px rgba(177, 0, 255, 0.25)',
+            background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.06) 100%)',
+            filter: 'blur(90px)',
+            opacity: 0.2,
+            boxShadow: '0 0 100px 40px rgba(139, 92, 246, 0.08)',
           }}
         />
       </motion.div>

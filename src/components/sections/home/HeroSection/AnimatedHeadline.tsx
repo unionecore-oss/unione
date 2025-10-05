@@ -43,17 +43,18 @@ export default function AnimatedHeadline() {
               style={
                 word.gradient
                   ? {
-                      background: 'linear-gradient(135deg, #00ffff 0%, #b100ff 100%)',
+                      background: 'linear-gradient(135deg, #9666ff 0%, #6366f1 50%, #8b5cf6 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
-                      backgroundSize: '200% 200%',
-                      animation: 'shimmer 3s linear infinite, neonPulse 2s ease-in-out infinite',
-                      filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(177, 0, 255, 0.6))',
+                      backgroundRepeat: 'repeat-y',
+                      backgroundSize: '100% 200%',
+                      animation: 'knockoutSlide 8s linear infinite',
+                      filter: 'drop-shadow(0 0 15px rgba(150, 102, 255, 0.4))',
                     }
                   : {
-                      color: '#ffffff',
-                      textShadow: '0 0 20px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.8)',
+                      color: '#e5e7eb',
+                      textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
                     }
               }
             >
@@ -71,17 +72,18 @@ export default function AnimatedHeadline() {
               style={
                 word.gradient
                   ? {
-                      background: 'linear-gradient(135deg, #00ffff 0%, #b100ff 100%)',
+                      background: 'linear-gradient(135deg, #9666ff 0%, #6366f1 50%, #8b5cf6 100%)',
                       WebkitBackgroundClip: 'text',
                       WebkitTextFillColor: 'transparent',
                       backgroundClip: 'text',
-                      backgroundSize: '200% 200%',
-                      animation: 'shimmer 3s linear infinite, neonPulse 2s ease-in-out infinite',
-                      filter: 'drop-shadow(0 0 20px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(177, 0, 255, 0.6))',
+                      backgroundRepeat: 'repeat-y',
+                      backgroundSize: '100% 200%',
+                      animation: 'knockoutSlide 8s linear infinite',
+                      filter: 'drop-shadow(0 0 15px rgba(150, 102, 255, 0.4))',
                     }
                   : {
-                      color: '#ffffff',
-                      textShadow: '0 0 20px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(0, 0, 0, 0.8)',
+                      color: '#e5e7eb',
+                      textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
                     }
               }
             >
@@ -106,6 +108,14 @@ export default function AnimatedHeadline() {
           }
           50% {
             filter: drop-shadow(0 0 30px rgba(0, 255, 255, 1)) drop-shadow(0 0 60px rgba(177, 0, 255, 0.9));
+          }
+        }
+        @keyframes knockoutSlide {
+          0% {
+            background-position-y: 0%;
+          }
+          100% {
+            background-position-y: 100%;
           }
         }
       `}</style>
