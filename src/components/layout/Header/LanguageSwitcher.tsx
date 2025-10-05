@@ -30,7 +30,7 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="text-base font-medium transition-colors flex items-center gap-1"
         style={{
-          color: '#ffffff',
+          color: '#000000',
           opacity: 0.85,
         }}
       >

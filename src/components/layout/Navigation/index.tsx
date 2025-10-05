@@ -37,7 +37,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
               <button
                 className="text-base font-medium transition-colors flex items-center gap-1"
                 style={{
-                  color: isActive ? '#00ffff' : '#ffffff',
+                  color: isActive ? '#00ffff' : '#000000',
                 }}
               >
                 {link.label}
@@ -70,7 +70,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
             href={link.href}
             className="text-base font-medium transition-all hover:opacity-100 relative group"
             style={{
-              color: isActive ? '#00ffff' : '#ffffff',
+              color: isActive ? '#00ffff' : '#000000',
               opacity: isActive ? 1 : 0.85,
             }}
           >

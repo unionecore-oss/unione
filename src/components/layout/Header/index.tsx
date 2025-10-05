@@ -23,15 +23,15 @@ export default function Header() {
     <>
       <header
         className={`navbar fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'backdrop-blur-xl bg-black/60' : 'backdrop-blur-md bg-black/40'
+          isScrolled ? 'backdrop-blur-xl bg-white/95' : 'backdrop-blur-md bg-white/90'
         }`}
         style={{
           boxShadow: isScrolled
-            ? '0 0 30px rgba(0, 255, 255, 0.3), 0 0 60px rgba(255, 0, 128, 0.2)'
-            : '0 0 20px rgba(0, 255, 255, 0.1)',
+            ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+            : '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
           borderBottom: isScrolled
-            ? '1px solid rgba(0, 255, 255, 0.3)'
-            : '1px solid rgba(0, 255, 255, 0.1)',
+            ? '1px solid rgba(0, 0, 0, 0.1)'
+            : '1px solid rgba(0, 0, 0, 0.05)',
         }}
       >
         <div className="container-custom">
@@ -71,7 +71,7 @@ export default function Header() {
               className="md:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
-              style={{ color: '#ffffff' }}
+              style={{ color: '#000000' }}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
