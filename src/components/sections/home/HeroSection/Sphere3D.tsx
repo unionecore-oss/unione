@@ -28,8 +28,10 @@ export default function Sphere3D() {
         className="w-full h-auto max-w-[600px] relative z-10"
         style={{
           filter: 'drop-shadow(0 0 60px rgba(139, 92, 246, 0.4))',
+          mixBlendMode: 'screen',
         }}
       >
+        <source src="/sphere-logo-transparent.mp4" type="video/mp4" />
         <source src="/sphere-logo-transparent.webm" type="video/webm" />
       </video>
     </motion.div>
