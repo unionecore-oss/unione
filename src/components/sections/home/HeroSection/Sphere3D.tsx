@@ -30,7 +30,7 @@ export default function Sphere3D() {
           filter: 'drop-shadow(0 0 60px rgba(139, 92, 246, 0.4))',
         }}
       >
-        <source src="/sphere-logo.webm" type="video/webm" />
+        <source src="/sphere-logo-transparent.webm" type="video/webm" />
       </video>
     </motion.div>
   )
