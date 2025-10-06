@@ -1,27 +1,89 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { wordReveal, staggerContainer } from '@/lib/animations'
+import { staggerContainer } from '@/lib/animations'
 
 export default function AnimatedHeadline() {
   return (
-    <div className="text-left max-w-3xl">
+    <div className="text-left max-w-5xl">
       <motion.h1
         className="font-bold mb-8"
         style={{
-          fontSize: 'clamp(56px, 6.5vw, 88px)',
-          lineHeight: '1.15',
-          letterSpacing: '-0.04em',
+          fontSize: 'clamp(48px, 6vw, 80px)',
+          lineHeight: '1.2',
+          letterSpacing: '-0.02em',
           fontWeight: 800,
           overflow: 'visible',
-          color: '#ffffff',
         }}
         variants={staggerContainer}
         initial="initial"
         animate="animate"
       >
-        A new Web3 payment paradigm in one platform
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={{ color: '#ffffff' }}
+        >
+          A new
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          style={{ color: '#ffffff' }}
+        >
+          Web3 payment
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          style={{ color: '#ffffff' }}
+        >
+          paradigm
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          style={{ color: '#ffffff' }}
+        >
+          in one platform
+        </motion.div>
       </motion.h1>
+
+      {/* CTA Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.0 }}
+        className="mt-12"
+      >
+        <a
+          href="/app"
+          className="inline-flex items-center gap-3 px-10 py-5 text-xl font-bold rounded-full transition-all duration-300 group"
+          style={{
+            background: '#ffffff',
+            color: '#000000',
+          }}
+        >
+          Get Started
+          <svg
+            className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M13 7l5 5m0 0l-5 5m5-5H6"
+            />
+          </svg>
+        </a>
+      </motion.div>
 
       <style jsx global>{`
         @keyframes shimmer {

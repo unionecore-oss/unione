@@ -13,14 +13,14 @@ export default function BackgroundGradient() {
         }}
       />
 
-      {/* Neon Accent Gradients - Pink, Purple, Cyan */}
+      {/* Neon Accent Gradients - Stronger Pink, Purple, Cyan */}
       <motion.div
         className="absolute inset-0"
         animate={{
           background: [
-            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.12) 0%, transparent 50%)',
-            'radial-gradient(circle at 60% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 40% 70%, rgba(255, 0, 255, 0.12) 0%, transparent 50%)',
-            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.12) 0%, transparent 50%)',
+            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.25) 0%, transparent 60%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 60%)',
+            'radial-gradient(circle at 60% 30%, rgba(139, 92, 246, 0.25) 0%, transparent 60%), radial-gradient(circle at 40% 70%, rgba(255, 0, 255, 0.2) 0%, transparent 60%)',
+            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.25) 0%, transparent 60%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.2) 0%, transparent 60%)',
           ],
         }}
         transition={{
@@ -30,11 +30,19 @@ export default function BackgroundGradient() {
         }}
       />
 
-      {/* Neon Glow Layer */}
+      {/* Stronger Neon Glow Layer */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 0, 255, 0.1) 0%, rgba(139, 92, 246, 0.08) 40%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 0, 255, 0.2) 0%, rgba(139, 92, 246, 0.15) 40%, transparent 70%)',
+        }}
+      />
+
+      {/* Additional Glow at Center */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%)',
         }}
       />
 
