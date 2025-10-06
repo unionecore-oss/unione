@@ -3,8 +3,18 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
+interface Particle {
+  id: number
+  x: number
+  y: number
+  size: number
+  duration: number
+  delay: number
+  color: string
+}
+
 export default function Particles() {
-  const [particles, setParticles] = useState<any[]>([])
+  const [particles, setParticles] = useState<Particle[]>([])
 
   useEffect(() => {
     setParticles(

@@ -1,11 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import BackgroundGradient from './BackgroundGradient'
-import FloatingOrbs from './FloatingOrbs'
-import WaveEffect from './WaveEffect'
 import AnimatedHeadline from './AnimatedHeadline'
-import NeonLogo from './NeonLogo'
 import Particles from './Particles'
 import Sphere3D from './Sphere3D'
 
