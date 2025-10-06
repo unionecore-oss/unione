@@ -51,13 +51,13 @@ export default function ProductGrid() {
                 >
                   <div className="space-y-6 max-w-2xl">
                     <h2
-                      className="text-7xl font-bold leading-tight"
+                      className="text-5xl font-bold leading-tight"
                       style={{ color: '#000000' }}
                     >
                       {item.title}
                     </h2>
                     <p
-                      className="text-2xl leading-relaxed"
+                      className="text-xl leading-relaxed"
                       style={{ color: '#666666' }}
                     >
                       {item.description}

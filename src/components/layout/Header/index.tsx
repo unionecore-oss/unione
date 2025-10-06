@@ -47,19 +47,19 @@ export default function Header() {
               <LanguageSwitcher />
               <a
                 href="/app"
-                className="px-6 py-2.5 rounded-full font-medium transition-all duration-300 relative overflow-hidden group"
+                className="px-6 py-2.5 rounded-full font-medium transition-all duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #00ffff 0%, #ff0080 100%)',
+                  background: '#ffffff',
                   color: '#000000',
-                  boxShadow: '0 0 20px rgba(0, 255, 255, 0.5)',
+                  border: '1px solid rgba(0, 0, 0, 0.1)',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 128, 0.6)'
-                  e.currentTarget.style.transform = 'scale(1.05)'
+                  e.currentTarget.style.background = '#f5f5f5'
+                  e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)'
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(0, 255, 255, 0.5)'
-                  e.currentTarget.style.transform = 'scale(1)'
+                  e.currentTarget.style.background = '#ffffff'
+                  e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)'
                 }}
               >
                 Launch App

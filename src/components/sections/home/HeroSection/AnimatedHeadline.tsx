@@ -15,8 +15,7 @@ export default function AnimatedHeadline() {
   const wordsLine2 = [
     { text: 'in', gradient: false },
     { text: 'one', gradient: false },
-    { text: 'Unione', gradient: true },
-    { text: 'platform.', gradient: false },
+    { text: 'platform', gradient: false },
   ]
 
   return (
