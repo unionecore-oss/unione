@@ -13,7 +13,7 @@ export default function WaveEffect() {
           right: '-10%',
           width: '150%',
           height: '100%',
-          opacity: 0.03,
+          opacity: 0.15,
         }}
         animate={{
           y: [0, -30, 0],
@@ -34,13 +34,13 @@ export default function WaveEffect() {
         >
           <defs>
             <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#9666ff" stopOpacity="0.4" />
-              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#9666ff" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.5" />
             </linearGradient>
             <linearGradient id="waveGradient2" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#9666ff" stopOpacity="0.2" />
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#9666ff" stopOpacity="0.5" />
             </linearGradient>
           </defs>
 
@@ -84,7 +84,7 @@ export default function WaveEffect() {
           <motion.path
             d="M0,300 Q200,250 400,300 T800,300 Q1000,250 1200,300 L1200,800 L0,800 Z"
             fill="url(#waveGradient1)"
-            opacity="0.15"
+            opacity="0.4"
             animate={{
               d: [
                 'M0,300 Q200,250 400,300 T800,300 Q1000,250 1200,300 L1200,800 L0,800 Z',
@@ -109,7 +109,7 @@ export default function WaveEffect() {
           left: '-10%',
           width: '120%',
           height: '80%',
-          opacity: 0.02,
+          opacity: 0.1,
         }}
         animate={{
           rotate: [0, 5, 0],

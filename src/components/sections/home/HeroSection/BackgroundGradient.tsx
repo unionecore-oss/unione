@@ -13,14 +13,14 @@ export default function BackgroundGradient() {
         }}
       />
 
-      {/* Subtle Purple Accent Gradients */}
+      {/* Neon Accent Gradients - Pink, Purple, Cyan */}
       <motion.div
         className="absolute inset-0"
         animate={{
           background: [
-            'radial-gradient(circle at 20% 20%, rgba(150, 102, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%)',
-            'radial-gradient(circle at 60% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%), radial-gradient(circle at 40% 70%, rgba(150, 102, 255, 0.06) 0%, transparent 50%)',
-            'radial-gradient(circle at 20% 20%, rgba(150, 102, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.06) 0%, transparent 50%)',
+            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.12) 0%, transparent 50%)',
+            'radial-gradient(circle at 60% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 40% 70%, rgba(255, 0, 255, 0.12) 0%, transparent 50%)',
+            'radial-gradient(circle at 20% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0, 255, 255, 0.12) 0%, transparent 50%)',
           ],
         }}
         transition={{
@@ -30,11 +30,11 @@ export default function BackgroundGradient() {
         }}
       />
 
-      {/* Subtle Glow Layer */}
+      {/* Neon Glow Layer */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse at 50% 0%, rgba(150, 102, 255, 0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(255, 0, 255, 0.1) 0%, rgba(139, 92, 246, 0.08) 40%, transparent 70%)',
         }}
       />
 

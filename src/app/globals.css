@@ -3,6 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Brand Colors - 로고 기반 */
+  --brand-neon-pink: #FF00FF;
+  --brand-neon-purple: #8B5CF6;
+  --brand-neon-cyan: #00FFFF;
+  --brand-gradient: linear-gradient(135deg, #FF00FF 0%, #8B5CF6 50%, #00FFFF 100%);
+
+  /* Solid Colors for Light Theme */
+  --brand-pink: #E91E63;
+  --brand-purple: #7C3AED;
+  --brand-cyan: #06B6D4;
+  --brand-gradient-solid: linear-gradient(135deg, #E91E63 0%, #7C3AED 50%, #06B6D4 100%);
+
+  /* Glow Effects */
+  --glow-pink: 0 0 20px rgba(255, 0, 255, 0.5);
+  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
+  --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.5);
+
+  /* Dark Backgrounds */
+  --bg-dark: #0a0a0a;
+  --bg-dark-secondary: #1a1a1a;
 }
 
 @theme inline {

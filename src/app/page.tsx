@@ -4,7 +4,7 @@ import ProductGrid from '@/components/sections/home/ProductGrid'
 
 export default function Home() {
   return (
-    <main className="min-h-screen pt-16" style={{ backgroundColor: 'var(--color-background-primary)' }}>
+    <main className="min-h-screen pt-16">
       <HeroSection />
       <CardShowcase />
       <ProductGrid />

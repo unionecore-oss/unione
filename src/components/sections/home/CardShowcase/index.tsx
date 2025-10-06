@@ -21,7 +21,13 @@ export default function CardShowcase() {
           >
             <h2
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 leading-tight"
-              style={{ color: 'var(--color-text-primary)' }}
+              style={{
+                background: 'var(--brand-gradient-solid)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                display: 'inline-block',
+              }}
             >
               Unione bridges crypto and the real world with a global card
             </h2>
@@ -55,11 +61,11 @@ export default function CardShowcase() {
             variants={slideInRight}
           >
             <div className="relative mx-auto max-w-[500px] lg:max-w-none">
-              {/* Purple Gradient Background */}
+              {/* Brand Color Gradient Background */}
               <div
-                className="absolute inset-0 -m-20 opacity-70 blur-3xl"
+                className="absolute inset-0 -m-20 opacity-60 blur-3xl"
                 style={{
-                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(124, 58, 237, 0.3) 40%, transparent 70%)',
+                  background: 'radial-gradient(circle, rgba(233, 30, 99, 0.4) 0%, rgba(124, 58, 237, 0.3) 50%, rgba(6, 182, 212, 0.2) 100%)',
                 }}
               />
 

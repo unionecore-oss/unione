@@ -52,7 +52,12 @@ export default function ProductGrid() {
                   <div className="space-y-6 max-w-2xl">
                     <h2
                       className="text-5xl font-bold leading-tight"
-                      style={{ color: '#000000' }}
+                      style={{
+                        background: 'var(--brand-gradient-solid)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        backgroundClip: 'text',
+                      }}
                     >
                       {item.title}
                     </h2>

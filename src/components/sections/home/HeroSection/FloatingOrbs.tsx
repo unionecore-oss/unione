@@ -6,7 +6,7 @@ import { floatSlow, floatMedium, floatFast } from '@/lib/animations'
 export default function FloatingOrbs() {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Orb 1 - Subtle Purple */}
+      {/* Orb 1 - Neon Pink */}
       <motion.div
         className="absolute"
         style={{
@@ -22,15 +22,15 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(150, 102, 255, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%)',
+            background: 'linear-gradient(135deg, rgba(255, 0, 255, 0.2) 0%, rgba(255, 0, 255, 0.12) 100%)',
             filter: 'blur(70px)',
-            opacity: 0.25,
-            boxShadow: '0 0 80px 30px rgba(150, 102, 255, 0.1)',
+            opacity: 0.35,
+            boxShadow: '0 0 100px 40px rgba(255, 0, 255, 0.15)',
           }}
         />
       </motion.div>
 
-      {/* Orb 2 - Subtle Indigo */}
+      {/* Orb 2 - Neon Cyan */}
       <motion.div
         className="absolute"
         style={{
@@ -46,15 +46,15 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(79, 70, 229, 0.08) 100%)',
+            background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.18) 0%, rgba(0, 255, 255, 0.1) 100%)',
             filter: 'blur(80px)',
-            opacity: 0.22,
-            boxShadow: '0 0 90px 35px rgba(99, 102, 241, 0.08)',
+            opacity: 0.3,
+            boxShadow: '0 0 100px 40px rgba(0, 255, 255, 0.12)',
           }}
         />
       </motion.div>
 
-      {/* Orb 3 - Subtle Violet */}
+      {/* Orb 3 - Neon Purple */}
       <motion.div
         className="absolute"
         style={{
@@ -70,10 +70,10 @@ export default function FloatingOrbs() {
         <div
           className="w-full h-full rounded-full"
           style={{
-            background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.06) 100%)',
+            background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.16) 0%, rgba(139, 92, 246, 0.1) 100%)',
             filter: 'blur(90px)',
-            opacity: 0.2,
-            boxShadow: '0 0 100px 40px rgba(139, 92, 246, 0.08)',
+            opacity: 0.28,
+            boxShadow: '0 0 110px 45px rgba(139, 92, 246, 0.12)',
           }}
         />
       </motion.div>

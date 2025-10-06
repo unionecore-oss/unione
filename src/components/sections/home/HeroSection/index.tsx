@@ -8,7 +8,12 @@ import AnimatedHeadline from './AnimatedHeadline'
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-visible pt-16 pb-20 lg:pt-20 lg:pb-24">
+    <section
+      className="relative min-h-screen flex items-center overflow-visible pt-16 pb-20 lg:pt-20 lg:pb-24"
+      style={{
+        background: 'var(--bg-dark)',
+      }}
+    >
       {/* Animated Background */}
       <BackgroundGradient />
 

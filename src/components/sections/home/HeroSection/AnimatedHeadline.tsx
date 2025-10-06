@@ -4,20 +4,6 @@ import { motion } from 'framer-motion'
 import { wordReveal, staggerContainer } from '@/lib/animations'
 
 export default function AnimatedHeadline() {
-  const words = [
-    { text: 'A', gradient: false },
-    { text: 'new', gradient: false },
-    { text: 'Web3', gradient: true },
-    { text: 'payment', gradient: true },
-    { text: 'paradigm', gradient: false },
-  ]
-
-  const wordsLine2 = [
-    { text: 'in', gradient: false },
-    { text: 'one', gradient: false },
-    { text: 'platform', gradient: false },
-  ]
-
   return (
     <div className="text-left max-w-3xl">
       <motion.h1
@@ -28,68 +14,13 @@ export default function AnimatedHeadline() {
           letterSpacing: '-0.04em',
           fontWeight: 800,
           overflow: 'visible',
+          color: '#ffffff',
         }}
         variants={staggerContainer}
         initial="initial"
         animate="animate"
       >
-        {/* First Line */}
-        <div className="flex flex-wrap gap-3 md:gap-4 mb-2">
-          {words.map((word, index) => (
-            <motion.span
-              key={index}
-              variants={wordReveal}
-              style={
-                word.gradient
-                  ? {
-                      background: 'linear-gradient(135deg, #9666ff 0%, #6366f1 50%, #8b5cf6 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      backgroundRepeat: 'repeat-y',
-                      backgroundSize: '100% 200%',
-                      animation: 'knockoutSlide 8s linear infinite',
-                      filter: 'drop-shadow(0 0 15px rgba(150, 102, 255, 0.4))',
-                    }
-                  : {
-                      color: '#e5e7eb',
-                      textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
-                    }
-              }
-            >
-              {word.text}
-            </motion.span>
-          ))}
-        </div>
-
-        {/* Second Line */}
-        <div className="flex flex-wrap gap-3 md:gap-4">
-          {wordsLine2.map((word, index) => (
-            <motion.span
-              key={index}
-              variants={wordReveal}
-              style={
-                word.gradient
-                  ? {
-                      background: 'linear-gradient(135deg, #9666ff 0%, #6366f1 50%, #8b5cf6 100%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                      backgroundClip: 'text',
-                      backgroundRepeat: 'repeat-y',
-                      backgroundSize: '100% 200%',
-                      animation: 'knockoutSlide 8s linear infinite',
-                      filter: 'drop-shadow(0 0 15px rgba(150, 102, 255, 0.4))',
-                    }
-                  : {
-                      color: '#e5e7eb',
-                      textShadow: '0 1px 3px rgba(0, 0, 0, 0.3)',
-                    }
-              }
-            >
-              {word.text}
-            </motion.span>
-          ))}
-        </div>
+        A new Web3 payment paradigm in one platform
       </motion.h1>
 
       <style jsx global>{`
