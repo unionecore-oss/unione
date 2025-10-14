@@ -34,10 +34,14 @@ export default function AboutUnione() {
               Inspired by the vision of connecting digital assets with real-world usability, Unione is more than just a fintech company; it's a movement toward a new era of financial freedom and empowerment. We believe that everyone should have the opportunity to participate and prosper in the global financial ecosystem.
             </motion.p>
 
+            <motion.p variants={fadeInUp}>
+              With a commitment to innovation, accessibility, and simplicity, Unione is redefining how people use and grow their digital assets empowering users to spend, stake, and manage crypto effortlessly anytime, anywhere.
+            </motion.p>
+
             {/* Visual Break - Core Values */}
             <motion.div
               variants={staggerContainer}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-12"
             >
               {[
                 {
@@ -72,16 +76,18 @@ export default function AboutUnione() {
                     scale: 1.05,
                     transition: { duration: 0.2 }
                   }}
-                  className="relative group"
+                  className="relative group h-full"
                 >
                   <div className={`
-                    relative p-6 rounded-2xl
+                    relative p-6 rounded-2xl h-full
                     bg-gradient-to-br ${value.gradient}
                     border border-white/10
                     backdrop-blur-sm
                     transition-all duration-300
                     group-hover:border-cyan-400/50
                     group-hover:shadow-lg group-hover:shadow-cyan-500/20
+                    flex flex-col
+                    min-h-[240px]
                   `}>
                     {/* Icon */}
                     <div className="text-5xl mb-4 transform transition-transform duration-300 group-hover:scale-110">
@@ -97,7 +103,7 @@ export default function AboutUnione() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-sm opacity-80">
+                    <p className="text-sm opacity-80 flex-grow">
                       {value.description}
                     </p>
 
@@ -107,10 +113,6 @@ export default function AboutUnione() {
                 </motion.div>
               ))}
             </motion.div>
-
-            <motion.p variants={fadeInUp}>
-              With a commitment to innovation, accessibility, and simplicity, Unione is redefining how people use and grow their digital assets empowering users to spend, stake, and manage crypto effortlessly anytime, anywhere.
-            </motion.p>
           </motion.div>
         </motion.div>
       </div>
