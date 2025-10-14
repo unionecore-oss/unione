@@ -18,7 +18,7 @@ export default function EarnPage() {
 
         <div className="container-custom relative z-10">
           <motion.div
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-4xl mx-auto"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -31,7 +31,7 @@ export default function EarnPage() {
             </motion.h1>
 
             {/* App Store Badges */}
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 justify-center">
+            <motion.div variants={fadeInUp} className="flex flex-wrap gap-4">
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
                   src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
