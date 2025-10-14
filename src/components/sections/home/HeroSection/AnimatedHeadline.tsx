@@ -25,7 +25,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ color: '#ffffff' }}
         >
-          A new
+          A new Web3 payment
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -33,7 +33,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ color: '#ffffff' }}
         >
-          Web3 payment
+          paradigm in one
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -41,15 +41,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.6 }}
           style={{ color: '#ffffff' }}
         >
-          paradigm
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          style={{ color: '#ffffff' }}
-        >
-          in one platform
+          platform.
         </motion.div>
       </motion.h1>
 

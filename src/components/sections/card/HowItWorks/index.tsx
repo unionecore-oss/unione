@@ -33,23 +33,6 @@ const features = [
 export default function HowItWorks() {
   return (
     <section className="py-20">
-      <div className="container-custom">
-        <motion.div
-          className="mb-16"
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={fadeInUp}
-        >
-          <h2
-            className="text-3xl md:text-4xl font-bold"
-            style={{ color: 'var(--color-text-primary)' }}
-          >
-            Real-Time Conversion, Low Fees, Global usage, Easy-to-Use App
-          </h2>
-        </motion.div>
-      </div>
-
       <div className="w-full px-0">
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 items-start"
@@ -76,12 +59,6 @@ export default function HowItWorks() {
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <p className="absolute top-6 left-6 text-sm font-bold" style={{
-                  color: '#FF1493',
-                  letterSpacing: '0.05em'
-                }}>
-                  {feature.label}
-                </p>
               </div>
               <div className="p-6 bg-white/5 backdrop-blur-sm">
                 <h3
@@ -90,14 +67,9 @@ export default function HowItWorks() {
                 >
                   {feature.title}
                 </h3>
-                <p className="text-sm mb-6" style={{ color: 'var(--color-text-secondary)' }}>
+                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
                   {feature.description}
                 </p>
-                <button className="text-xs font-bold hover:opacity-80 transition-opacity" style={{
-                  letterSpacing: '0.1em'
-                }}>
-                  LEARN MORE
-                </button>
               </div>
             </motion.div>
           ))}

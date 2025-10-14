@@ -65,7 +65,7 @@ export default function CardShowcase() {
 
               {/* Image */}
               <img
-                src="https://www.figma.com/api/mcp/asset/a0321d04-96ae-4474-937a-c2ff5b3de83a"
+                src="/card-showcase-phones.jpeg"
                 alt="UNIONE Mobile App"
                 className="relative z-10 w-full h-auto"
               />
