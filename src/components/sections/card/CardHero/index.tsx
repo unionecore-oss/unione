@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import GradientText from '@/components/common/GradientText'
 import Button from '@/components/common/Button'
 
 export default function CardHero() {

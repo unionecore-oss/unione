@@ -20,10 +20,10 @@ export default function ContactCTA() {
               className="text-4xl md:text-5xl font-bold mb-4"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Let's talk
+              Let&apos;s talk
             </h2>
             <p className="text-xl" style={{ color: 'var(--color-text-secondary)' }}>
-              Whether you're interested in partnering with us or joining the team shaping the future of finance, we'd be delighted to connect with you.
+              Whether you&apos;re interested in partnering with us or joining the team shaping the future of finance, we&apos;d be delighted to connect with you.
             </p>
           </motion.div>
 

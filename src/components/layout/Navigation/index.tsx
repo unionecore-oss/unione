@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { NAVIGATION_LINKS } from '@/lib/constants'
 import { useState } from 'react'
 import Dropdown from './Dropdown'
@@ -11,21 +10,11 @@ interface NavigationProps {
 }
 
 export default function Navigation({ className = '' }: NavigationProps) {
-  const pathname = usePathname()
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  const isActivePath = (href: string) => {
-    if (href === '/') {
-      return pathname === '/'
-    }
-    return pathname.startsWith(href)
-  }
 
   return (
     <nav className={`flex items-center gap-12 ${className}`}>
       {NAVIGATION_LINKS.map((link) => {
-        const isActive = isActivePath(link.href)
-
         if ('dropdown' in link && link.dropdown) {
           return (
             <div

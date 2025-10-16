@@ -31,7 +31,7 @@ export default function AboutUnione() {
             </motion.p>
 
             <motion.p variants={fadeInUp}>
-              Inspired by the vision of connecting digital assets with real-world usability, Unione is more than just a fintech company; it's a movement toward a new era of financial freedom and empowerment. We believe that everyone should have the opportunity to participate and prosper in the global financial ecosystem.
+              Inspired by the vision of connecting digital assets with real-world usability, Unione is more than just a fintech company; it&apos;s a movement toward a new era of financial freedom and empowerment. We believe that everyone should have the opportunity to participate and prosper in the global financial ecosystem.
             </motion.p>
 
             <motion.p variants={fadeInUp}>

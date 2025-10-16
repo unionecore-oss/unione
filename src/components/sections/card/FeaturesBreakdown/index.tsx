@@ -85,7 +85,7 @@ export default function FeaturesBreakdown() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {stats.map((stat, index) => {
+          {stats.map((stat) => {
             const Icon = stat.icon
             return (
               <motion.div
