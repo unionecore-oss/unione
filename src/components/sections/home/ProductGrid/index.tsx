@@ -8,7 +8,7 @@ export default function ProductGrid() {
     {
       number: '1',
       title: 'Card',
-      description: 'Turn your crypto into real-world spending power. Instantly use your assets anywhere Visa is accepted — online, offline, or at ATMs.',
+      description: 'Turn your crypto into real-world spending power. Instantly use your assets anywhere Visa is accepted. Online, Offline, or at ATMs.',
     },
     {
       number: '2',
@@ -23,7 +23,7 @@ export default function ProductGrid() {
     {
       number: '4',
       title: 'Wallet',
-      description: 'Safely store, send, and receive crypto in one secure place. Manage assets, top up your card, stake, and shop — all from your wallet.',
+      description: 'Safely store, send, and receive crypto in one secure place. Manage assets, top up your card, stake, and shop. All from your wallet.',
     },
   ]
 
@@ -44,7 +44,7 @@ export default function ProductGrid() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <div
-                  className="asset_container h-[700px] p-12 flex items-center justify-center"
+                  className="asset_container h-[500px] p-12 flex items-center justify-center"
                   style={{
                     background: '#FFFFFF',
                   }}
@@ -77,7 +77,7 @@ export default function ProductGrid() {
                 transition={{ delay: index * 0.1 + 0.1, duration: 0.6 }}
               >
                 <div
-                  className={`asset_container h-[700px] flex items-center ${
+                  className={`asset_container h-[500px] flex items-center ${
                     isNumberOnRight ? 'justify-end pr-16' : 'justify-start pl-16'
                   }`}
                   style={{
@@ -85,7 +85,7 @@ export default function ProductGrid() {
                   }}
                 >
                   <div
-                    className="text-[800px] font-bold leading-none select-none"
+                    className="text-[650px] font-bold leading-none select-none"
                     style={{
                       color: '#FFFFFF',
                       opacity: 1,

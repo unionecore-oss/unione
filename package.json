@@ -15,15 +15,17 @@
     "generate:favicons": "node scripts/generate-favicons.js"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^5.2.2",
     "@phosphor-icons/react": "^2.1.10",
     "@react-three/drei": "^10.7.6",
-    "@react-three/fiber": "^9.3.0",
+    "@react-three/fiber": "^9.4.0",
     "@react-three/postprocessing": "^3.0.4",
     "@splinetool/react-spline": "^4.1.0",
     "@tanstack/react-query": "^5.90.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.22",
+    "gsap": "^3.13.0",
     "next": "15.5.4",
     "postprocessing": "^6.37.8",
     "react": "19.1.0",

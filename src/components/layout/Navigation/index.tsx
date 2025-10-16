@@ -22,7 +22,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
   }
 
   return (
-    <nav className={`flex items-center gap-10 ${className}`}>
+    <nav className={`flex items-center gap-12 ${className}`}>
       {NAVIGATION_LINKS.map((link) => {
         const isActive = isActivePath(link.href)
 
@@ -35,7 +35,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className="text-base font-medium transition-colors flex items-center gap-1"
+                className="text-xl font-medium transition-colors flex items-center gap-1"
                 style={{
                   color: '#000000',
                 }}
@@ -68,7 +68,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
           <Link
             key={link.label}
             href={link.href}
-            className="text-base font-medium transition-all hover:opacity-100 relative group"
+            className="text-xl font-medium transition-all hover:opacity-100 relative group"
             style={{
               color: '#000000',
               opacity: 0.85,
