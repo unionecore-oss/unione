@@ -8,11 +8,13 @@ import { LOCALES, type LocaleCode } from './constants'
  */
 export default getRequestConfig(async ({ locale }) => {
   // Validate that the incoming locale parameter is valid
-  if (!LOCALES.includes(locale as LocaleCode)) {
+  const validatedLocale = locale as string
+  if (!LOCALES.includes(validatedLocale as LocaleCode)) {
     notFound()
   }
 
   return {
-    messages: (await import(`../../../messages/${locale}.json`)).default,
+    locale: validatedLocale,
+    messages: (await import(`../../../messages/${validatedLocale}.json`)).default,
   }
 })

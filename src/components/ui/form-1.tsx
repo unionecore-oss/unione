@@ -5,7 +5,7 @@ export default function Form1() {
     return (
         <form className="flex flex-col items-center text-sm text-slate-800">
             <p className="text-xs bg-indigo-200 text-indigo-600 font-medium px-3 py-1 rounded-full">Contact Us</p>
-            <h1 className="text-4xl font-bold py-4 text-center">Let's Get In Touch.</h1>
+            <h1 className="text-4xl font-bold py-4 text-center">Let&apos;s Get In Touch.</h1>
             <p className="max-md:text-sm text-gray-500 pb-10 text-center">
                 Or just reach out manually to us at <a href="#" className="text-indigo-600 hover:underline">hello@prebuiltui.com</a>
             </p>

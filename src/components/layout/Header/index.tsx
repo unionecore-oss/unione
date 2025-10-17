@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import Logo from './Logo'
 import Navigation from '../Navigation'
 import MobileMenu from '../MobileMenu'
@@ -47,7 +48,7 @@ export default function Header() {
             {/* Language Switcher & CTA */}
             <div className="hidden md:flex items-center gap-5 lg:gap-6">
               <LanguageSwitcher />
-              <a
+              <Link
                 href="/app"
                 className="px-5 md:px-6 py-2.5 min-h-touch flex items-center rounded-full font-medium text-sm md:text-base transition-all duration-300"
                 style={{
@@ -65,7 +66,7 @@ export default function Header() {
                 }}
               >
                 {t('launchApp')}
-              </a>
+              </Link>
             </div>
 
             {/* Mobile Menu Button - Touch Optimized (44x44px) */}

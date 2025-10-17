@@ -38,7 +38,7 @@ export default function HowItWorks() {
         >
           {features.map((feature, index) => (
             <motion.div
-              key={feature.title}
+              key={feature.key}
               variants={fadeInUp}
               className="overflow-hidden"
               style={{

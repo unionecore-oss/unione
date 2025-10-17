@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, slideInRight } from '@/lib/animations'
-import { getMotionTransition } from '@/lib/utils/motionPreference'
 import { HolographicCard } from './HolographicCard'
 
 export default function CardShowcase() {

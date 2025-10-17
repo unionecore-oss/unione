@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import Button from '@/components/common/Button'
 import { ShaderAnimation } from '@/components/ui/neno-shader'
 
 export default function WalletPage() {

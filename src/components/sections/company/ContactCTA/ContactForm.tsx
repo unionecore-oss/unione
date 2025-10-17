@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '@/lib/animations'
 import Button from '@/components/common/Button'
-import Card from '@/components/common/Card'
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({

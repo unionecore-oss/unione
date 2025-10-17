@@ -2,7 +2,7 @@
 
 import React from "react"
 import { useId } from "react"
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { useTranslations } from 'next-intl'
 
 export function FeatureCardsGrid() {
@@ -24,14 +24,14 @@ export function FeatureCardsGrid() {
     }
   }
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: [0.4, 0, 0.2, 1] as const // easeOut cubic-bezier
       }
     }
   }
@@ -47,7 +47,7 @@ export function FeatureCardsGrid() {
       >
         {features.map((feature, index) => (
           <motion.div
-            key={feature.title}
+            key={feature.key}
             className="relative bg-gradient-to-b dark:from-neutral-900 from-neutral-100 dark:to-neutral-950 to-white p-8 md:p-10 rounded-3xl overflow-hidden min-h-[280px] md:min-h-[320px] cursor-pointer"
             variants={cardVariants}
             whileHover={{

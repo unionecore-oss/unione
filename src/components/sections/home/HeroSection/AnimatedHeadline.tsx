@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import { staggerContainer } from '@/lib/animations'
 
 export default function AnimatedHeadline() {
@@ -55,7 +56,7 @@ export default function AnimatedHeadline() {
         transition={{ duration: 0.8, delay: 1.0 }}
         className="mt-12"
       >
-        <a
+        <Link
           href="/app"
           className="inline-flex items-center gap-3 px-10 py-5 min-h-touch text-xl font-bold rounded-full transition-all duration-300 group"
           style={{
@@ -77,7 +78,7 @@ export default function AnimatedHeadline() {
               d="M13 7l5 5m0 0l-5 5m5-5H6"
             />
           </svg>
-        </a>
+        </Link>
       </motion.div>
 
       <style jsx global>{`

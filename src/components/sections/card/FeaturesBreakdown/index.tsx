@@ -84,7 +84,7 @@ export default function FeaturesBreakdown() {
             const Icon = stat.icon
             return (
               <motion.div
-                key={stat.label}
+                key={stat.key}
                 variants={fadeInUp}
                 whileHover={{
                   y: -12,

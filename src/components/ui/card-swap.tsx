@@ -129,7 +129,7 @@ const CardSwap = ({
     Array.from({ length: childArr.length }, (_, i) => i),
   );
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-  const intervalRef = useRef<number>();
+  const intervalRef = useRef<number | undefined>(undefined);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -181,14 +181,18 @@ const CardSwap = ({
 
       const backSlot = makeSlot(total - 1, cardDistance, verticalDistance, total);
       tl.addLabel('return', `promote+=${config.durMove * config.returnDelay}`);
-      tl.call(() => gsap.set(elFront, { zIndex: backSlot.zIndex }), [], 'return');
+      tl.call(() => {
+        gsap.set(elFront, { zIndex: backSlot.zIndex });
+      }, [], 'return');
       tl.set(elFront, { x: backSlot.x, z: backSlot.z }, 'return');
       tl.to(
         elFront,
         { y: backSlot.y, duration: config.durReturn, ease: config.ease },
         'return',
       );
-      tl.call(() => (order.current = [...rest, front]));
+      tl.call(() => {
+        order.current = [...rest, front];
+      });
     };
 
     // Initial animation call
@@ -221,19 +225,20 @@ const CardSwap = ({
     };
   }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, config, refs]);
 
-  const renderedChildren = childArr.map((child, i) =>
-    isValidElement(child)
-      ? cloneElement(child as React.ReactElement<any>, {
-          key: i,
-          ref: refs[i],
-          style: { width, height, ...(child.props.style ?? {}) },
-          onClick: (e: React.MouseEvent) => {
-            child.props.onClick?.(e);
-            onCardClick?.(i);
-          },
-        })
-      : child,
-  );
+  const renderedChildren = childArr.map((child, i) => {
+    if (!isValidElement(child)) return child;
+
+    const childElement = child as React.ReactElement<any>;
+    return cloneElement(childElement, {
+      key: i,
+      ref: refs[i],
+      style: { width, height, ...(childElement.props.style ?? {}) },
+      onClick: (e: React.MouseEvent) => {
+        childElement.props.onClick?.(e);
+        onCardClick?.(i);
+      },
+    });
+  });
 
   return (
     <div

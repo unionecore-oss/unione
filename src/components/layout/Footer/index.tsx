@@ -5,7 +5,6 @@ import { Link } from '@/lib/i18n/navigation'
 
 export default function Footer() {
   const t = useTranslations('footer')
-  const currentYear = new Date().getFullYear()
 
   return (
     <footer
