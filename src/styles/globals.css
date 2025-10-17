@@ -74,9 +74,12 @@
     transition: all 0.3s ease-out;
   }
 
-  .btn-primary:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
   }
 
   /* Secondary Button */
@@ -90,8 +93,11 @@
     transition: all 0.3s ease-out;
   }
 
-  .btn-secondary:hover {
-    background-color: var(--color-background-accent);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .btn-secondary:hover {
+      background-color: var(--color-background-accent);
+    }
   }
 
   /* Card Component */
@@ -103,9 +109,12 @@
     transition: all 0.3s ease-out;
   }
 
-  .card:hover {
-    box-shadow: var(--shadow-soft-lg);
-    transform: translateY(-4px);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .card:hover {
+      box-shadow: var(--shadow-soft-lg);
+      transform: translateY(-4px);
+    }
   }
 
   /* Hero Gradient Background */
@@ -137,7 +146,7 @@
 
   /* Container */
   .container-custom {
-    max-width: 80rem;
+    max-width: 90rem; /* 1440px for optimal desktop viewing */
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;
@@ -174,5 +183,105 @@
   /* Smooth Animations */
   .transition-smooth {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Feature: 003-responsive-optimization */
+  /* Responsive Utilities */
+
+  /* Touch Target Optimization (WCAG 2.1 AA) */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .touch-target-recommended {
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Container Queries */
+  .container-card {
+    container-type: inline-size;
+    container-name: card;
+  }
+
+  .container-section {
+    container-type: inline-size;
+    container-name: section;
+  }
+
+  /* Responsive Text Hiding */
+  @media (max-width: 639px) {
+    .hide-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: 640px) {
+    .show-mobile {
+      display: none;
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 1023px) {
+    .hide-tablet {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hide-desktop {
+      display: none;
+    }
+  }
+
+  /* Reduced Motion Support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* High Contrast Mode Support */
+  @media (prefers-contrast: high) {
+    .card {
+      border-width: 2px;
+    }
+  }
+
+  /* Fluid Spacing */
+  .space-fluid-sm {
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .space-fluid-md {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .space-fluid-lg {
+    padding: clamp(2rem, 4vw, 4rem);
+  }
+
+  /* Aspect Ratio Containers */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect-portrait {
+    aspect-ratio: 3 / 4;
   }
 }

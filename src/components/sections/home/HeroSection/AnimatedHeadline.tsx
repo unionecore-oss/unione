@@ -57,7 +57,7 @@ export default function AnimatedHeadline() {
       >
         <a
           href="/app"
-          className="inline-flex items-center gap-3 px-10 py-5 text-xl font-bold rounded-full transition-all duration-300 group"
+          className="inline-flex items-center gap-3 px-10 py-5 min-h-touch text-xl font-bold rounded-full transition-all duration-300 group"
           style={{
             background: '#ffffff',
             color: '#000000',

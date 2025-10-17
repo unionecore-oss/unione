@@ -8,6 +8,40 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // 반응형 브레이크포인트 확장
+      screens: {
+        xs: '320px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1536px',
+        '3xl': '2560px',
+      },
+      // Fluid Typography 추가
+      fontSize: {
+        'fluid-display': 'clamp(2rem, 5vw, 4.5rem)',
+        'fluid-h1': 'clamp(1.75rem, 4vw, 3rem)',
+        'fluid-h2': 'clamp(1.5rem, 3vw, 2.25rem)',
+        'fluid-h3': 'clamp(1.25rem, 2.5vw, 1.875rem)',
+        'fluid-body-lg': 'clamp(1rem, 2vw, 1.25rem)',
+        'fluid-body': 'clamp(0.875rem, 1.5vw, 1rem)',
+        'fluid-small': 'clamp(0.75rem, 1.2vw, 0.875rem)',
+      },
+      // 최소 터치 타겟 크기 유틸리티
+      minWidth: {
+        touch: '44px',
+      },
+      minHeight: {
+        touch: '44px',
+      },
+      // Container Query 설정
+      containers: {
+        card: 'card',
+        section: 'section',
+        sidebar: 'sidebar',
+        modal: 'modal',
+      },
       colors: {
         // Background Colors (Light Theme)
         background: {
@@ -82,7 +116,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/container-queries'),
+  ],
 }
 
 export default config

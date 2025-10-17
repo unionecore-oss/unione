@@ -37,7 +37,7 @@ export default function Header() {
         }}
       >
         <div className="container-custom">
-          <nav className="flex items-center justify-between h-20">
+          <nav className="flex items-center justify-between h-18 md:h-19 lg:h-20">
             {/* Logo */}
             <Logo />
 
@@ -45,11 +45,11 @@ export default function Header() {
             <Navigation className="hidden md:flex" />
 
             {/* Language Switcher & CTA */}
-            <div className="hidden md:flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-5 lg:gap-6">
               <LanguageSwitcher />
               <a
                 href="/app"
-                className="px-6 py-2.5 rounded-full font-medium transition-all duration-300"
+                className="px-5 md:px-6 py-2.5 min-h-touch flex items-center rounded-full font-medium text-sm md:text-base transition-all duration-300"
                 style={{
                   background: '#ffffff',
                   color: '#000000',
@@ -68,9 +68,9 @@ export default function Header() {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Touch Optimized (44x44px) */}
             <button
-              className="md:hidden p-2"
+              className="md:hidden min-w-touch min-h-touch flex items-center justify-center"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
               style={{ color: '#000000' }}

@@ -40,7 +40,7 @@ export default function FeaturesBreakdown() {
   ]
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-24 3xl:py-32 relative overflow-hidden">
       {/* Ambient background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
@@ -50,7 +50,7 @@ export default function FeaturesBreakdown() {
       <div className="container-custom relative z-10">
         {/* Hero Section */}
         <motion.div
-          className="rounded-3xl p-12 md:p-16 mb-16 relative overflow-hidden"
+          className="rounded-3xl p-6 sm:p-8 md:p-10 lg:p-16 3xl:p-20 mb-10 md:mb-14 lg:mb-16 3xl:mb-20 relative overflow-hidden"
           style={{
             background: 'linear-gradient(135deg, #A4DC6C 0%, #8BC34A 100%)',
           }}
@@ -60,13 +60,13 @@ export default function FeaturesBreakdown() {
           variants={fadeInUp}
         >
           <div className="relative z-10">
-            <p className="text-sm font-semibold mb-3 tracking-wide uppercase" style={{ color: 'rgba(0,0,0,0.6)' }}>
+            <p className="text-xs sm:text-sm 3xl:text-base font-semibold mb-2 md:mb-2.5 lg:mb-3 3xl:mb-4 tracking-wide uppercase" style={{ color: 'rgba(0,0,0,0.6)' }}>
               {t('label')}
             </p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ color: '#000' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-[3rem] lg:text-6xl xl:text-7xl 3xl:text-8xl font-bold mb-4 md:mb-5 lg:mb-6 3xl:mb-8 leading-tight" style={{ color: '#000' }}>
               {t('title')}
             </h2>
-            <p className="text-lg md:text-xl max-w-3xl leading-relaxed" style={{ color: 'rgba(0,0,0,0.75)' }}>
+            <p className="text-base sm:text-lg md:text-[1.125rem] lg:text-xl 3xl:text-2xl max-w-3xl 3xl:max-w-4xl leading-relaxed" style={{ color: 'rgba(0,0,0,0.75)' }}>
               {t('description')}
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function FeaturesBreakdown() {
 
         {/* Premium Stats Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 lg:gap-8"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -91,7 +91,7 @@ export default function FeaturesBreakdown() {
                   scale: 1.02,
                   transition: { duration: 0.4, ease: [0.4, 0, 0.2, 1] }
                 }}
-                className="group relative overflow-hidden rounded-3xl p-10 lg:p-12"
+                className="group relative overflow-hidden rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-9 lg:p-12"
                 style={{
                   background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -120,7 +120,7 @@ export default function FeaturesBreakdown() {
                 <div className="relative z-10">
                   {/* Premium Icon Container */}
                   <motion.div
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-8 relative"
+                    className="inline-flex items-center justify-center w-14 md:w-15 lg:w-16 h-14 md:h-15 lg:h-16 rounded-2xl mb-6 md:mb-7 lg:mb-8 relative"
                     style={{
                       background: `linear-gradient(135deg, ${stat.glowColor}, rgba(255, 255, 255, 0.05))`,
                       border: '1px solid rgba(255, 255, 255, 0.15)',
@@ -152,7 +152,7 @@ export default function FeaturesBreakdown() {
 
                   {/* Value with animated gradient */}
                   <motion.div
-                    className="text-7xl lg:text-8xl font-bold mb-4 tracking-tight"
+                    className="text-6xl md:text-7xl lg:text-8xl font-bold mb-3 md:mb-4 tracking-tight"
                     style={{
                       background: `linear-gradient(135deg, ${stat.iconColor} 0%, rgba(255, 255, 255, 0.9) 100%)`,
                       WebkitBackgroundClip: 'text',
