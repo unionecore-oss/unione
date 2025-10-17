@@ -388,14 +388,46 @@ function OrthographicCameraSetup() {
 }
 
 export const FluidGradient = () => {
+  const canvasRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const currentRef = canvasRef.current;
+    if (!currentRef) return;
+
+    // Intersection Observer to detect when component is in viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when at least 10% is visible
+        rootMargin: '50px', // Start rendering slightly before entering viewport
+      }
+    );
+
+    observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <Canvas
-     className='absolute inset-0'
-     gl={{ antialias: false, powerPreference: 'high-performance' }}
-     dpr={1}
->
-      <OrthographicCameraSetup />
-      <FluidSimulation />
-    </Canvas>
+    <div ref={canvasRef} className="absolute inset-0">
+      <Canvas
+        className='absolute inset-0'
+        gl={{ antialias: false, powerPreference: 'high-performance' }}
+        dpr={Math.min(typeof window !== 'undefined' ? window.devicePixelRatio : 1, 2)}
+        frameloop={isVisible ? 'always' : 'never'}
+      >
+        <OrthographicCameraSetup />
+        <FluidSimulation />
+      </Canvas>
+    </div>
   );
 }
