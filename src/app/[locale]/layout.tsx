@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import { routing } from '@/i18n/routing'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import MotionProvider from '@/components/providers/MotionProvider'
 import '../../styles/globals.css'
 
 const inter = Inter({
@@ -137,11 +138,13 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={inter.variable}>
       <body className="antialiased">
-        <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
-          <Footer />
-        </NextIntlClientProvider>
+        <MotionProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Header />
+            {children}
+            <Footer />
+          </NextIntlClientProvider>
+        </MotionProvider>
       </body>
     </html>
   )
