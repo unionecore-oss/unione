@@ -1,8 +1,8 @@
 'use client'
 
-import Link from 'next/link'
-import { NAVIGATION_LINKS } from '@/lib/constants'
-import { useState } from 'react'
+import { useTranslations } from 'next-intl'
+import { useState, useMemo } from 'react'
+import { Link } from '@/lib/i18n/navigation'
 import Dropdown from './Dropdown'
 
 interface NavigationProps {
@@ -10,11 +10,26 @@ interface NavigationProps {
 }
 
 export default function Navigation({ className = '' }: NavigationProps) {
+  const t = useTranslations('header.navigation')
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+
+  const navigationLinks = useMemo(() => [
+    { label: t('card'), href: '/card' },
+    {
+      label: t('platform'),
+      href: '/platform',
+      dropdown: [
+        { label: t('reward'), href: '/platform/reward' },
+        { label: t('wallet'), href: '/platform/wallet' },
+        { label: t('earn'), href: '/platform/earn' },
+      ],
+    },
+    { label: t('aboutUs'), href: '/about-us' },
+  ], [t])
 
   return (
     <nav className={`flex items-center gap-12 ${className}`}>
-      {NAVIGATION_LINKS.map((link) => {
+      {navigationLinks.map((link) => {
         if ('dropdown' in link && link.dropdown) {
           return (
             <div

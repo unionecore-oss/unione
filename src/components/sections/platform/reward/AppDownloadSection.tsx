@@ -1,10 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import Image from 'next/image'
 
 export default function AppDownloadSection() {
+  const t = useTranslations('pages.reward.appDownload')
+
   return (
     <section className="section-padding" style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="container-custom">
@@ -41,7 +44,7 @@ export default function AppDownloadSection() {
               className="text-4xl md:text-5xl font-bold"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Start mining today by downloading the app! Join us!
+              {t('title')}
             </motion.h2>
 
             <motion.p
@@ -49,7 +52,7 @@ export default function AppDownloadSection() {
               className="text-lg md:text-xl leading-relaxed"
               style={{ color: 'var(--color-text-secondary)' }}
             >
-              Join now and keep 100% of what you earn. Mining Uni is completely free. All you need is an invitation from a trusted member. Got one? Download the app below and get started!
+              {t('description')}
             </motion.p>
 
             <motion.div
@@ -58,17 +61,17 @@ export default function AppDownloadSection() {
             >
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  src="/images/badges/app-store.svg"
                   alt="Download on the App Store"
-                  className="h-14"
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
 
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  src="/images/badges/google-play.svg"
                   alt="Get it on Google Play"
-                  className="h-14"
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
             </motion.div>

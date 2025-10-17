@@ -1,49 +1,44 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { Globe, Lightning, Shield, Users } from '@phosphor-icons/react'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
-const stats = [
-  {
-    value: '200+',
-    label: 'Countries Supported',
-    icon: Globe,
-    description: 'Global acceptance',
-    gradient: 'from-blue-500 to-cyan-500',
-    iconColor: '#3B82F6',
-    glowColor: 'rgba(59, 130, 246, 0.4)',
-  },
-  {
-    value: '1sec',
-    label: 'Transaction Speed',
-    icon: Lightning,
-    description: 'Lightning fast',
-    gradient: 'from-yellow-500 to-orange-500',
-    iconColor: '#F59E0B',
-    glowColor: 'rgba(245, 158, 11, 0.4)',
-  },
-  {
-    value: '99%',
-    label: 'Security Uptime',
-    icon: Shield,
-    description: 'Bank-grade security',
-    gradient: 'from-green-500 to-emerald-500',
-    iconColor: '#10B981',
-    glowColor: 'rgba(16, 185, 129, 0.4)',
-  },
-  {
-    value: '100k+',
-    label: 'Users & Growing',
-    icon: Users,
-    description: 'Trusted worldwide',
-    gradient: 'from-purple-500 to-pink-500',
-    iconColor: '#8B5CF6',
-    glowColor: 'rgba(139, 92, 246, 0.4)',
-  },
-]
-
 export default function FeaturesBreakdown() {
+  const t = useTranslations('pages.card.featuresBreakdown')
+
+  const stats = [
+    {
+      key: 'countries',
+      icon: Globe,
+      gradient: 'from-blue-500 to-cyan-500',
+      iconColor: '#3B82F6',
+      glowColor: 'rgba(59, 130, 246, 0.4)',
+    },
+    {
+      key: 'speed',
+      icon: Lightning,
+      gradient: 'from-yellow-500 to-orange-500',
+      iconColor: '#F59E0B',
+      glowColor: 'rgba(245, 158, 11, 0.4)',
+    },
+    {
+      key: 'security',
+      icon: Shield,
+      gradient: 'from-green-500 to-emerald-500',
+      iconColor: '#10B981',
+      glowColor: 'rgba(16, 185, 129, 0.4)',
+    },
+    {
+      key: 'users',
+      icon: Users,
+      gradient: 'from-purple-500 to-pink-500',
+      iconColor: '#8B5CF6',
+      glowColor: 'rgba(139, 92, 246, 0.4)',
+    },
+  ]
+
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Ambient background elements */}
@@ -66,13 +61,13 @@ export default function FeaturesBreakdown() {
         >
           <div className="relative z-10">
             <p className="text-sm font-semibold mb-3 tracking-wide uppercase" style={{ color: 'rgba(0,0,0,0.6)' }}>
-              Place to use Unione Card
+              {t('label')}
             </p>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style={{ color: '#000' }}>
-              Spend Everywhere
+              {t('title')}
             </h2>
             <p className="text-lg md:text-xl max-w-3xl leading-relaxed" style={{ color: 'rgba(0,0,0,0.75)' }}>
-              Unione Card is designed for your everyday life — simple, limitless, and effortless. Spend your assets wherever you go, anytime you need.
+              {t('description')}
             </p>
           </div>
         </motion.div>
@@ -170,7 +165,7 @@ export default function FeaturesBreakdown() {
                       transition: { duration: 0.3 }
                     }}
                   >
-                    {stat.value}
+                    {t(`stats.${stat.key}.value`)}
                   </motion.div>
 
                   {/* Label with enhanced typography */}
@@ -181,7 +176,7 @@ export default function FeaturesBreakdown() {
                       textShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
                     }}
                   >
-                    {stat.label}
+                    {t(`stats.${stat.key}.label`)}
                   </p>
 
                   {/* Description with better contrast */}
@@ -192,7 +187,7 @@ export default function FeaturesBreakdown() {
                       opacity: 0.8,
                     }}
                   >
-                    {stat.description}
+                    {t(`stats.${stat.key}.description`)}
                   </p>
 
                   {/* Decorative corner element */}

@@ -33,12 +33,12 @@ export default function ContactForm() {
       viewport={{ once: true, amount: 0.3 }}
       variants={fadeInUp}
     >
-      <Card className="p-8 max-w-2xl mx-auto">
-        <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="p-12 max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-100">
+        <form onSubmit={handleSubmit} className="space-y-8">
           <div>
             <label
               htmlFor="name"
-              className="block mb-2 text-sm font-medium"
+              className="block mb-3 text-lg font-semibold"
               style={{ color: 'var(--color-text-primary)' }}
             >
               Name
@@ -50,19 +50,19 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border"
+              className="w-full px-6 py-4 text-lg rounded-xl border-2 border-gray-200 transition-all duration-300 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 focus:outline-none"
               style={{
-                backgroundColor: 'var(--color-background-secondary)',
-                borderColor: 'var(--color-border)',
+                backgroundColor: '#ffffff',
                 color: 'var(--color-text-primary)',
               }}
+              placeholder="Your name"
             />
           </div>
 
           <div>
             <label
               htmlFor="email"
-              className="block mb-2 text-sm font-medium"
+              className="block mb-3 text-lg font-semibold"
               style={{ color: 'var(--color-text-primary)' }}
             >
               Email
@@ -74,19 +74,19 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 rounded-lg border"
+              className="w-full px-6 py-4 text-lg rounded-xl border-2 border-gray-200 transition-all duration-300 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 focus:outline-none"
               style={{
-                backgroundColor: 'var(--color-background-secondary)',
-                borderColor: 'var(--color-border)',
+                backgroundColor: '#ffffff',
                 color: 'var(--color-text-primary)',
               }}
+              placeholder="your.email@example.com"
             />
           </div>
 
           <div>
             <label
               htmlFor="message"
-              className="block mb-2 text-sm font-medium"
+              className="block mb-3 text-lg font-semibold"
               style={{ color: 'var(--color-text-primary)' }}
             >
               Message
@@ -97,13 +97,13 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               required
-              rows={5}
-              className="w-full px-4 py-2 rounded-lg border resize-none"
+              rows={6}
+              className="w-full px-6 py-4 text-lg rounded-xl border-2 border-gray-200 resize-none transition-all duration-300 focus:border-purple-500 focus:ring-4 focus:ring-purple-100 focus:outline-none"
               style={{
-                backgroundColor: 'var(--color-background-secondary)',
-                borderColor: 'var(--color-border)',
+                backgroundColor: '#ffffff',
                 color: 'var(--color-text-primary)',
               }}
+              placeholder="Tell us about your inquiry..."
             />
           </div>
 
@@ -111,7 +111,7 @@ export default function ContactForm() {
             Send Message
           </Button>
         </form>
-      </Card>
+      </div>
     </motion.div>
   )
 }

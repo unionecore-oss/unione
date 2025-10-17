@@ -1,29 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/lib/i18n/navigation'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import Card from '@/components/common/Card'
 
-const features = [
-  {
-    title: 'Card',
-    description: 'Discover our card solutions',
-    href: '/card',
-  },
-  {
-    title: 'Platform',
-    description: 'Discover our platform solutions',
-    href: '/platform',
-  },
-  {
-    title: 'Company',
-    description: 'Discover our company solutions',
-    href: '/company',
-  },
-]
-
 export default function FeaturesSection() {
+  const t = useTranslations('pages.home.features')
+
+  const features = [
+    {
+      title: t('card.title'),
+      description: t('card.description'),
+      href: '/card',
+    },
+    {
+      title: t('platform.title'),
+      description: t('platform.description'),
+      href: '/platform',
+    },
+    {
+      title: t('company.title'),
+      description: t('company.description'),
+      href: '/about-us',
+    },
+  ]
+
   return (
     <section
       className="section-padding"

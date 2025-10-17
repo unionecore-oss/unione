@@ -1,9 +1,22 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
+import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Shield, Zap, Globe, Sparkles } from 'lucide-react'
+import { ReactNode } from 'react'
+
+const CardDecorator = ({ children }: { children: ReactNode }) => (
+  <div aria-hidden className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+    <div className="absolute inset-0 [--border:black] dark:[--border:white] bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
+    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l">{children}</div>
+  </div>
+)
 
 export default function AboutUnione() {
+  const t = useTranslations('pages.aboutUs.about')
+
   return (
     <section
       className="section-padding"
@@ -18,98 +31,55 @@ export default function AboutUnione() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2
-            className="text-4xl md:text-5xl font-bold mb-12"
+            className="text-6xl md:text-7xl font-bold mb-16"
             style={{ color: 'var(--color-text-primary)' }}
             variants={fadeInUp}
           >
-            About Unione
+            {t('title')}
           </motion.h2>
 
-          <motion.div className="space-y-8 text-lg leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
+          <motion.div className="space-y-12 text-2xl leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
             <motion.p variants={fadeInUp}>
-              Unione is building the next generation of financial infrastructure by offering innovative crypto payment solutions and global card services. Our mission is to overcome the barriers of traditional finance slow transactions, high fees, and limited accessibility and create a seamless experience for everyone.
+              {t('paragraph1')}
             </motion.p>
 
             <motion.p variants={fadeInUp}>
-              Inspired by the vision of connecting digital assets with real-world usability, Unione is more than just a fintech company; it&apos;s a movement toward a new era of financial freedom and empowerment. We believe that everyone should have the opportunity to participate and prosper in the global financial ecosystem.
+              {t('paragraph2')}
             </motion.p>
 
             <motion.p variants={fadeInUp}>
-              With a commitment to innovation, accessibility, and simplicity, Unione is redefining how people use and grow their digital assets empowering users to spend, stake, and manage crypto effortlessly anytime, anywhere.
+              {t('paragraph3')}
             </motion.p>
 
             {/* Visual Break - Core Values */}
             <motion.div
               variants={staggerContainer}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-16"
             >
               {[
-                {
-                  icon: '🛡️',
-                  title: 'Security First',
-                  description: 'Bank-level encryption and multi-layer protection',
-                  gradient: 'from-cyan-500/20 to-blue-500/20'
-                },
-                {
-                  icon: '⚡',
-                  title: 'Lightning Fast',
-                  description: 'Instant transactions with minimal fees',
-                  gradient: 'from-purple-500/20 to-pink-500/20'
-                },
-                {
-                  icon: '🌍',
-                  title: 'Global Access',
-                  description: 'Available in 50+ countries worldwide',
-                  gradient: 'from-green-500/20 to-teal-500/20'
-                },
-                {
-                  icon: '💎',
-                  title: 'Premium Experience',
-                  description: 'Best-in-class features and support',
-                  gradient: 'from-yellow-500/20 to-orange-500/20'
-                }
+                { Icon: Shield, key: 'securityFirst' },
+                { Icon: Zap, key: 'lightningFast' },
+                { Icon: Globe, key: 'globalAccess' },
+                { Icon: Sparkles, key: 'premiumExperience' }
               ].map((value, index) => (
                 <motion.div
                   key={index}
                   variants={fadeInUp}
-                  whileHover={{
-                    scale: 1.05,
-                    transition: { duration: 0.2 }
-                  }}
-                  className="relative group h-full"
+                  className="h-full"
                 >
-                  <div className={`
-                    relative p-6 rounded-2xl h-full
-                    bg-gradient-to-br ${value.gradient}
-                    border border-white/10
-                    backdrop-blur-sm
-                    transition-all duration-300
-                    group-hover:border-cyan-400/50
-                    group-hover:shadow-lg group-hover:shadow-cyan-500/20
-                    flex flex-col
-                    min-h-[240px]
-                  `}>
-                    {/* Icon */}
-                    <div className="text-5xl mb-4 transform transition-transform duration-300 group-hover:scale-110">
-                      {value.icon}
-                    </div>
+                  <Card className="group shadow-black-950/5 h-full">
+                    <CardHeader className="pb-3">
+                      <CardDecorator>
+                        <value.Icon className="size-6" aria-hidden />
+                      </CardDecorator>
 
-                    {/* Title */}
-                    <h3
-                      className="text-xl font-bold mb-2 transition-colors duration-300 group-hover:text-cyan-400"
-                      style={{ color: 'var(--color-text-primary)' }}
-                    >
-                      {value.title}
-                    </h3>
+                      <h3 className="mt-6 font-medium text-center">{t(`values.${value.key}.title`)}</h3>
+                    </CardHeader>
 
-                    {/* Description */}
-                    <p className="text-sm opacity-80 flex-grow">
-                      {value.description}
-                    </p>
-
-                    {/* Animated background gradient */}
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:to-purple-500/10 transition-all duration-500" />
-                  </div>
+                    <CardContent>
+                      <p className="text-sm text-center">{t(`values.${value.key}.description`)}</p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
               ))}
             </motion.div>

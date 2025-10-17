@@ -225,7 +225,7 @@ function ShaderBackground() {
 
 // ===================== HERO =====================
 interface HeroProps {
-  title: string;
+  title: React.ReactNode;
   description: string;
   badgeText?: string;
   badgeLabel?: string;
@@ -325,7 +325,7 @@ export default function Hero({
     <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden">
       <ShaderBackground />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
         {(badgeLabel || badgeText) && (
           <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
@@ -334,29 +334,29 @@ export default function Hero({
           </div>
         )}
 
-        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
+        <h1 ref={headerRef} className="max-w-7xl text-center text-[2.2rem] font-black leading-[1.25] tracking-tight text-white sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.2rem] px-6">
           {title}
         </h1>
 
-        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
+        <p ref={paraRef} className="max-w-xl text-center text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
           {description}
         </p>
 
-        <div ref={ctaRef} className="flex flex-wrap gap-4 pt-2">
+        <div ref={ctaRef} className="flex flex-wrap gap-4 pt-4">
           {ctaButtons.length > 0 && (
             <>
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  src="/images/badges/app-store.svg"
                   alt="Download on the App Store"
-                  className="h-14"
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  src="/images/badges/google-play.svg"
                   alt="Get it on Google Play"
-                  className="h-14"
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
             </>

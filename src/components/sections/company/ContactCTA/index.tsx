@@ -1,10 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp } from '@/lib/animations'
 import ContactForm from './ContactForm'
 
 export default function ContactCTA() {
+  const t = useTranslations('pages.aboutUs.contact')
+
   return (
     <section className="section-padding">
       <div className="container-custom">
@@ -17,13 +20,13 @@ export default function ContactCTA() {
             variants={fadeInUp}
           >
             <h2
-              className="text-4xl md:text-5xl font-bold mb-4"
+              className="text-6xl md:text-7xl font-bold mb-8"
               style={{ color: 'var(--color-text-primary)' }}
             >
-              Let&apos;s talk
+              {t('title')}
             </h2>
-            <p className="text-xl" style={{ color: 'var(--color-text-secondary)' }}>
-              Whether you&apos;re interested in partnering with us or joining the team shaping the future of finance, we&apos;d be delighted to connect with you.
+            <p className="text-3xl leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
+              {t('description')}
             </p>
           </motion.div>
 

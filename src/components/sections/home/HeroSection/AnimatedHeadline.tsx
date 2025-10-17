@@ -1,9 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { staggerContainer } from '@/lib/animations'
 
 export default function AnimatedHeadline() {
+  const t = useTranslations('pages.home.hero')
+
   return (
     <div className="text-left max-w-5xl">
       <motion.h1
@@ -25,7 +28,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.2 }}
           style={{ color: '#ffffff' }}
         >
-          A new Web3 payment
+          {t('title.line1')}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -33,7 +36,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.4 }}
           style={{ color: '#ffffff' }}
         >
-          paradigm in one
+          {t('title.line2')}
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -41,7 +44,7 @@ export default function AnimatedHeadline() {
           transition={{ duration: 0.8, delay: 0.6 }}
           style={{ color: '#ffffff' }}
         >
-          platform.
+          {t('title.line3')}
         </motion.div>
       </motion.h1>
 
@@ -60,7 +63,7 @@ export default function AnimatedHeadline() {
             color: '#000000',
           }}
         >
-          Get Started
+          {t('cta')}
           <svg
             className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1"
             fill="none"

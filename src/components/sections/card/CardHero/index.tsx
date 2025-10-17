@@ -1,10 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import Button from '@/components/common/Button'
+import { CSS_FILTERS } from '@/lib/constants'
 
 export default function CardHero() {
+  const t = useTranslations('pages.card.hero')
+
   return (
     <section
       className="relative overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center"
@@ -20,6 +24,7 @@ export default function CardHero() {
           src="/card6.png"
           alt="Unione Card"
           className="w-full h-full object-cover"
+          style={{ filter: CSS_FILTERS.cardPage.heroBackground }}
         />
       </motion.div>
 
@@ -35,17 +40,14 @@ export default function CardHero() {
             className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white"
             variants={fadeInUp}
           >
-            Unione Card opens the door to{' '}
-            <span className="text-white">
-              borderless payments
-            </span>
+            {t('title')}
           </motion.h1>
 
           <motion.p
             className="text-xl md:text-2xl mb-8 text-white"
             variants={fadeInUp}
           >
-            Enjoy the convenience of using your USDT digital assets instantly, wherever and whenever around the world.
+            {t('subtitle')}
           </motion.p>
 
           <motion.div
@@ -53,7 +55,7 @@ export default function CardHero() {
             variants={fadeInUp}
           >
             <Button variant="primary" size="lg">
-              Get your Card
+              {t('cta')}
             </Button>
           </motion.div>
         </motion.div>

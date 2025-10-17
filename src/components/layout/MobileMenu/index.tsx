@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link, usePathname } from '@/lib/i18n/navigation'
 import { NAVIGATION_LINKS } from '@/lib/constants'
 
 interface MobileMenuProps {

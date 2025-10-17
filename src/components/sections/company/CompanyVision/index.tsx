@@ -1,9 +1,12 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
 export default function CompanyVision() {
+  const t = useTranslations('pages.aboutUs.vision')
+
   return (
     <section className="section-padding hero-gradient">
       <div className="container-custom">
@@ -14,19 +17,19 @@ export default function CompanyVision() {
           animate="animate"
         >
           <motion.h1
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-7xl md:text-8xl font-bold mb-12"
             style={{ color: 'var(--color-text-primary)' }}
             variants={fadeInUp}
           >
-            Building the Future of Finance
+            {t('title')}
           </motion.h1>
 
           <motion.p
-            className="text-xl"
+            className="text-3xl leading-relaxed"
             style={{ color: 'var(--color-text-secondary)' }}
             variants={fadeInUp}
           >
-            We are dedicated to creating a better financial experience. Our vision is for everyone around the world to access financial services freely and securely.
+            {t('description')}
           </motion.p>
         </motion.div>
       </div>

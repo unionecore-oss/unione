@@ -1,0 +1,252 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Try again",
+    "close": "Close",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "launchApp": "Launch App"
+  },
+  "header": {
+    "navigation": {
+      "card": "Card",
+      "platform": "Platform",
+      "wallet": "Wallet",
+      "earn": "Earn",
+      "reward": "Reward",
+      "aboutUs": "About Us"
+    },
+    "cta": {
+      "launchApp": "Launch App"
+    }
+  },
+  "footer": {
+    "brand": "UNIONE",
+    "card": {
+      "title": "Card"
+    },
+    "platform": {
+      "title": "Platform",
+      "reward": "Reward",
+      "wallet": "Wallet",
+      "earn": "Earn"
+    },
+    "company": {
+      "title": "About Us"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms and Conditions"
+    },
+    "copyright": "© 2025 UNIONE Technology Limited All Rights Reserved"
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": {
+          "line1": "A new Web3 payment",
+          "line2": "paradigm in one",
+          "line3": "platform."
+        },
+        "cta": "Get Started"
+      },
+      "cardShowcase": {
+        "title": "Unione bridges crypto and the real world with a global card",
+        "appStore": "Download on the App Store",
+        "googlePlay": "Get it on Google Play"
+      },
+      "productGrid": {
+        "card": {
+          "title": "Card",
+          "description": "Turn your crypto into real-world spending power. Instantly use your assets anywhere Visa is accepted. Online, Offline, or at ATMs."
+        },
+        "earn": {
+          "title": "Earn",
+          "description": "Make your assets work for you. Choose flexible or fixed plans, earn in real time, and enjoy full on-chain transparency."
+        },
+        "reward": {
+          "title": "Reward",
+          "description": "Grow together with your network. Invite friends, boost your mining speed, and unlock greater rewards through a community-driven model."
+        },
+        "wallet": {
+          "title": "Wallet",
+          "description": "Safely store, send, and receive crypto in one secure place. Manage assets, top up your card, stake, and shop. All from your wallet."
+        }
+      },
+      "features": {
+        "card": {
+          "title": "Card",
+          "description": "Discover our card solutions"
+        },
+        "platform": {
+          "title": "Platform",
+          "description": "Discover our platform solutions"
+        },
+        "company": {
+          "title": "Company",
+          "description": "Discover our company solutions"
+        }
+      }
+    },
+    "card": {
+      "hero": {
+        "title": "Unione Card opens the door to borderless payments",
+        "subtitle": "Enjoy the convenience of using your USDT digital assets instantly, wherever and whenever around the world.",
+        "cta": "Get your Card"
+      },
+      "featuresBreakdown": {
+        "label": "Place to use Unione Card",
+        "title": "Spend Everywhere",
+        "description": "Unione Card is designed for your everyday life — simple, limitless, and effortless. Spend your assets wherever you go, anytime you need.",
+        "stats": {
+          "countries": {
+            "value": "200+",
+            "label": "Countries Supported",
+            "description": "Global acceptance"
+          },
+          "speed": {
+            "value": "1sec",
+            "label": "Transaction Speed",
+            "description": "Lightning fast"
+          },
+          "security": {
+            "value": "99%",
+            "label": "Security Uptime",
+            "description": "Bank-grade security"
+          },
+          "users": {
+            "value": "100k+",
+            "label": "Users & Growing",
+            "description": "Trusted worldwide"
+          }
+        }
+      },
+      "howItWorks": {
+        "realTimeConversion": {
+          "label": "Money-in",
+          "title": "Real-Time Conversion",
+          "description": "Seamlessly convert your crypto into fiat at the moment of purchase. No need for manual exchanges transactions are instant, automatic, and come without conversion fees, can spend with confidence anytime, anywhere."
+        },
+        "lowFees": {
+          "label": "Accounts",
+          "title": "Low Fees",
+          "description": "Enjoy peace of mind with a transparent fee structure. No hidden markups, no surprise charges — just fair and predictable costs every time use your card, whether at home or abroad."
+        },
+        "globalUsage": {
+          "label": "Global Usage",
+          "title": "Global Usage",
+          "description": "Use your Unione card seamlessly across the globe. From online shopping to in-store purchases and ATM withdrawals, it works anywhere Visa is accepted, turning your crypto into true borderless money."
+        },
+        "easyApp": {
+          "label": "App",
+          "title": "Easy-to-Use App",
+          "description": "Control your entire financial experience from one intuitive app. Easily top up, monitor spending, manage your card, and explore features all from a clean dashboard available on both iOS and Android."
+        }
+      }
+    },
+    "wallet": {
+      "hero": {
+        "title": "All Your Digital Assets, Your Smart Wallet",
+        "subtitle": "Manage your assets with ease, protected by industry-leading security.",
+        "cta": "Get Your Wallet"
+      },
+      "security": {
+        "title": "SECURITY YOU CAN TRUST",
+        "custodianProtection": {
+          "title": "Custodian Protection",
+          "description": "Your assets, secured with trusted custodial solutions."
+        },
+        "walletSecurity": {
+          "title": "Wallet Security",
+          "description": "Enhanced safety with separate hot and cold wallets."
+        }
+      },
+      "walletProtection": {
+        "title": "Protect your value with next-gen wallets",
+        "description": "Unione wallets integrate seamlessly with your platform, enabling card functionality, holding balances within the ecosystem, and offering compliant U.S. dollar accounts with optional earning potential.",
+        "cta": "Start with Wallet"
+      }
+    },
+    "earn": {
+      "hero": {
+        "title": "User-friendly staking service backed by institutional security, delivering real-time yields.",
+        "ctaAppStore": "Download on App Store",
+        "ctaGooglePlay": "Get it on Google Play"
+      },
+      "features": {
+        "flexibleEntry": {
+          "title": "Flexible Entry and Exit Anytime",
+          "description": "Total control of your wealth with instant access and management"
+        },
+        "idleMoney": {
+          "title": "Make your idle money work for you",
+          "description": "Begin your journey with only $1 Unlock unlimited growth"
+        },
+        "hourlyRewards": {
+          "title": "Rewards paid out every hour",
+          "description": "Calculated accurately, down to the very minute"
+        }
+      }
+    },
+    "reward": {
+      "hero": {
+        "title": "The First Digital Currency You Can Mine on Your Phone",
+        "subtitle": "Join Unione and start mining cryptocurrency today with our eco-friendly mobile app."
+      },
+      "features": {
+        "maximizeRewards": {
+          "title": "Maximize Your Rewards",
+          "description": "Boost your mining speed with friends, and maximize your earnings by unlocking tiered rewards through friend invitations."
+        },
+        "mobileFirst": {
+          "title": "Mobile First",
+          "description": "Designed for your phone mine and manage crypto effortlessly."
+        },
+        "userFriendly": {
+          "title": "User Friendly",
+          "description": "Easy for everyone and eco-friendly combining accessibility, security, and sustainability."
+        }
+      },
+      "appDownload": {
+        "title": "Start mining today by downloading the app! Join us!",
+        "description": "Join now and keep 100% of what you earn. Mining Uni is completely free. All you need is an invitation from a trusted member. Got one? Download the app below and get started!"
+      }
+    },
+    "aboutUs": {
+      "vision": {
+        "title": "Building the Future of Finance",
+        "description": "We are dedicated to creating a better financial experience. Our vision is for everyone around the world to access financial services freely and securely."
+      },
+      "about": {
+        "title": "About Unione",
+        "paragraph1": "Unione is building the next generation of financial infrastructure by offering innovative crypto payment solutions and global card services. Our mission is to overcome the barriers of traditional finance slow transactions, high fees, and limited accessibility and create a seamless experience for everyone.",
+        "paragraph2": "Inspired by the vision of connecting digital assets with real-world usability, Unione is more than just a fintech company; it's a movement toward a new era of financial freedom and empowerment. We believe that everyone should have the opportunity to participate and prosper in the global financial ecosystem.",
+        "paragraph3": "With a commitment to innovation, accessibility, and simplicity, Unione is redefining how people use and grow their digital assets empowering users to spend, stake, and manage crypto effortlessly anytime, anywhere.",
+        "values": {
+          "securityFirst": {
+            "title": "Security First",
+            "description": "Bank-level encryption and multi-layer protection"
+          },
+          "lightningFast": {
+            "title": "Lightning Fast",
+            "description": "Instant transactions with minimal fees"
+          },
+          "globalAccess": {
+            "title": "Global Access",
+            "description": "Available in 50+ countries worldwide"
+          },
+          "premiumExperience": {
+            "title": "Premium Experience",
+            "description": "Best-in-class features and support"
+          }
+        }
+      },
+      "contact": {
+        "title": "Let's talk",
+        "description": "Whether you're interested in partnering with us or joining the team shaping the future of finance, we'd be delighted to connect with you."
+      }
+    }
+  }
+}

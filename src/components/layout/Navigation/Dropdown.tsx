@@ -1,8 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Link, usePathname } from '@/lib/i18n/navigation'
 
 interface DropdownItem {
   readonly label: string

@@ -2,28 +2,31 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 export default function ProductGrid() {
+  const t = useTranslations('pages.home.productGrid')
+
   const gridItems = [
     {
       number: '1',
-      title: 'Card',
-      description: 'Turn your crypto into real-world spending power. Instantly use your assets anywhere Visa is accepted. Online, Offline, or at ATMs.',
+      title: t('card.title'),
+      description: t('card.description'),
     },
     {
       number: '2',
-      title: 'Earn',
-      description: 'Make your assets work for you. Choose flexible or fixed plans, earn in real time, and enjoy full on-chain transparency.',
+      title: t('earn.title'),
+      description: t('earn.description'),
     },
     {
       number: '3',
-      title: 'Reward',
-      description: 'Grow together with your network. Invite friends, boost your mining speed, and unlock greater rewards through a community-driven model.',
+      title: t('reward.title'),
+      description: t('reward.description'),
     },
     {
       number: '4',
-      title: 'Wallet',
-      description: 'Safely store, send, and receive crypto in one secure place. Manage assets, top up your card, stake, and shop. All from your wallet.',
+      title: t('wallet.title'),
+      description: t('wallet.description'),
     },
   ]
 

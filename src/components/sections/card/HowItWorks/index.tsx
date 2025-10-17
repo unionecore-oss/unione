@@ -1,36 +1,31 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
-const features = [
-  {
-    label: 'Money-in',
-    title: 'Real-Time Conversion',
-    description: 'Seamlessly convert your crypto into fiat at the moment of purchase. No need for manual exchanges transactions are instant, automatic, and come without conversion fees, can spend with confidence anytime, anywhere.',
-    image: 'url(https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80)',
-  },
-  {
-    label: 'Accounts',
-    title: 'Low Fees',
-    description: 'Enjoy peace of mind with a transparent fee structure. No hidden markups, no surprise charges — just fair and predictable costs every time use your card, whether at home or abroad.',
-    image: 'url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80)',
-  },
-  {
-    label: 'Global Usage',
-    title: 'Global Usage',
-    description: 'Use your Unione card seamlessly across the globe. From online shopping to in-store purchases and ATM withdrawals, it works anywhere Visa is accepted, turning your crypto into true borderless money.',
-    image: 'url(https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80)',
-  },
-  {
-    label: 'App',
-    title: 'Easy-to-Use App',
-    description: 'Control your entire financial experience from one intuitive app. Easily top up, monitor spending, manage your card, and explore features all from a clean dashboard available on both iOS and Android.',
-    image: 'url(https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&q=80)',
-  },
-]
-
 export default function HowItWorks() {
+  const t = useTranslations('pages.card.howItWorks')
+
+  const features = [
+    {
+      key: 'realTimeConversion',
+      image: 'url(https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80)',
+    },
+    {
+      key: 'lowFees',
+      image: 'url(https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80)',
+    },
+    {
+      key: 'globalUsage',
+      image: 'url(https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&q=80)',
+    },
+    {
+      key: 'easyApp',
+      image: 'url(https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&q=80)',
+    },
+  ]
+
   return (
     <section className="py-20">
       <div className="w-full px-0">
@@ -51,7 +46,7 @@ export default function HowItWorks() {
               }}
             >
               <div
-                className="w-full h-72 relative"
+                className="w-full h-[432px] relative"
                 style={{
                   background: feature.image,
                   backgroundSize: 'cover',
@@ -60,15 +55,15 @@ export default function HowItWorks() {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-6 bg-white/5 backdrop-blur-sm">
+              <div className="p-9 bg-white/5 backdrop-blur-sm">
                 <h3
                   className="text-2xl font-bold mb-4"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
-                  {feature.title}
+                  {t(`${feature.key}.title`)}
                 </h3>
                 <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-                  {feature.description}
+                  {t(`${feature.key}.description`)}
                 </p>
               </div>
             </motion.div>

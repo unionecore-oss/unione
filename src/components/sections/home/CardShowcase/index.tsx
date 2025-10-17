@@ -1,9 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, slideInRight } from '@/lib/animations'
+import { getMotionTransition } from '@/lib/utils/motionPreference'
+import { HolographicCard } from './HolographicCard'
 
 export default function CardShowcase() {
+  const t = useTranslations('pages.home.cardShowcase')
+
   return (
     <section
       className="py-20 lg:py-32"
@@ -23,30 +28,30 @@ export default function CardShowcase() {
               className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 leading-tight"
               style={{ color: '#000000' }}
             >
-              Unione bridges crypto and the real world with a global card
+              {t('title')}
             </h2>
 
             {/* App Store Badges */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                  alt="Download on the App Store"
-                  className="h-14"
+                  src="/images/badges/app-store.svg"
+                  alt={t('appStore')}
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
 
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                  alt="Get it on Google Play"
-                  className="h-14"
+                  src="/images/badges/google-play.svg"
+                  alt={t('googlePlay')}
+                  style={{ height: '56px', width: '200px' }}
                 />
               </a>
             </div>
           </motion.div>
 
-          {/* Right: Phone Mockup */}
+          {/* Right: 3D Holographic Card */}
           <motion.div
             className="relative order-1 lg:order-2"
             initial="initial"
@@ -54,21 +59,8 @@ export default function CardShowcase() {
             viewport={{ once: true, amount: 0.3 }}
             variants={slideInRight}
           >
-            <div className="relative mx-auto max-w-[500px] lg:max-w-none">
-              {/* Purple Gradient Background */}
-              <div
-                className="absolute inset-0 -m-20 opacity-70 blur-3xl"
-                style={{
-                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(124, 58, 237, 0.3) 40%, transparent 70%)',
-                }}
-              />
-
-              {/* Image */}
-              <img
-                src="/card-showcase-phones.jpeg"
-                alt="UNIONE Mobile App"
-                className="relative z-10 w-full h-auto"
-              />
+            <div className="relative mx-auto max-w-[700px] h-[500px]">
+              <HolographicCard />
             </div>
           </motion.div>
         </div>

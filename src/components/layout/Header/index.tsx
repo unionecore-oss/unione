@@ -1,12 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import Logo from './Logo'
 import Navigation from '../Navigation'
 import MobileMenu from '../MobileMenu'
 import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
+  const t = useTranslations('header.cta')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -62,7 +64,7 @@ export default function Header() {
                   e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)'
                 }}
               >
-                Launch App
+                {t('launchApp')}
               </a>
             </div>
 
