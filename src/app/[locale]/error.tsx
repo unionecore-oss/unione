@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { fadeInUp } from '@/lib/animations'
 import Button from '@/components/common/Button'
 import GradientText from '@/components/common/GradientText'
@@ -23,7 +23,7 @@ export default function Error({
       style={{ backgroundColor: 'var(--color-background-primary)' }}
     >
       <div className="container-custom">
-        <motion.div
+        <m.div
           className="max-w-2xl mx-auto text-center"
           initial="initial"
           animate="animate"
@@ -42,7 +42,7 @@ export default function Error({
           <Button variant="primary" size="lg" onClick={reset}>
             Try Again
           </Button>
-        </motion.div>
+        </m.div>
       </div>
     </main>
   )

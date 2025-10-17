@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import Image from 'next/image'
@@ -13,7 +13,7 @@ export default function AppDownloadSection() {
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -29,33 +29,33 @@ export default function AppDownloadSection() {
                 className="w-full h-auto"
               />
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Right: Text Content */}
-          <motion.div
+          <m.div
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true, amount: 0.3 }}
             className="space-y-6"
           >
-            <motion.h2
+            <m.h2
               variants={fadeInUp}
               className="text-4xl md:text-5xl font-bold"
               style={{ color: 'var(--color-text-primary)' }}
             >
               {t('title')}
-            </motion.h2>
+            </m.h2>
 
-            <motion.p
+            <m.p
               variants={fadeInUp}
               className="text-lg md:text-xl leading-relaxed"
               style={{ color: 'var(--color-text-secondary)' }}
             >
               {t('description')}
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               variants={fadeInUp}
               className="flex flex-wrap gap-4 pt-4"
             >
@@ -74,8 +74,8 @@ export default function AppDownloadSection() {
                   style={{ height: '56px', width: '200px' }}
                 />
               </a>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </section>

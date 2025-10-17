@@ -197,6 +197,7 @@ function FluidSimulation() {
   const fluidMeshRef = useRef<THREE.Mesh>(null);
   const displayMeshRef = useRef<THREE.Mesh>(null);
 
+  // Triple buffering: read, write, and display
   const fluidTarget1 = useFBO(size.width, size.height, {
     minFilter: THREE.LinearFilter,
     magFilter: THREE.LinearFilter,
@@ -237,6 +238,18 @@ function FluidSimulation() {
     mouse.current.prevX = smoothMouse.current.x;
     mouse.current.prevY = smoothMouse.current.y;
 
+    // Auto-generate movement when no mouse input
+    if (targetMouse.current.x === 0 && targetMouse.current.y === 0) {
+      // Create circular motion
+      const radius = Math.min(size.width, size.height) * 0.3;
+      const centerX = size.width * 0.5;
+      const centerY = size.height * 0.5;
+      const angle = time * 0.5;
+
+      targetMouse.current.x = centerX + Math.cos(angle) * radius;
+      targetMouse.current.y = centerY + Math.sin(angle) * radius;
+    }
+
     smoothMouse.current.x += (targetMouse.current.x - smoothMouse.current.x) * config.lerpFactor;
     smoothMouse.current.y += (targetMouse.current.y - smoothMouse.current.y) * config.lerpFactor;
 
@@ -259,8 +272,8 @@ function FluidSimulation() {
       fluidMaterial.current.uniforms.uTrailLength.value = config.trailLength;
       fluidMaterial.current.uniforms.uStopDecay.value = config.stopDecay;
 
-      // Set previous texture BEFORE rendering
-      fluidMaterial.current.uniforms.iPreviousFrame.value = previousTargetRef.current.texture;
+      // Note: iPreviousFrame texture is set just before rendering (see below)
+      // to ensure we're reading from the correct buffer
     }
 
     if (displayMaterial.current) {
@@ -275,28 +288,25 @@ function FluidSimulation() {
     }
 
     // Render fluid simulation
-    if (fluidMeshRef.current && fluidMaterial.current) {
-      // Unbind texture before rendering to avoid feedback loop
-      const webgl = gl.getContext() as WebGL2RenderingContext;
-      webgl.activeTexture(webgl.TEXTURE0);
-      webgl.bindTexture(webgl.TEXTURE_2D, null);
+    if (fluidMeshRef.current && fluidMaterial.current && displayMeshRef.current && displayMaterial.current) {
+      // CRITICAL FIX: Only use previousTarget as input, currentTarget as output
 
+      // Render fluid simulation: previousTarget (read) -> currentTarget (write)
+      fluidMaterial.current.uniforms.iPreviousFrame.value = previousTargetRef.current.texture;
       gl.setRenderTarget(currentTargetRef.current);
       gl.clear();
       gl.render(fluidMeshRef.current, camera);
-      gl.setRenderTarget(null);
-    }
 
-    // Render display
-    if (displayMeshRef.current && displayMaterial.current) {
+      // Unbind the render target
+      gl.setRenderTarget(null);
+
+      // Now render to screen using currentTarget (which is now safe to read)
       displayMaterial.current.uniforms.iFluid.value = currentTargetRef.current.texture;
       gl.render(displayMeshRef.current, camera);
-    }
 
-    // Swap targets for next frame
-    const temp = currentTargetRef.current;
-    currentTargetRef.current = previousTargetRef.current;
-    previousTargetRef.current = temp;
+      // Swap buffers for next frame
+      [currentTargetRef.current, previousTargetRef.current] = [previousTargetRef.current, currentTargetRef.current];
+    }
 
     setFrameCount(prev => prev + 1);
   });
@@ -304,7 +314,7 @@ function FluidSimulation() {
   const fluidPlane = useMemo(() => {
     const aspect = size.width / size.height;
     return (
-      <mesh ref={fluidMeshRef}>
+      <mesh ref={fluidMeshRef} visible={false}>
         <planeGeometry args={[2 * aspect, 2]} />
         <shaderMaterial
           ref={fluidMaterial}
@@ -362,8 +372,8 @@ function FluidSimulation() {
     }
     fluidTarget1.setSize(size.width, size.height);
     fluidTarget2.setSize(size.width, size.height);
-    setFrameCount(0);
-  }, [size, fluidTarget1, fluidTarget2]);
+    // Don't reset frameCount - let it continue
+  }, [size.width, size.height, fluidTarget1, fluidTarget2]);
 
   return (
     <>
@@ -388,42 +398,13 @@ function OrthographicCameraSetup() {
 }
 
 export const FluidGradient = () => {
-  const canvasRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const currentRef = canvasRef.current;
-    if (!currentRef) return;
-
-    // Intersection Observer to detect when component is in viewport
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsVisible(entry.isIntersecting);
-        });
-      },
-      {
-        threshold: 0.1, // Trigger when at least 10% is visible
-        rootMargin: '50px', // Start rendering slightly before entering viewport
-      }
-    );
-
-    observer.observe(currentRef);
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-    };
-  }, []);
-
   return (
-    <div ref={canvasRef} className="absolute inset-0">
+    <div className="absolute inset-0">
       <Canvas
         className='absolute inset-0'
         gl={{ antialias: false, powerPreference: 'high-performance' }}
         dpr={Math.min(typeof window !== 'undefined' ? window.devicePixelRatio : 1, 2)}
-        frameloop={isVisible ? 'always' : 'never'}
+        frameloop='always'
       >
         <OrthographicCameraSetup />
         <FluidSimulation />
