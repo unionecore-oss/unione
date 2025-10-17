@@ -1,0 +1,61 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mystical/ethereal background with purple-blue-pink gradients -->
+  <defs>
+    <!-- Main gradient background -->
+    <radialGradient id="mysticGradient1" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:0.6" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0.2" />
+    </radialGradient>
+
+    <radialGradient id="mysticGradient2" cx="70%" cy="60%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.5" />
+      <stop offset="50%" style="stop-color:#9333ea;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0.1" />
+    </radialGradient>
+
+    <!-- Blur filter for ethereal glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="800" height="600" fill="#1a1625"/>
+
+  <!-- Gradient overlays -->
+  <rect width="800" height="600" fill="url(#mysticGradient1)" opacity="0.8"/>
+  <rect width="800" height="600" fill="url(#mysticGradient2)" opacity="0.7"/>
+
+  <!-- Ethereal orbs with glow -->
+  <circle cx="200" cy="200" r="120" fill="#ec4899" opacity="0.3" filter="url(#glow)"/>
+  <circle cx="600" cy="400" r="150" fill="#a855f7" opacity="0.25" filter="url(#glow)"/>
+  <circle cx="400" cy="300" r="100" fill="#7c3aed" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Abstract flowing shapes -->
+  <path d="M 0,300 Q 200,200 400,300 T 800,300 L 800,600 L 0,600 Z"
+        fill="url(#mysticGradient1)" opacity="0.15" filter="url(#softBlur)"/>
+  <path d="M 0,400 Q 300,300 600,450 T 800,400 L 800,600 L 0,600 Z"
+        fill="url(#mysticGradient2)" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Sparkle/particle effects -->
+  <circle cx="150" cy="100" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="300" cy="150" r="2" fill="#ffffff" opacity="0.6"/>
+  <circle cx="650" cy="120" r="4" fill="#ec4899" opacity="0.7"/>
+  <circle cx="500" cy="450" r="3" fill="#a855f7" opacity="0.8"/>
+  <circle cx="700" cy="250" r="2" fill="#ffffff" opacity="0.5"/>
+  <circle cx="100" cy="500" r="3" fill="#7c3aed" opacity="0.6"/>
+
+  <!-- Placeholder text -->
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle" opacity="0.7">
+    Replace with mystical image (800x600px)
+  </text>
+</svg>
