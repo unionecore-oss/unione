@@ -74,9 +74,12 @@
     transition: all 0.3s ease-out;
   }
 
-  .btn-primary:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
   }
 
   /* Secondary Button */
@@ -90,8 +93,11 @@
     transition: all 0.3s ease-out;
   }
 
-  .btn-secondary:hover {
-    background-color: var(--color-background-accent);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .btn-secondary:hover {
+      background-color: var(--color-background-accent);
+    }
   }
 
   /* Card Component */
@@ -103,9 +109,12 @@
     transition: all 0.3s ease-out;
   }
 
-  .card:hover {
-    box-shadow: var(--shadow-soft-lg);
-    transform: translateY(-4px);
+  /* Only apply hover effects on devices with hover capability */
+  @media (hover: hover) {
+    .card:hover {
+      box-shadow: var(--shadow-soft-lg);
+      transform: translateY(-4px);
+    }
   }
 
   /* Hero Gradient Background */
@@ -137,7 +146,7 @@
 
   /* Container */
   .container-custom {
-    max-width: 80rem;
+    max-width: 90rem; /* 1440px for optimal desktop viewing */
     margin-left: auto;
     margin-right: auto;
     padding-left: 1.5rem;

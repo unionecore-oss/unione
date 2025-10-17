@@ -15,12 +15,13 @@ export default function Button({
   className = '',
   ...props
 }: ButtonProps) {
-  const baseStyles = 'font-medium rounded-full transition-all duration-300'
+  // Base styles with touch optimization
+  const baseStyles = 'font-medium rounded-full transition-all duration-300 min-w-touch min-h-touch'
 
   const variantStyles = {
-    primary: 'btn-primary',
-    secondary: 'btn-secondary',
-    outline: 'bg-transparent border-2 hover:bg-background-accent',
+    primary: 'btn-primary active:scale-95 active:opacity-90',
+    secondary: 'btn-secondary active:scale-95 active:opacity-90',
+    outline: 'bg-transparent border-2 hover:bg-background-accent active:scale-95 active:opacity-90',
   }
 
   const sizeStyles = {
@@ -34,6 +35,7 @@ export default function Button({
   return (
     <button
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${widthStyles} ${className}`}
+      style={{ touchAction: 'manipulation' }}
       {...props}
     >
       {children}

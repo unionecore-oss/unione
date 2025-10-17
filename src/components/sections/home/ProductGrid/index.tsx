@@ -33,7 +33,7 @@ export default function ProductGrid() {
   return (
     <section style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="w-full">
-        <div className="grid grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
           {gridItems.map((item, index) => {
             const isNumberOnRight = index % 2 === 0 // 1행, 3행은 숫자가 오른쪽
 
@@ -47,20 +47,20 @@ export default function ProductGrid() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <div
-                  className="asset_container h-[500px] p-12 flex items-center justify-center"
+                  className="asset_container min-h-[400px] md:min-h-[450px] md:h-[500px] lg:h-[550px] 3xl:h-[600px] p-6 md:p-10 lg:p-12 3xl:p-16 flex items-center justify-center"
                   style={{
                     background: '#FFFFFF',
                   }}
                 >
-                  <div className="space-y-6 max-w-2xl">
+                  <div className="space-y-4 md:space-y-5 lg:space-y-6 3xl:space-y-8 max-w-2xl 3xl:max-w-4xl">
                     <h2
-                      className="text-5xl font-bold leading-tight"
+                      className="text-3xl md:text-[2.75rem] lg:text-5xl 3xl:text-6xl font-bold leading-tight"
                       style={{ color: '#000000' }}
                     >
                       {item.title}
                     </h2>
                     <p
-                      className="text-xl leading-relaxed"
+                      className="text-base md:text-[1.0625rem] lg:text-xl 3xl:text-2xl leading-relaxed"
                       style={{ color: '#666666' }}
                     >
                       {item.description}
@@ -80,15 +80,15 @@ export default function ProductGrid() {
                 transition={{ delay: index * 0.1 + 0.1, duration: 0.6 }}
               >
                 <div
-                  className={`asset_container h-[500px] flex items-center ${
-                    isNumberOnRight ? 'justify-end pr-16' : 'justify-start pl-16'
+                  className={`asset_container min-h-[250px] md:min-h-[450px] md:h-[500px] lg:h-[550px] 3xl:h-[600px] flex items-center ${
+                    isNumberOnRight ? 'justify-center md:justify-end md:pr-12 lg:pr-16 3xl:pr-20' : 'justify-center md:justify-start md:pl-12 lg:pl-16 3xl:pl-20'
                   }`}
                   style={{
                     background: '#EEEEEE',
                   }}
                 >
                   <div
-                    className="text-[650px] font-bold leading-none select-none"
+                    className="text-[200px] md:text-[350px] lg:text-[650px] 3xl:text-[750px] font-bold leading-none select-none"
                     style={{
                       color: '#FFFFFF',
                       opacity: 1,

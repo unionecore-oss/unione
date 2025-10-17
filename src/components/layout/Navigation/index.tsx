@@ -28,7 +28,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
   ], [t])
 
   return (
-    <nav className={`flex items-center gap-12 ${className}`}>
+    <nav className={`flex items-center gap-8 lg:gap-12 ${className}`}>
       {navigationLinks.map((link) => {
         if ('dropdown' in link && link.dropdown) {
           return (
@@ -39,7 +39,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <button
-                className="text-xl font-medium transition-colors flex items-center gap-1"
+                className="text-lg lg:text-xl font-medium transition-colors flex items-center gap-1"
                 style={{
                   color: '#000000',
                 }}
@@ -72,7 +72,7 @@ export default function Navigation({ className = '' }: NavigationProps) {
           <Link
             key={link.label}
             href={link.href}
-            className="text-xl font-medium transition-all hover:opacity-100 relative group"
+            className="text-lg lg:text-xl font-medium transition-all hover:opacity-100 relative group"
             style={{
               color: '#000000',
               opacity: 0.85,
