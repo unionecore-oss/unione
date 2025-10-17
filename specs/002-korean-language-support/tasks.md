@@ -163,16 +163,16 @@
 
 ### Implementation for SEO
 
-- [ ] T055 [P] Add hreflang meta tags generation in locale layout
-- [ ] T056 [P] Set HTML lang attribute dynamically based on locale in `src/app/[locale]/layout.tsx`
-- [ ] T057 [P] Translate metadata (title, description) for each page
-- [ ] T058 [P] Add canonical URLs for language variants
-- [ ] T059 Configure robots.txt for locale-based routing
+- [x] T055 [P] Add hreflang meta tags generation in locale layout
+- [x] T056 [P] Set HTML lang attribute dynamically based on locale in `src/app/[locale]/layout.tsx`
+- [x] T057 [P] Translate metadata (title, description) for each page
+- [x] T058 [P] Add canonical URLs for language variants
+- [x] T059 Configure robots.txt for locale-based routing
 
 ### E2E Tests for SEO
 
-- [ ] T060 [P] Write Playwright test to verify hreflang tags on all pages
-- [ ] T061 [P] Write Playwright test to verify HTML lang attribute updates correctly
+- [x] T060 [P] Write Playwright test to verify hreflang tags on all pages
+- [x] T061 [P] Write Playwright test to verify HTML lang attribute updates correctly
 
 **Checkpoint**: SEO properly configured for both language versions
 

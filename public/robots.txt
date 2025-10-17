@@ -1,0 +1,18 @@
+# T059: robots.txt for locale-based routing
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Allow locale-specific paths
+Allow: /en/
+Allow: /ko/
+
+# Sitemap location
+Sitemap: https://unione.com/sitemap.xml
+Sitemap: https://unione.com/sitemap-en.xml
+Sitemap: https://unione.com/sitemap-ko.xml
+
+# Disallow paths (if any)
+# Disallow: /api/
+# Disallow: /_next/
