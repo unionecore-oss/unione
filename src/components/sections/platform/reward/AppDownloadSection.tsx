@@ -22,7 +22,7 @@ export default function AppDownloadSection() {
           >
             <div className="relative w-full max-w-md mx-auto">
               <Image
-                src="/app-phones.png"
+                src="/phone1.png"
                 alt="UNIONE Mobile App"
                 width={400}
                 height={600}
