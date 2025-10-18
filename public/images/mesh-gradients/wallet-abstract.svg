@@ -1,0 +1,77 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Modern gradient for wallet/finance theme -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea" />
+      <stop offset="50%" stop-color="#764ba2" />
+      <stop offset="100%" stop-color="#f093fb" />
+    </linearGradient>
+
+    <!-- Floating shapes gradients -->
+    <radialGradient id="circle1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a8edea" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fed6e3" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="circle2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c471f5" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fa71cd" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <!-- Abstract wallet icon gradient -->
+    <linearGradient id="wallet-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base gradient background -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)"/>
+
+  <!-- Floating circles with animations -->
+  <g filter="url(#soft-glow)">
+    <circle cx="200" cy="600" r="180" fill="url(#circle1)" opacity="0.7">
+      <animate attributeName="cx" values="200;250;200" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="600;550;600" dur="20s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="900" cy="200" r="220" fill="url(#circle2)" opacity="0.6">
+      <animate attributeName="cx" values="900;850;900" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="200;250;200" dur="18s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1000" cy="650" r="160" fill="url(#circle1)" opacity="0.5">
+      <animate attributeName="cx" values="1000;1050;1000" dur="28s" repeatCount="indefinite"/>
+      <animate attributeName="r" values="160;180;160" dur="15s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Abstract wallet/card shapes -->
+  <g opacity="0.2" filter="url(#soft-glow)">
+    <!-- Layered card shapes -->
+    <rect x="850" y="300" width="280" height="180" rx="20" fill="url(#wallet-icon)" transform="rotate(-15 990 390)">
+      <animate attributeName="opacity" values="0.2;0.35;0.2" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="870" y="320" width="280" height="180" rx="20" fill="url(#wallet-icon)" transform="rotate(-10 1010 410)">
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="4.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Geometric accent lines -->
+  <g stroke="url(#wallet-icon)" stroke-width="2" opacity="0.3">
+    <path d="M 100 100 Q 300 150, 500 100" fill="none">
+      <animate attributeName="d" values="M 100 100 Q 300 150, 500 100; M 100 100 Q 300 120, 500 100; M 100 100 Q 300 150, 500 100" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 700 600 Q 850 550, 1000 600" fill="none">
+      <animate attributeName="d" values="M 700 600 Q 850 550, 1000 600; M 700 600 Q 850 580, 1000 600; M 700 600 Q 850 550, 1000 600" dur="10s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

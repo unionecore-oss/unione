@@ -1,0 +1,82 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Growth/investment gradient theme -->
+    <linearGradient id="growth-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11998e" />
+      <stop offset="50%" stop-color="#38ef7d" />
+      <stop offset="100%" stop-color="#d4fc79" />
+    </linearGradient>
+
+    <radialGradient id="growth-circle1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#84fab0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#8fd3f4" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="growth-circle2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffeaa7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fdcb6e" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <linearGradient id="growth-accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <filter id="growth-glow">
+      <feGaussianBlur stdDeviation="25" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1200" height="800" fill="url(#growth-bg)"/>
+
+  <!-- Organic floating shapes -->
+  <g filter="url(#growth-glow)">
+    <ellipse cx="180" cy="150" rx="200" ry="180" fill="url(#growth-circle1)" opacity="0.7">
+      <animate attributeName="rx" values="200;220;200" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="180;200;180" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="950" cy="550" rx="240" ry="200" fill="url(#growth-circle2)" opacity="0.6">
+      <animate attributeName="cx" values="950;920;950" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="550;580;550" dur="22s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="400" cy="680" rx="170" ry="150" fill="url(#growth-circle1)" opacity="0.5">
+      <animate attributeName="rx" values="170;190;170" dur="26s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="1050" cy="180" rx="150" ry="140" fill="url(#growth-circle2)" opacity="0.45">
+      <animate attributeName="cy" values="180;160;180" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Abstract growth arrow/chart -->
+  <g opacity="0.25" filter="url(#growth-glow)">
+    <path d="M 200 650 Q 400 500, 600 550 T 1000 350" stroke="url(#growth-accent)" stroke-width="6" fill="none" stroke-linecap="round">
+      <animate attributeName="d"
+        values="M 200 650 Q 400 500, 600 550 T 1000 350; M 200 650 Q 400 480, 600 530 T 1000 330; M 200 650 Q 400 500, 600 550 T 1000 350"
+        dur="6s" repeatCount="indefinite"/>
+    </path>
+    <!-- Arrow tip -->
+    <polygon points="1000,340 985,355 1010,355" fill="url(#growth-accent)">
+      <animate attributeName="points"
+        values="1000,340 985,355 1010,355; 1000,320 985,335 1010,335; 1000,340 985,355 1010,355"
+        dur="6s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+
+  <!-- Subtle geometric accents -->
+  <g stroke="url(#growth-accent)" stroke-width="1.5" opacity="0.2" fill="none">
+    <circle cx="700" cy="250" r="60">
+      <animate attributeName="r" values="60;70;60" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="400" r="45">
+      <animate attributeName="r" values="45;55;45" dur="15s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

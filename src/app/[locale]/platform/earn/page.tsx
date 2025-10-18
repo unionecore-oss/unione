@@ -27,7 +27,38 @@ export default function EarnPage() {
       <section className="py-0 bg-white">
         <div className="w-full">
           <div className="space-y-0">
-            {/* Row 1: Flexible Entry and Exit Anytime */}
+            {/* Row 1: Financial opportunities open to everyone */}
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={staggerContainer}
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.div
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                style={{
+                  backgroundImage: 'url(/images/mesh-gradients/opportunity-bg.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+                variants={fadeInUp}
+              >
+              </motion.div>
+              <motion.div
+                className="px-12 md:px-20 py-16 bg-white"
+                variants={fadeInUp}
+              >
+                <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-orange-600">
+                  {t('features.financialOpportunities.title')}
+                </h2>
+                <p className="text-gray-600 text-lg">{t('features.financialOpportunities.description')}</p>
+              </motion.div>
+            </motion.div>
+
+            {/* Row 2: Flexible Entry and Exit Anytime */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
@@ -47,49 +78,18 @@ export default function EarnPage() {
                 <p className="text-gray-600 text-lg">{t('features.flexibleEntry.description')}</p>
               </motion.div>
               <motion.div
-                className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-purple-50 group-hover:to-cyan-50"
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                style={{
+                  backgroundImage: 'url(/images/mesh-gradients/wallet-bg.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
                 variants={fadeInUp}
               >
-                {/* Arrow Icon with Animation */}
-                <motion.svg
-                  className="w-48 h-48"
-                  viewBox="0 0 200 100"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <motion.path
-                    d="M20 30 L80 30 L80 20 L100 35 L80 50 L80 40 L20 40 Z"
-                    animate={{
-                      x: [0, 10, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                  <motion.path
-                    d="M180 70 L120 70 L120 80 L100 65 L120 50 L120 60 L180 60 Z"
-                    animate={{
-                      x: [0, -10, 0],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                </motion.svg>
               </motion.div>
             </motion.div>
 
-            {/* Row 2: Make your idle money work for you */}
+            {/* Row 3: Make your idle money work for you */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
@@ -100,67 +100,14 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-green-50 group-hover:to-cyan-50"
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                style={{
+                  backgroundImage: 'url(/images/mesh-gradients/time-bg.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
                 variants={fadeInUp}
               >
-                {/* Venn Diagram Icon with Animation */}
-                <motion.svg
-                  className="w-48 h-48"
-                  viewBox="0 0 200 150"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 360,
-                  }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <motion.circle
-                    cx="70"
-                    cy="60"
-                    r="45"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                  <motion.circle
-                    cx="100"
-                    cy="90"
-                    r="45"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 0.7
-                    }}
-                  />
-                  <motion.circle
-                    cx="130"
-                    cy="60"
-                    r="45"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                      opacity: [0.6, 1, 0.6],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1.4
-                    }}
-                  />
-                </motion.svg>
               </motion.div>
               <motion.div
                 className="px-12 md:px-20 py-16 bg-white"
@@ -173,7 +120,7 @@ export default function EarnPage() {
               </motion.div>
             </motion.div>
 
-            {/* Row 3: Rewards paid out every hour */}
+            {/* Row 4: Rewards paid out every hour */}
             <motion.div
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
@@ -193,66 +140,14 @@ export default function EarnPage() {
                 <p className="text-gray-600 text-lg">{t('features.hourlyRewards.description')}</p>
               </motion.div>
               <motion.div
-                className="bg-gray-50 p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 group-hover:bg-gradient-to-br group-hover:from-cyan-50 group-hover:to-blue-50"
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                style={{
+                  backgroundImage: 'url(/images/mesh-gradients/growth-bg.jpg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
                 variants={fadeInUp}
               >
-                {/* Concentric Circles Icon with Animation */}
-                <motion.svg
-                  className="w-48 h-48"
-                  viewBox="0 0 200 200"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  whileHover={{
-                    scale: 1.2,
-                  }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <motion.circle
-                    cx="100"
-                    cy="100"
-                    r="70"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.3, 0.7, 0.3],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut"
-                    }}
-                  />
-                  <motion.circle
-                    cx="100"
-                    cy="100"
-                    r="50"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.5, 0.9, 0.5],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 0.5
-                    }}
-                  />
-                  <motion.circle
-                    cx="100"
-                    cy="100"
-                    r="30"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.7, 1, 0.7],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1
-                    }}
-                  />
-                </motion.svg>
               </motion.div>
             </motion.div>
           </div>

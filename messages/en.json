@@ -171,7 +171,7 @@
     },
     "earn": {
       "hero": {
-        "title": "User-friendly staking service backed by institutional security, delivering real-time yields.",
+        "title": "User-friendly staking,\ninstitutional-grade security,\nreal-time yields.",
         "ctaAppStore": "Download on App Store",
         "ctaGooglePlay": "Get it on Google Play"
       },
@@ -187,6 +187,10 @@
         "hourlyRewards": {
           "title": "Rewards paid out every hour",
           "description": "Calculated accurately, down to the very minute"
+        },
+        "financialOpportunities": {
+          "title": "Financial opportunities open to everyone",
+          "description": "Providing high annual yields through a secure and user-friendly staking service"
         }
       }
     },

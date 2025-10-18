@@ -1,0 +1,76 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Orange-Amber Gradients -->
+    <radialGradient id="orange-blob1" cx="0.3" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <radialGradient id="orange-blob2" cx="0.7" cy="0.6" r="0.6">
+      <stop offset="0%" stop-color="#fed7aa" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#fb923c" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="orange-blob3" cx="0.5" cy="0.8" r="0.5">
+      <stop offset="0%" stop-color="#fde68a" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#fcd34d" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="orange-blob4" cx="0.2" cy="0.7" r="0.4">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#fde68a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fcd34d" stop-opacity="0.3"/>
+    </radialGradient>
+
+    <filter id="orange-glow">
+      <feGaussianBlur stdDeviation="40" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base layer -->
+  <rect width="1200" height="800" fill="#fffbeb"/>
+
+  <!-- Mesh gradient blobs -->
+  <g filter="url(#orange-glow)">
+    <!-- Blob 1 - Top left -->
+    <ellipse cx="240" cy="210" rx="410" ry="350" fill="url(#orange-blob1)" opacity="0.8">
+      <animate attributeName="cx" values="240;290;240" dur="21s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="210;180;210" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="410;450;410" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Blob 2 - Top right -->
+    <ellipse cx="930" cy="220" rx="450" ry="410" fill="url(#orange-blob2)" opacity="0.7">
+      <animate attributeName="cx" values="930;880;930" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="220;250;220" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="410;370;410" dur="17s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Blob 3 - Bottom right -->
+    <ellipse cx="880" cy="630" rx="390" ry="370" fill="url(#orange-blob3)" opacity="0.6">
+      <animate attributeName="cx" values="880;930;880" dur="25s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="630;610;630" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="390;430;390" dur="22s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Blob 4 - Bottom left -->
+    <ellipse cx="270" cy="620" rx="370" ry="330" fill="url(#orange-blob4)" opacity="0.75">
+      <animate attributeName="cx" values="270;220;270" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="620;590;620" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="330;370;330" dur="21s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Center blob for blend -->
+    <ellipse cx="600" cy="400" rx="480" ry="430" fill="url(#orange-blob1)" opacity="0.4">
+      <animate attributeName="rx" values="480;510;480" dur="26s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="430;450;430" dur="24s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

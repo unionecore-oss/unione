@@ -1,0 +1,87 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Time/regular rewards gradient theme -->
+    <linearGradient id="time-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4facfe" />
+      <stop offset="50%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#43e97b" />
+    </linearGradient>
+
+    <radialGradient id="time-circle1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a8edea" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fed6e3" stop-opacity="0.2"/>
+    </radialGradient>
+
+    <radialGradient id="time-circle2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#30cfd0" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#330867" stop-opacity="0.15"/>
+    </radialGradient>
+
+    <linearGradient id="time-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <filter id="time-glow">
+      <feGaussianBlur stdDeviation="22" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base gradient -->
+  <rect width="1200" height="800" fill="url(#time-bg)"/>
+
+  <!-- Flowing time-based shapes -->
+  <g filter="url(#time-glow)">
+    <ellipse cx="250" cy="180" rx="210" ry="190" fill="url(#time-circle1)" opacity="0.7">
+      <animate attributeName="cx" values="250;280;250" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="180;210;180" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="880" cy="600" rx="230" ry="200" fill="url(#time-circle2)" opacity="0.6">
+      <animate attributeName="rx" values="230;250;230" dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="200;220;200" dur="21s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="1020" cy="250" rx="160" ry="150" fill="url(#time-circle1)" opacity="0.5">
+      <animate attributeName="cx" values="1020;1050;1020" dur="27s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <ellipse cx="350" cy="620" rx="180" ry="160" fill="url(#time-circle2)" opacity="0.45">
+      <animate attributeName="ry" values="160;180;160" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Abstract clock/time concept - concentric circles -->
+  <g opacity="0.2" filter="url(#time-glow)">
+    <circle cx="600" cy="400" r="100" stroke="url(#time-accent)" stroke-width="3" fill="none">
+      <animate attributeName="r" values="100;110;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.35;0.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="140" stroke="url(#time-accent)" stroke-width="2.5" fill="none">
+      <animate attributeName="r" values="140;150;140" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="400" r="180" stroke="url(#time-accent)" stroke-width="2" fill="none">
+      <animate attributeName="r" values="180;190;180" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.25;0.1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Flowing curved lines representing time flow -->
+  <g stroke="url(#time-accent)" stroke-width="2" opacity="0.25" fill="none">
+    <path d="M 100 200 Q 300 180, 500 200 T 900 200">
+      <animate attributeName="d"
+        values="M 100 200 Q 300 180, 500 200 T 900 200; M 100 200 Q 300 220, 500 200 T 900 200; M 100 200 Q 300 180, 500 200 T 900 200"
+        dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 200 600 Q 500 580, 800 600 T 1100 600">
+      <animate attributeName="d"
+        values="M 200 600 Q 500 580, 800 600 T 1100 600; M 200 600 Q 500 620, 800 600 T 1100 600; M 200 600 Q 500 580, 800 600 T 1100 600"
+        dur="10s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

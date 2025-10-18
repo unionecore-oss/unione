@@ -171,7 +171,7 @@
     },
     "earn": {
       "hero": {
-        "title": "기관급 보안을 갖춘 사용자 친화적 스테이킹 서비스, 실시간 수익 제공.",
+        "title": "사용자 친화적 스테이킹,\n기관급 보안,\n실시간 수익.",
         "ctaAppStore": "App Store에서 다운로드",
         "ctaGooglePlay": "Google Play에서 다운로드"
       },
@@ -187,6 +187,10 @@
         "hourlyRewards": {
           "title": "매시간 지급되는 보상",
           "description": "분 단위까지 정확하게 계산됨"
+        },
+        "financialOpportunities": {
+          "title": "모두에게 열려있는 금융 기회",
+          "description": "안전하고 사용자 친화적인 스테이킹 서비스를 통해 높은 연간 수익률 제공"
         }
       }
     },
