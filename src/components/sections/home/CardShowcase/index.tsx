@@ -10,7 +10,10 @@ export default function CardShowcase() {
 
   return (
     <section
-      className="py-20 lg:py-32 bg-white"
+      className="pt-0 pb-12 lg:pt-2 lg:pb-32"
+      style={{
+        background: 'linear-gradient(to bottom, #000000 0%, #000000 30%, #1a1a1a 45%, #2a2a2a 55%, #3d3d3d 65%, #808080 75%, #c0c0c0 85%, #f0f0f0 92%, #FFFFFF 100%)'
+      }}
     >
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -18,33 +21,49 @@ export default function CardShowcase() {
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.7 }}
             variants={fadeInUp}
             className="order-2 lg:order-1"
           >
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-10 leading-tight"
-              style={{ color: '#000000' }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-10 leading-tight"
+              style={{ color: '#FFFFFF' }}
             >
               {t('title')}
             </h2>
 
             {/* App Store Badges */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="#" className="inline-block transition-transform hover:scale-105">
+              <motion.a
+                href="#"
+                className="inline-block"
+                whileHover={{
+                  scale: 1.05,
+                  filter: 'drop-shadow(0 8px 24px rgba(139, 92, 246, 0.6))'
+                }}
+                transition={{ duration: 0.2 }}
+              >
                 <img
                   src="/images/badges/app-store.svg"
                   alt={t('appStore')}
                   style={{ height: '52px', width: '176px', objectFit: 'fill' }}
                 />
-              </a>
-              <a href="#" className="inline-block transition-transform hover:scale-105">
+              </motion.a>
+              <motion.a
+                href="#"
+                className="inline-block"
+                whileHover={{
+                  scale: 1.05,
+                  filter: 'drop-shadow(0 8px 24px rgba(139, 92, 246, 0.6))'
+                }}
+                transition={{ duration: 0.2 }}
+              >
                 <img
                   src="/images/badges/google-play.svg"
                   alt={t('googlePlay')}
                   style={{ height: '52px', width: '176px', objectFit: 'fill' }}
                 />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -53,16 +72,32 @@ export default function CardShowcase() {
             className="relative order-1 lg:order-2"
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.7 }}
             variants={slideInRight}
           >
-            <div className="relative mx-auto max-w-[700px] h-[500px] flex items-center justify-center">
+            <div className="relative mx-auto flex items-center justify-center">
+              {/* Purple Gradient Background - positioned behind image */}
+              <div
+                className="absolute"
+                style={{
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '1200px',
+                  height: '1200px',
+                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(168, 85, 247, 0.3) 30%, rgba(124, 58, 237, 0.15) 50%, rgba(99, 102, 241, 0) 70%)',
+                  filter: 'saturate(1.1)',
+                  pointerEvents: 'none'
+                }}
+              />
+
+              {/* Image */}
               <Image
-                src="/images/phone-card.png"
+                src="/images/phone-card-nobg.png"
                 alt="Phone with Visa Card"
-                width={600}
-                height={600}
-                className="object-contain w-full h-full"
+                width={1200}
+                height={1200}
+                className="object-contain relative z-10"
                 priority
               />
             </div>
