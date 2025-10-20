@@ -343,25 +343,22 @@ export default function Hero({
         </p>
 
         <div ref={ctaRef} className="flex flex-wrap gap-4 pt-4">
-          {ctaButtons.length > 0 && (
-            <>
-              <a href="#" className="inline-block transition-transform hover:scale-105">
-                <img
-                  src="/images/badges/app-store.svg"
-                  alt="Download on the App Store"
-                  style={{ height: '56px', width: '200px' }}
-                />
-              </a>
-              <a href="#" className="inline-block transition-transform hover:scale-105">
-                <img
-                  src="/images/badges/google-play.svg"
-                  alt="Get it on Google Play"
-                  style={{ height: '56px', width: '200px' }}
-                />
-              </a>
-            </>
-          )}
+          <a href="#" className="inline-block transition-transform hover:scale-105">
+            <img
+              src="/images/badges/app-store.svg"
+              alt="Download on the App Store"
+              style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+            />
+          </a>
+          <a href="#" className="inline-block transition-transform hover:scale-105">
+            <img
+              src="/images/badges/google-play.svg"
+              alt="Get it on Google Play"
+              style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+            />
+          </a>
         </div>
+
 
         <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-white/60">
           {microDetails.map((detail, index) => {

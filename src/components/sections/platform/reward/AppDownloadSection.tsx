@@ -63,15 +63,14 @@ export default function AppDownloadSection() {
                 <img
                   src="/images/badges/app-store.svg"
                   alt="Download on the App Store"
-                  style={{ height: '56px', width: '200px' }}
+                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
                 />
               </a>
-
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
                   src="/images/badges/google-play.svg"
                   alt="Get it on Google Play"
-                  style={{ height: '56px', width: '200px' }}
+                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
                 />
               </a>
             </m.div>
