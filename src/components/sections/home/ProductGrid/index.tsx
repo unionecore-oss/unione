@@ -30,6 +30,9 @@ export default function ProductGrid() {
     },
   ]
 
+  const textOrders = ['order-2', 'order-4', 'order-6', 'order-8']
+  const numberOrders = ['order-1', 'order-3', 'order-5', 'order-7']
+
   return (
     <section style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="w-full">
@@ -40,10 +43,10 @@ export default function ProductGrid() {
             const textCell = (
               <motion.div
                 key={`text-${index}`}
-                className="product_asset_wrap"
+                className={`product_asset_wrap ${textOrders[index]} md:order-none`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.7 }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <div
@@ -73,10 +76,10 @@ export default function ProductGrid() {
             const numberCell = (
               <motion.div
                 key={`number-${index}`}
-                className="product_asset_wrap"
+                className={`product_asset_wrap ${numberOrders[index]} md:order-none`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.7 }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ delay: index * 0.1 + 0.1, duration: 0.6 }}
               >
                 <div
