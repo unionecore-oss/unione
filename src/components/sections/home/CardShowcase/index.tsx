@@ -37,10 +37,7 @@ export default function CardShowcase() {
               <motion.a
                 href="#"
                 className="inline-block"
-                whileHover={{
-                  scale: 1.05,
-                  filter: 'drop-shadow(0 8px 24px rgba(139, 92, 246, 0.6))'
-                }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
@@ -53,10 +50,7 @@ export default function CardShowcase() {
               <motion.a
                 href="#"
                 className="inline-block"
-                whileHover={{
-                  scale: 1.05,
-                  filter: 'drop-shadow(0 8px 24px rgba(139, 92, 246, 0.6))'
-                }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
