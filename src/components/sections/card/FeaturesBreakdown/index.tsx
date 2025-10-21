@@ -40,7 +40,7 @@ export default function FeaturesBreakdown() {
   ]
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 3xl:py-32 relative overflow-hidden">
+    <section className="py-8 md:py-20 lg:py-24 3xl:py-32 relative overflow-hidden">
       {/* Ambient background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-48 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
