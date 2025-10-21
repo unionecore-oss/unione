@@ -178,7 +178,7 @@ export default function WalletPage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 px-8 md:px-12 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 leading-tight whitespace-pre-line">
               {t('walletProtection.title')}
             </h2>
-            <div className="flex-1 min-h-[400px] overflow-hidden">
+            <div className="flex-1 min-h-[800px] overflow-hidden">
               <ShaderAnimation />
             </div>
           </motion.div>
