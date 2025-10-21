@@ -165,32 +165,33 @@ export default function WalletPage() {
       </section>
 
       {/* Wallets that secure assets */}
-      <section className="bg-white pb-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
-          {/* Left: Title and Shader Animation */}
+      <section className="bg-white py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start px-8 md:px-12 lg:px-16">
+          {/* Left: Shader Animation */}
           <motion.div
-            className="flex flex-col"
+            className="order-2 lg:order-1"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 px-8 md:px-12 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 leading-tight whitespace-pre-line">
-              {t('walletProtection.title')}
-            </h2>
-            <div className="flex-1 min-h-[800px] overflow-hidden">
+            <div className="h-[640px] overflow-hidden rounded-2xl">
               <ShaderAnimation />
             </div>
           </motion.div>
 
           {/* Right: Text Content */}
           <motion.div
-            className="px-8 md:px-12 lg:px-16 xl:px-20 flex flex-col py-8 md:py-12 lg:py-16"
+            className="flex flex-col order-1 lg:order-2"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 md:mb-8 lg:mb-10 leading-tight whitespace-pre-line">
+              {t('walletProtection.title')}
+            </h2>
+
             <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 mb-8 md:mb-10 lg:mb-12 leading-relaxed font-light">
               {t('walletProtection.description')}
             </p>
