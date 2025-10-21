@@ -19,7 +19,7 @@ export default function WalletPage() {
               variants={staggerContainer}
               initial="initial"
               animate="animate"
-              className="order-1"
+              className="order-2 lg:order-1"
             >
               <motion.div variants={fadeInUp}>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 md:mb-6 leading-tight tracking-tight text-gray-900">
@@ -40,7 +40,7 @@ export default function WalletPage() {
 
             {/* Right: Phone Mockup */}
             <motion.div
-              className="relative flex justify-center items-center order-2"
+              className="relative flex justify-center items-center order-1 lg:order-2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
