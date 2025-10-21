@@ -335,7 +335,7 @@ export default function Hero({
           </div>
         )}
 
-        <h1 ref={headerRef} className="max-w-7xl text-center text-5xl md:text-6xl lg:text-7xl font-black leading-[1.25] tracking-tight text-white px-6" style={{ textShadow: '0 3px 10px rgba(0,0,0,0.9), 0 6px 20px rgba(0,0,0,0.7)' }}>
+        <h1 ref={headerRef} className="max-w-7xl text-center text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.25] tracking-tight text-white px-6" style={{ textShadow: '0 3px 10px rgba(0,0,0,0.9), 0 6px 20px rgba(0,0,0,0.7)' }}>
           {title}
         </h1>
 
