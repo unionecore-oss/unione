@@ -44,7 +44,7 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                className="p-8 md:p-16 flex items-center justify-center min-h-[250px] md:min-h-[400px] relative overflow-hidden transition-all duration-500"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/opportunity-bg.jpg)',
                   backgroundSize: 'cover',
@@ -54,13 +54,13 @@ export default function EarnPage() {
               >
               </motion.div>
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white"
+                className="px-6 md:px-12 lg:px-20 py-8 md:py-16 bg-white"
                 variants={fadeInUp}
               >
-                <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-orange-600">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900 transition-all duration-300 group-hover:text-orange-600">
                   {t('features.financialOpportunities.title')}
                 </h2>
-                <p className="text-gray-600 text-lg">{t('features.financialOpportunities.description')}</p>
+                <p className="text-gray-600 text-base md:text-lg">{t('features.financialOpportunities.description')}</p>
               </motion.div>
             </motion.div>
 
@@ -75,16 +75,16 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white order-2 md:order-1"
+                className="px-6 md:px-12 lg:px-20 py-8 md:py-16 bg-white order-2 md:order-1"
                 variants={fadeInUp}
               >
-                <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-purple-600">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900 transition-all duration-300 group-hover:text-purple-600">
                   {t('features.flexibleEntry.title')}
                 </h2>
-                <p className="text-gray-600 text-lg">{t('features.flexibleEntry.description')}</p>
+                <p className="text-gray-600 text-base md:text-lg">{t('features.flexibleEntry.description')}</p>
               </motion.div>
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
+                className="p-8 md:p-16 flex items-center justify-center min-h-[250px] md:min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/wallet-bg.jpg)',
                   backgroundSize: 'cover',
@@ -106,7 +106,7 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                className="p-8 md:p-16 flex items-center justify-center min-h-[250px] md:min-h-[400px] relative overflow-hidden transition-all duration-500"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/time-bg.jpg)',
                   backgroundSize: 'cover',
@@ -116,13 +116,13 @@ export default function EarnPage() {
               >
               </motion.div>
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white"
+                className="px-6 md:px-12 lg:px-20 py-8 md:py-16 bg-white"
                 variants={fadeInUp}
               >
-                <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-green-600">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900 transition-all duration-300 group-hover:text-green-600">
                   {t('features.idleMoney.title')}
                 </h2>
-                <p className="text-gray-600 text-lg">{t('features.idleMoney.description')}</p>
+                <p className="text-gray-600 text-base md:text-lg">{t('features.idleMoney.description')}</p>
               </motion.div>
             </motion.div>
 
@@ -137,16 +137,16 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white order-2 md:order-1"
+                className="px-6 md:px-12 lg:px-20 py-8 md:py-16 bg-white order-2 md:order-1"
                 variants={fadeInUp}
               >
-                <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-cyan-600">
+                <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-900 transition-all duration-300 group-hover:text-cyan-600">
                   {t('features.hourlyRewards.title')}
                 </h2>
-                <p className="text-gray-600 text-lg">{t('features.hourlyRewards.description')}</p>
+                <p className="text-gray-600 text-base md:text-lg">{t('features.hourlyRewards.description')}</p>
               </motion.div>
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
+                className="p-8 md:p-16 flex items-center justify-center min-h-[250px] md:min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/growth-bg.jpg)',
                   backgroundSize: 'cover',

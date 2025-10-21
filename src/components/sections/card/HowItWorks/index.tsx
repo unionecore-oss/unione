@@ -27,7 +27,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-white">
       <div className="w-full px-0">
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 items-start"
@@ -42,11 +42,11 @@ export default function HowItWorks() {
               variants={fadeInUp}
               className="overflow-hidden"
               style={{
-                marginTop: `${index * 60}px`,
+                marginTop: `${index * 30}px`,
               }}
             >
               <div
-                className="w-full h-[432px] relative"
+                className="w-full h-[216px] relative"
                 style={{
                   background: feature.image,
                   backgroundSize: 'cover',
@@ -55,14 +55,14 @@ export default function HowItWorks() {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-9 bg-white/5 backdrop-blur-sm">
+              <div className="p-4 bg-white/5 backdrop-blur-sm">
                 <h3
-                  className="text-2xl font-bold mb-4"
+                  className="text-xl font-bold mb-2"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
                   {t(`${feature.key}.title`)}
                 </h3>
-                <p className="text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
                   {t(`${feature.key}.description`)}
                 </p>
               </div>

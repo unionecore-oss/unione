@@ -28,7 +28,7 @@ export default function AboutUnione() {
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <motion.h2
             className="text-6xl md:text-7xl font-bold mb-16"

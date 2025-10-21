@@ -11,29 +11,11 @@ export default function CardHero() {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[800px] md:min-h-[750px] lg:min-h-[850px] xl:min-h-[900px] 3xl:min-h-[950px] flex items-start -mt-[74px] pt-[74px]"
+      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center -mt-[74px] pt-[74px] bg-white"
     >
-      {/* Background Image - Mobile */}
+      {/* Background Image */}
       <motion.div
-        className="absolute inset-0 w-full h-full md:hidden"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <img
-          src="/card6.png"
-          alt="Unione Card"
-          className="w-full h-full object-cover"
-          style={{
-            filter: CSS_FILTERS.cardPage.heroBackground,
-            objectPosition: 'center center',
-          }}
-        />
-      </motion.div>
-
-      {/* Background Image - Desktop */}
-      <motion.div
-        className="absolute inset-0 w-full h-full hidden md:block"
+        className="absolute inset-0 w-full h-full"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -50,7 +32,7 @@ export default function CardHero() {
       </motion.div>
 
       {/* Text Content - Overlay Left Aligned */}
-      <div className="relative z-10 px-4 sm:px-6 md:px-12 md:pl-14 lg:pl-24 3xl:pl-32 pt-16 md:pt-20 lg:pt-24">
+      <div className="relative z-10 px-4 sm:px-6 md:px-12 md:pl-14 lg:pl-24 3xl:pl-32 py-8">
         <motion.div
           variants={staggerContainer}
           initial="initial"
