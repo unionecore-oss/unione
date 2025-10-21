@@ -101,7 +101,7 @@ export default function CardShowcase() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src="/images/phone-card-nobg.png"
+                  src="/images/iphone-card-nobg.png"
                   alt="Phone with Visa Card"
                   width={800}
                   height={800}
