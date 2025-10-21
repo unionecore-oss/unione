@@ -226,7 +226,7 @@ function ShaderBackground() {
 // ===================== HERO =====================
 interface HeroProps {
   title: React.ReactNode;
-  description: string;
+  description: React.ReactNode;
   badgeText?: string;
   badgeLabel?: string;
   ctaButtons?: Array<{ text: string; href: string; primary?: boolean }>;
@@ -339,7 +339,7 @@ export default function Hero({
           {title}
         </h1>
 
-        <p ref={paraRef} className="max-w-xl text-center text-xl md:text-2xl font-light leading-relaxed tracking-tight text-white/90 px-4 whitespace-pre-line" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6)' }}>
+        <p ref={paraRef} className="max-w-xl text-center text-xl md:text-2xl font-light leading-relaxed tracking-tight text-white/90 px-4" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6)' }}>
           {description}
         </p>
 

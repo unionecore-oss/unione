@@ -13,7 +13,13 @@ export default function EarnPage() {
       {/* Hero - Normal flow positioning */}
       <Hero
         title={t('hero.title')}
-        description="Stake your assets effortlessly with a simple and intuitive interface.\nNo complex steps. Just seamless earning with full transparency."
+        description={
+          <>
+            Stake your assets effortlessly with a simple and intuitive interface.
+            <br />
+            No complex steps. Just seamless earning with full transparency.
+          </>
+        }
         badgeText=""
         badgeLabel=""
         ctaButtons={[
