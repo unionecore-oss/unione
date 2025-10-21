@@ -323,7 +323,7 @@ export default function Hero({
   );
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden flex items-center justify-center -mt-[74px] pt-[74px]">
+    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden flex items-center justify-center -mt-[74px] pt-[150px]">
       <ShaderBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-20 sm:gap-8 md:px-10 lg:px-16">
