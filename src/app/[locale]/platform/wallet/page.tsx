@@ -81,7 +81,7 @@ export default function WalletPage() {
           >
             {/* UNIONE Logo Card */}
             <motion.div
-              className="rounded-2xl p-6 min-h-[350px] flex flex-col shadow-lg relative"
+              className="rounded-2xl p-6 min-h-[350px] md:min-h-[700px] flex flex-col shadow-lg relative"
               style={{ backgroundColor: 'rgb(245, 243, 255)' }}
               variants={fadeInUp}
             >
@@ -102,7 +102,7 @@ export default function WalletPage() {
                   <img
                     src="/secure-shield.png"
                     alt="Custodian Protection Shield"
-                    className="w-[175px] h-auto object-contain relative z-10"
+                    className="w-[175px] md:w-[350px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'
                     }}
@@ -122,7 +122,7 @@ export default function WalletPage() {
 
             {/* UNIONE Company Name Card */}
             <motion.div
-              className="rounded-2xl p-6 min-h-[350px] flex flex-col shadow-lg relative"
+              className="rounded-2xl p-6 min-h-[350px] md:min-h-[700px] flex flex-col shadow-lg relative"
               style={{ backgroundColor: 'rgb(245, 243, 255)' }}
               variants={fadeInUp}
             >
@@ -143,7 +143,7 @@ export default function WalletPage() {
                   <img
                     src="/secure-web.png"
                     alt="Wallet Security Box"
-                    className="w-[175px] h-auto object-contain relative z-10"
+                    className="w-[175px] md:w-[350px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'
                     }}
