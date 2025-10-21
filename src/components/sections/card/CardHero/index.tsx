@@ -11,11 +11,31 @@ export default function CardHero() {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center"
+      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center -mt-[72px] pt-[72px]"
     >
-      {/* Background Image - Full Width */}
+      {/* Background Image - Mobile */}
       <motion.div
-        className="absolute inset-0 w-full h-full"
+        className="absolute inset-0 w-full h-full md:hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <img
+          src="/card6.png"
+          alt="Unione Card"
+          className="w-full h-full object-contain"
+          style={{
+            filter: CSS_FILTERS.cardPage.heroBackground,
+            objectPosition: 'center center',
+            transform: 'scaleY(2.0)',
+            transformOrigin: 'center center',
+          }}
+        />
+      </motion.div>
+
+      {/* Background Image - Desktop */}
+      <motion.div
+        className="absolute inset-0 w-full h-full hidden md:block"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -24,7 +44,10 @@ export default function CardHero() {
           src="/card6.png"
           alt="Unione Card"
           className="w-full h-full object-cover"
-          style={{ filter: CSS_FILTERS.cardPage.heroBackground }}
+          style={{
+            filter: CSS_FILTERS.cardPage.heroBackground,
+            objectPosition: 'center center',
+          }}
         />
       </motion.div>
 
