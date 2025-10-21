@@ -9,7 +9,7 @@ export default function AppDownloadSection() {
   const t = useTranslations('pages.reward.appDownload')
 
   return (
-    <section className="section-padding" style={{ backgroundColor: 'var(--color-background-primary)' }}>
+    <section className="section-padding lg:pt-8" style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
@@ -20,12 +20,12 @@ export default function AppDownloadSection() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
+            <div className="relative w-full max-w-md lg:max-w-2xl mx-auto">
               <Image
                 src="/phone1.png"
                 alt="UNIONE Mobile App"
-                width={400}
-                height={600}
+                width={600}
+                height={900}
                 className="w-full h-auto"
               />
             </div>
@@ -41,7 +41,7 @@ export default function AppDownloadSection() {
           >
             <m.h2
               variants={fadeInUp}
-              className="text-4xl md:text-5xl font-bold"
+              className="text-4xl md:text-5xl lg:text-7xl font-bold"
               style={{ color: 'var(--color-text-primary)' }}
             >
               {t('title')}
@@ -49,7 +49,7 @@ export default function AppDownloadSection() {
 
             <m.p
               variants={fadeInUp}
-              className="text-lg md:text-xl leading-relaxed"
+              className="text-lg md:text-xl lg:text-3xl leading-relaxed"
               style={{ color: 'var(--color-text-secondary)' }}
             >
               {t('description')}
