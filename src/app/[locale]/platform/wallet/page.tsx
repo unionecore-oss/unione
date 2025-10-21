@@ -165,10 +165,11 @@ export default function WalletPage() {
       </section>
 
       {/* Wallets that secure assets */}
-      <section className="bg-white pb-16 md:pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
+      <section className="bg-white pb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
           {/* Left: Title and Shader Animation */}
           <motion.div
+            className="flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -177,7 +178,7 @@ export default function WalletPage() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 px-8 md:px-12 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 leading-tight whitespace-pre-line">
               {t('walletProtection.title')}
             </h2>
-            <div className="h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+            <div className="flex-1 min-h-[400px] overflow-hidden">
               <ShaderAnimation />
             </div>
           </motion.div>
