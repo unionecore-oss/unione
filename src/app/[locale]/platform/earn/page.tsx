@@ -30,7 +30,7 @@ export default function EarnPage() {
       />
 
       {/* Features Grid */}
-      <section className="pt-8 pb-0 bg-white">
+      <section className="py-0 bg-white">
         <div className="w-full">
           <div className="space-y-0">
             {/* Row 1: Financial opportunities open to everyone */}
