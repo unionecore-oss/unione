@@ -11,7 +11,7 @@ export default function CardHero() {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center -mt-[73px] pt-[73px]"
+      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center -mt-[74px] pt-[74px]"
     >
       {/* Background Image - Mobile */}
       <motion.div
