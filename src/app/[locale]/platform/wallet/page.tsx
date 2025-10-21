@@ -13,25 +13,26 @@ export default function WalletPage() {
       {/* Hero Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Left: Text Content */}
             <motion.div
               variants={staggerContainer}
               initial="initial"
               animate="animate"
+              className="order-1"
             >
               <motion.div variants={fadeInUp}>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight tracking-tight text-gray-900">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 md:mb-6 leading-tight tracking-tight text-gray-900">
                   {t('hero.title')}
                 </h1>
 
                 <div className="h-1.5 w-80 bg-gradient-to-r from-purple-600 to-purple-600 mb-8 rounded-full"></div>
 
-                <p className="text-xl mb-10 text-gray-700 max-w-xl leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-10 text-gray-700 max-w-xl leading-relaxed">
                   {t('hero.subtitle')}
                 </p>
 
-                <button className="px-10 py-4 bg-black text-white text-lg font-semibold rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <button className="px-6 sm:px-8 md:px-10 py-3 md:py-4 bg-black text-white text-base md:text-lg font-semibold rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
                   {t('hero.cta')}
                 </button>
               </motion.div>
@@ -39,13 +40,13 @@ export default function WalletPage() {
 
             {/* Right: Phone Mockup */}
             <motion.div
-              className="relative flex justify-center items-center"
+              className="relative flex justify-center items-center order-2"
               variants={fadeInUp}
             >
               <img
                 src="/123124.png"
                 alt="UNIONE Wallet App"
-                className="w-full h-auto max-w-[800px]"
+                className="w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px]"
               />
             </motion.div>
           </div>
@@ -62,7 +63,7 @@ export default function WalletPage() {
             className="text-5xl md:text-6xl font-black text-center mb-20 tracking-tight text-gray-900"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
             {t('security.title')}
@@ -73,7 +74,7 @@ export default function WalletPage() {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             {/* UNIONE Logo Card */}
             <motion.div
@@ -167,10 +168,10 @@ export default function WalletPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 px-8 pt-16 pb-8 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 px-8 pt-16 pb-8 leading-tight whitespace-pre-line">
               {t('walletProtection.title')}
             </h2>
             <div className="h-[600px] overflow-hidden">
@@ -184,7 +185,7 @@ export default function WalletPage() {
             style={{ marginTop: '4rem' }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 mb-12 leading-relaxed font-light">

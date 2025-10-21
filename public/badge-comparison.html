@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .comparison {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+        .badge-wrapper {
+            text-align: center;
+        }
+        .badge-wrapper h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .badge-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        img {
+            display: block;
+            border: 2px solid #ddd;
+            padding: 10px;
+            background: white;
+        }
+        .test-176 img {
+            height: 52px;
+            width: 176px;
+            object-fit: fill;
+        }
+        .overlay {
+            position: relative;
+            display: inline-block;
+            margin-top: 40px;
+        }
+        .overlay img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .overlay img:first-child {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>App Store vs Google Play Badge Comparison</h1>
+
+        <h2>현재 설정 (176px × 52px, object-fit: fill)</h2>
+        <div class="comparison">
+            <div class="badge-wrapper">
+                <h3>App Store</h3>
+                <img src="/images/badges/app-store.svg" alt="App Store" class="test-176">
+                <div class="badge-info" id="app-store-info"></div>
+            </div>
+            <div class="badge-wrapper">
+                <h3>Google Play</h3>
+                <img src="/images/badges/google-play.svg" alt="Google Play" class="test-176">
+                <div class="badge-info" id="google-play-info"></div>
+            </div>
+        </div>
+
+        <h2>오버레이 비교 (빨간색=App Store, 파란색=Google Play)</h2>
+        <div style="text-align: center;">
+            <div class="overlay">
+                <img src="/images/badges/app-store.svg" alt="App Store" style="height: 52px; width: 176px; object-fit: fill; border: 2px solid red;">
+                <img src="/images/badges/google-play.svg" alt="Google Play" style="height: 52px; width: 176px; object-fit: fill; border: 2px solid blue; position: relative;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const appStoreImg = document.querySelector('img[alt="App Store"]');
+            const googlePlayImg = document.querySelector('img[alt="Google Play"]');
+
+            const appStoreRect = appStoreImg.getBoundingClientRect();
+            const googlePlayRect = googlePlayImg.getBoundingClientRect();
+
+            document.getElementById('app-store-info').innerHTML = `
+                실제 크기: ${Math.round(appStoreRect.width)}px × ${Math.round(appStoreRect.height)}px
+            `;
+
+            document.getElementById('google-play-info').innerHTML = `
+                실제 크기: ${Math.round(googlePlayRect.width)}px × ${Math.round(googlePlayRect.height)}px
+            `;
+        });
+    </script>
+</body>
+</html>

@@ -45,12 +45,17 @@
   "pages": {
     "home": {
       "hero": {
-        "title": {
-          "line1": "A new Web3 payment",
-          "line2": "paradigm in one",
-          "line3": "platform."
-        },
-        "cta": "Get Started"
+        "title": "Your complete platform for Web3 payments",
+        "badge": "Introducing UNIONE.",
+        "explore": "Explore",
+        "available": "Available Now",
+        "welcome": "Welcome to UNIONE! We're",
+        "name": "your payment partner",
+        "description": "Transform crypto into real-world spending power with our complete fintech platform.",
+        "cta": {
+          "primary": "Start Project",
+          "secondary": "Book a call"
+        }
       },
       "cardShowcase": {
         "title": "Unione bridges crypto and the real world with a global card",

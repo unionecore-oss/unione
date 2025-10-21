@@ -34,7 +34,7 @@ export default function HowItWorks() {
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {features.map((feature, index) => (
             <motion.div

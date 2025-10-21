@@ -244,6 +244,7 @@ export default function Hero({
   ],
   microDetails = ["Low‑weight font", "Tight tracking", "Subtle motion"]
 }: HeroProps) {
+  void ctaButtons; // Unused parameter
   const sectionRef = useRef<HTMLElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
@@ -334,11 +335,11 @@ export default function Hero({
           </div>
         )}
 
-        <h1 ref={headerRef} className="max-w-7xl text-center text-[2.2rem] font-black leading-[1.25] tracking-tight text-white sm:text-[2.8rem] md:text-[3.5rem] lg:text-[4.2rem] px-6">
+        <h1 ref={headerRef} className="max-w-7xl text-center text-[1.8rem] font-black leading-[1.25] tracking-tight text-white sm:text-[2.4rem] md:text-[3.2rem] lg:text-[4.2rem] px-6" style={{ textShadow: '0 3px 10px rgba(0,0,0,0.9), 0 6px 20px rgba(0,0,0,0.7)' }}>
           {title}
         </h1>
 
-        <p ref={paraRef} className="max-w-xl text-center text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
+        <p ref={paraRef} className="max-w-xl text-center text-sm font-light leading-relaxed tracking-tight text-white/90 sm:text-base md:text-lg px-4" style={{ textShadow: '0 2px 6px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.6)' }}>
           {description}
         </p>
 

@@ -16,7 +16,7 @@ export default function AppDownloadSection() {
           <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
             className="relative"
           >
@@ -36,7 +36,7 @@ export default function AppDownloadSection() {
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="space-y-6"
           >
             <m.h2

@@ -32,7 +32,7 @@ export default function EarnPage() {
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={staggerContainer}
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
@@ -63,7 +63,7 @@ export default function EarnPage() {
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={staggerContainer}
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
@@ -94,7 +94,7 @@ export default function EarnPage() {
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={staggerContainer}
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}
@@ -125,7 +125,7 @@ export default function EarnPage() {
               className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center group cursor-pointer"
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={staggerContainer}
               whileHover={{ scale: 1.01 }}
               transition={{ duration: 0.3 }}

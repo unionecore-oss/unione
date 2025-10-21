@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function ShaderAnimation() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -12,6 +13,7 @@ export function ShaderAnimation() {
     uniforms: any;
     animationId: number;
   } | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -142,6 +144,9 @@ export function ShaderAnimation() {
     // Start animation
     animate();
 
+    // Mark as loaded after initialization
+    setIsLoading(false);
+
     // Cleanup function
     return () => {
       window.removeEventListener("resize", onWindowResize);
@@ -161,13 +166,51 @@ export function ShaderAnimation() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="w-full h-full"
-      style={{
-        background: "#000",
-        overflow: "hidden",
-      }}
-    />
+    <div className="w-full h-full relative">
+      {/* Skeleton Loading UI */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0 overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%)",
+            }}
+          >
+            {/* Pulse animation effect */}
+            <motion.div
+              animate={{
+                opacity: [0.3, 0.6, 0.3],
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="w-full h-full"
+              style={{
+                background: "radial-gradient(circle at center, rgba(0, 122, 255, 0.15) 0%, transparent 70%)",
+              }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* WebGL Canvas Container */}
+      <motion.div
+        ref={containerRef}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoading ? 0 : 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="w-full h-full"
+        style={{
+          background: "#000",
+          overflow: "hidden",
+        }}
+      />
+    </div>
   );
 }
