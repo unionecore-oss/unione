@@ -8,9 +8,9 @@ import { Shield, Zap, Globe, Sparkles } from 'lucide-react'
 import { ReactNode } from 'react'
 
 const CardDecorator = ({ children }: { children: ReactNode }) => (
-  <div aria-hidden className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
+  <div aria-hidden className="relative mx-auto size-24 md:size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
     <div className="absolute inset-0 [--border:black] dark:[--border:white] bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
-    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l">{children}</div>
+    <div className="bg-background absolute inset-0 m-auto flex size-8 md:size-12 items-center justify-center border-t border-l">{children}</div>
   </div>
 )
 
@@ -31,14 +31,14 @@ export default function AboutUnione() {
           viewport={{ once: true, amount: 0.1 }}
         >
           <motion.h2
-            className="text-6xl md:text-7xl font-bold mb-16"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 md:mb-16"
             style={{ color: 'var(--color-text-primary)' }}
             variants={fadeInUp}
           >
             {t('title')}
           </motion.h2>
 
-          <motion.div className="space-y-12 text-2xl leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
+          <motion.div className="space-y-6 md:space-y-12 text-base md:text-2xl leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
             <motion.p variants={fadeInUp}>
               {t('paragraph1')}
             </motion.p>
@@ -54,7 +54,7 @@ export default function AboutUnione() {
             {/* Visual Break - Core Values */}
             <motion.div
               variants={staggerContainer}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-16"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-8 md:pt-16"
             >
               {[
                 { Icon: Shield, key: 'securityFirst' },
@@ -68,16 +68,16 @@ export default function AboutUnione() {
                   className="h-full"
                 >
                   <Card className="group shadow-black-950/5 h-full">
-                    <CardHeader className="pb-3">
+                    <CardHeader className="pb-2 md:pb-3">
                       <CardDecorator>
-                        <value.Icon className="size-6" aria-hidden />
+                        <value.Icon className="size-4 md:size-6" aria-hidden />
                       </CardDecorator>
 
-                      <h3 className="mt-6 font-medium text-center">{t(`values.${value.key}.title`)}</h3>
+                      <h3 className="mt-3 md:mt-6 font-medium text-center text-sm md:text-base">{t(`values.${value.key}.title`)}</h3>
                     </CardHeader>
 
                     <CardContent>
-                      <p className="text-sm text-center">{t(`values.${value.key}.description`)}</p>
+                      <p className="text-xs md:text-sm text-center">{t(`values.${value.key}.description`)}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
