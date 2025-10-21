@@ -33,7 +33,7 @@ export default function CardShowcase() {
             </h2>
 
             {/* App Store Badges */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-nowrap gap-2 sm:gap-4 pt-4">
               <motion.a
                 href="#"
                 className="inline-block"
@@ -44,7 +44,7 @@ export default function CardShowcase() {
                 <img
                   src="/images/badges/app-store.svg"
                   alt={t('appStore')}
-                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+                  className="h-10 w-auto sm:h-[52px]"
                 />
               </motion.a>
               <motion.a
@@ -57,7 +57,7 @@ export default function CardShowcase() {
                 <img
                   src="/images/badges/google-play.svg"
                   alt={t('googlePlay')}
-                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+                  className="h-10 w-auto sm:h-[52px]"
                 />
               </motion.a>
             </div>

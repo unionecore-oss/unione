@@ -57,20 +57,20 @@ export default function AppDownloadSection() {
 
             <m.div
               variants={fadeInUp}
-              className="flex flex-wrap gap-4 pt-4"
+              className="flex flex-nowrap gap-2 sm:gap-4 pt-4"
             >
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
                   src="/images/badges/app-store.svg"
                   alt="Download on the App Store"
-                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+                  className="h-10 w-auto sm:h-[52px]"
                 />
               </a>
               <a href="#" className="inline-block transition-transform hover:scale-105">
                 <img
                   src="/images/badges/google-play.svg"
                   alt="Get it on Google Play"
-                  style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+                  className="h-10 w-auto sm:h-[52px]"
                 />
               </a>
             </m.div>

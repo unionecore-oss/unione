@@ -326,7 +326,7 @@ export default function Hero({
     <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden flex items-center justify-center">
       <ShaderBackground />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 sm:gap-8 md:px-10 lg:px-16">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-20 sm:gap-8 md:px-10 lg:px-16">
         {(badgeLabel || badgeText) && (
           <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
@@ -343,19 +343,19 @@ export default function Hero({
           {description}
         </p>
 
-        <div ref={ctaRef} className="flex flex-wrap gap-4 pt-4">
+        <div ref={ctaRef} className="flex flex-nowrap gap-2 sm:gap-4 pt-4 justify-center">
           <a href="#" className="inline-block transition-transform hover:scale-105">
             <img
               src="/images/badges/app-store.svg"
               alt="Download on the App Store"
-              style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+              className="h-10 w-auto sm:h-[52px]"
             />
           </a>
           <a href="#" className="inline-block transition-transform hover:scale-105">
             <img
               src="/images/badges/google-play.svg"
               alt="Get it on Google Play"
-              style={{ height: '52px', width: '176px', objectFit: 'fill' }}
+              className="h-10 w-auto sm:h-[52px]"
             />
           </a>
         </div>
