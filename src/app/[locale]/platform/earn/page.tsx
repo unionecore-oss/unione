@@ -15,7 +15,7 @@ export default function EarnPage() {
         title={t('hero.title')}
         description={
           <>
-            Stake your assets effortlessly with a simple and intuitive interface. No complex steps.
+            Stake your assets effortlessly. No complex steps.
             <br />
             Just seamless earning with full transparency.
           </>
