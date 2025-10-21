@@ -165,7 +165,7 @@ export default function WalletPage() {
       </section>
 
       {/* Wallets that secure assets */}
-      <section className="bg-white pb-16">
+      <section className="bg-white pb-16 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
           {/* Left: Title and Shader Animation */}
           <motion.div
@@ -174,28 +174,27 @@ export default function WalletPage() {
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 px-8 pt-12 pb-6 leading-tight whitespace-pre-line">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 px-8 md:px-12 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 lg:pb-10 leading-tight whitespace-pre-line">
               {t('walletProtection.title')}
             </h2>
-            <div className="h-[300px] overflow-hidden">
+            <div className="h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
               <ShaderAnimation />
             </div>
           </motion.div>
 
           {/* Right: Text Content */}
           <motion.div
-            className="px-8 md:px-12 lg:px-16 flex flex-col"
-            style={{ marginTop: '2rem' }}
+            className="px-8 md:px-12 lg:px-16 xl:px-20 flex flex-col py-8 md:py-12 lg:py-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed font-light">
+            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-700 mb-8 md:mb-10 lg:mb-12 leading-relaxed font-light">
               {t('walletProtection.description')}
             </p>
 
-            <button className="px-8 py-4 bg-black text-white text-base font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-fit">
+            <button className="px-8 md:px-10 lg:px-12 py-4 md:py-5 lg:py-6 bg-black text-white text-base md:text-lg lg:text-xl font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-fit">
               {t('walletProtection.cta')}
             </button>
           </motion.div>
