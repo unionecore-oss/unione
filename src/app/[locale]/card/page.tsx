@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function CardPage() {
   return (
-    <main className="min-h-screen pt-16" style={{ backgroundColor: 'var(--color-background-primary)' }}>
+    <main className="min-h-screen" style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <CardHero />
       <FeaturesBreakdown />
       <HowItWorks />
