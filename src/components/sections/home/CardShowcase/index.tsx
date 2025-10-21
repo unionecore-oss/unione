@@ -79,8 +79,9 @@ export default function CardShowcase() {
                   top: '50%',
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
-                  width: '800px',
-                  height: '800px',
+                  width: 'min(800px, 100vw)',
+                  height: 'min(800px, 100vw)',
+                  maxWidth: '100%',
                   background: 'radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(168, 85, 247, 0.3) 30%, rgba(124, 58, 237, 0.15) 50%, rgba(99, 102, 241, 0) 70%)',
                   filter: 'saturate(1.1)',
                   pointerEvents: 'none'
