@@ -37,7 +37,7 @@ export default function RewardSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="section-padding relative overflow-hidden min-h-screen">
+    <section ref={sectionRef} className="section-padding relative overflow-hidden min-h-screen flex items-center justify-center">
       {/* Fluid Gradient Background */}
       {isVisible && (
         <div className="absolute inset-0">

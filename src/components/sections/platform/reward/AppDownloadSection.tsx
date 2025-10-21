@@ -11,14 +11,14 @@ export default function AppDownloadSection() {
   return (
     <section className="section-padding lg:pt-8" style={{ backgroundColor: 'var(--color-background-primary)' }}>
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <m.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative lg:-mt-32"
           >
             <div className="relative w-full max-w-md lg:max-w-2xl mx-auto">
               <Image
