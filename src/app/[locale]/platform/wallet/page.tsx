@@ -73,7 +73,7 @@ export default function WalletPage() {
           </motion.h2>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
             variants={staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -81,28 +81,28 @@ export default function WalletPage() {
           >
             {/* UNIONE Logo Card */}
             <motion.div
-              className="rounded-3xl p-12 min-h-[700px] flex flex-col shadow-lg relative"
+              className="rounded-2xl p-6 min-h-[350px] flex flex-col shadow-lg relative"
               style={{ backgroundColor: 'rgb(245, 243, 255)' }}
               variants={fadeInUp}
             >
               {/* Top Text Content */}
               <div className="flex flex-col items-center text-center mb-auto">
                 {/* Title */}
-                <h3 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 max-w-sm leading-tight">{t('security.custodianProtection.title')}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 max-w-sm leading-tight">{t('security.custodianProtection.title')}</h3>
 
                 {/* Description */}
-                <p className="text-2xl text-gray-700 leading-relaxed max-w-lg">
+                <p className="text-base text-gray-700 leading-relaxed max-w-lg">
                   {t('security.custodianProtection.description')}
                 </p>
               </div>
 
               {/* 3D Image - Bottom Right */}
-              <div className="absolute bottom-8 right-8">
+              <div className="absolute bottom-4 right-4">
                 <div className="relative">
                   <img
                     src="/secure-shield.png"
                     alt="Custodian Protection Shield"
-                    className="w-[350px] h-auto object-contain relative z-10"
+                    className="w-[175px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'
                     }}
@@ -122,28 +122,28 @@ export default function WalletPage() {
 
             {/* UNIONE Company Name Card */}
             <motion.div
-              className="rounded-3xl p-12 min-h-[700px] flex flex-col shadow-lg relative"
+              className="rounded-2xl p-6 min-h-[350px] flex flex-col shadow-lg relative"
               style={{ backgroundColor: 'rgb(245, 243, 255)' }}
               variants={fadeInUp}
             >
               {/* Top Text Content */}
               <div className="flex flex-col items-center text-center mb-auto">
                 {/* Title */}
-                <h3 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 max-w-sm leading-tight">{t('security.walletSecurity.title')}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 max-w-sm leading-tight">{t('security.walletSecurity.title')}</h3>
 
                 {/* Description */}
-                <p className="text-2xl text-gray-700 leading-relaxed max-w-lg">
+                <p className="text-base text-gray-700 leading-relaxed max-w-lg">
                   {t('security.walletSecurity.description')}
                 </p>
               </div>
 
               {/* 3D Image - Bottom Right */}
-              <div className="absolute bottom-8 right-8">
+              <div className="absolute bottom-4 right-4">
                 <div className="relative">
                   <img
                     src="/secure-web.png"
                     alt="Wallet Security Box"
-                    className="w-[350px] h-auto object-contain relative z-10"
+                    className="w-[175px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'
                     }}
@@ -165,7 +165,7 @@ export default function WalletPage() {
       </section>
 
       {/* Wallets that secure assets */}
-      <section className="bg-white pb-0">
+      <section className="bg-white pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-center">
           {/* Left: Title and Shader Animation */}
           <motion.div
@@ -174,10 +174,10 @@ export default function WalletPage() {
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 px-8 pt-16 pb-8 leading-tight whitespace-pre-line">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 px-8 pt-12 pb-6 leading-tight whitespace-pre-line">
               {t('walletProtection.title')}
             </h2>
-            <div className="h-[600px] overflow-hidden">
+            <div className="h-[300px] overflow-hidden">
               <ShaderAnimation />
             </div>
           </motion.div>
@@ -185,17 +185,17 @@ export default function WalletPage() {
           {/* Right: Text Content */}
           <motion.div
             className="px-8 md:px-12 lg:px-16 flex flex-col"
-            style={{ marginTop: '4rem' }}
+            style={{ marginTop: '2rem' }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 mb-12 leading-relaxed font-light">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed font-light">
               {t('walletProtection.description')}
             </p>
 
-            <button className="px-10 py-5 bg-black text-white text-lg font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-fit">
+            <button className="px-8 py-4 bg-black text-white text-base font-semibold rounded-full hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl w-fit">
               {t('walletProtection.cta')}
             </button>
           </motion.div>
