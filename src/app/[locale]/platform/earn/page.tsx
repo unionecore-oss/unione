@@ -75,7 +75,7 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white"
+                className="px-12 md:px-20 py-16 bg-white order-2 md:order-1"
                 variants={fadeInUp}
               >
                 <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-purple-600">
@@ -84,7 +84,7 @@ export default function EarnPage() {
                 <p className="text-gray-600 text-lg">{t('features.flexibleEntry.description')}</p>
               </motion.div>
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/wallet-bg.jpg)',
                   backgroundSize: 'cover',
@@ -137,7 +137,7 @@ export default function EarnPage() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="px-12 md:px-20 py-16 bg-white"
+                className="px-12 md:px-20 py-16 bg-white order-2 md:order-1"
                 variants={fadeInUp}
               >
                 <h2 className="text-4xl font-bold mb-4 text-gray-900 transition-all duration-300 group-hover:text-cyan-600">
@@ -146,7 +146,7 @@ export default function EarnPage() {
                 <p className="text-gray-600 text-lg">{t('features.hourlyRewards.description')}</p>
               </motion.div>
               <motion.div
-                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500"
+                className="p-16 flex items-center justify-center min-h-[400px] relative overflow-hidden transition-all duration-500 order-1 md:order-2"
                 style={{
                   backgroundImage: 'url(/images/mesh-gradients/growth-bg.jpg)',
                   backgroundSize: 'cover',
