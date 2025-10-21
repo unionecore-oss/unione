@@ -326,7 +326,7 @@ export default function Hero({
     <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden flex items-center justify-center -mt-[74px] pt-[74px]">
       <ShaderBackground />
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-8 sm:gap-8 md:px-10 lg:px-16">
+      <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 py-20 sm:gap-8 md:px-10 lg:px-16">
         {(badgeLabel || badgeText) && (
           <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
             <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
