@@ -11,7 +11,7 @@ export default function CardHero() {
 
   return (
     <section
-      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[750px] 3xl:min-h-[800px] flex items-center -mt-[74px] pt-[74px] bg-white"
+      className="relative overflow-hidden min-h-[650px] md:min-h-[600px] lg:min-h-[850px] xl:min-h-[950px] 3xl:min-h-[1000px] flex items-center -mt-[74px] pt-[74px] bg-white"
     >
       {/* Background Image */}
       <motion.div
@@ -34,7 +34,7 @@ export default function CardHero() {
       </motion.div>
 
       {/* Text Content - Overlay Left Aligned */}
-      <div className="relative z-10 px-4 sm:px-6 md:px-12 md:pl-14 lg:pl-24 3xl:pl-32 py-8">
+      <div className="relative z-10 px-4 sm:px-6 md:px-12 md:pl-14 lg:pl-24 3xl:pl-32 py-8 pt-12 md:pt-16 lg:pt-20">
         <motion.div
           variants={staggerContainer}
           initial="initial"

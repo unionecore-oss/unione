@@ -47,7 +47,8 @@ export default function Header() {
 
             {/* Language Switcher & CTA */}
             <div className="hidden md:flex items-center gap-5 lg:gap-6">
-              <LanguageSwitcher />
+              {/* Temporarily hidden - Korean feature on hold */}
+              {/* <LanguageSwitcher /> */}
               <Link
                 href="/app"
                 className="px-5 md:px-6 py-2.5 min-h-touch flex items-center rounded-full font-medium text-sm md:text-base transition-all duration-300"
