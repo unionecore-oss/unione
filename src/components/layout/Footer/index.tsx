@@ -99,6 +99,7 @@ export default function Footer() {
             <div className="flex gap-5 md:gap-6">
               <Link
                 href="/privacy"
+                prefetch={false}
                 className="min-h-touch flex items-center text-xs md:text-sm transition-colors hover:text-white"
                 style={{ color: '#808080' }}
               >
@@ -106,6 +107,7 @@ export default function Footer() {
               </Link>
               <Link
                 href="/terms"
+                prefetch={false}
                 className="min-h-touch flex items-center text-xs md:text-sm transition-colors hover:text-white"
                 style={{ color: '#808080' }}
               >

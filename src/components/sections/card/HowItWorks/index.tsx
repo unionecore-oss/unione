@@ -3,9 +3,20 @@
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
+import { useEffect, useState } from 'react'
 
 export default function HowItWorks() {
   const t = useTranslations('pages.card.howItWorks')
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const features = [
     {
@@ -30,7 +41,7 @@ export default function HowItWorks() {
     <section className="py-20 bg-white">
       <div className="w-full px-0">
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 items-start"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 items-stretch"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -40,13 +51,13 @@ export default function HowItWorks() {
             <motion.div
               key={feature.key}
               variants={fadeInUp}
-              className="overflow-hidden"
+              className="overflow-hidden flex flex-col"
               style={{
-                marginTop: `${index * 60}px`,
+                marginTop: isMobile ? '0px' : `${index * 60}px`,
               }}
             >
               <div
-                className="w-full h-[216px] lg:h-[432px] relative"
+                className="w-full h-[216px] lg:h-[432px] relative flex-shrink-0"
                 style={{
                   background: feature.image,
                   backgroundSize: 'cover',
@@ -55,14 +66,14 @@ export default function HowItWorks() {
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-4 bg-white/5 backdrop-blur-sm">
+              <div className="p-4 bg-white/5 backdrop-blur-sm flex-grow flex flex-col">
                 <h3
                   className="text-xl font-bold mb-2"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
                   {t(`${feature.key}.title`)}
                 </h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>
+                <p className="text-xs flex-grow" style={{ color: 'var(--color-text-secondary)' }}>
                   {t(`${feature.key}.description`)}
                 </p>
               </div>
