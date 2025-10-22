@@ -42,11 +42,11 @@ export default function HowItWorks() {
               variants={fadeInUp}
               className="overflow-hidden"
               style={{
-                marginTop: `${index * 30}px`,
+                marginTop: `${index * 60}px`,
               }}
             >
               <div
-                className="w-full h-[216px] relative"
+                className="w-full h-[216px] lg:h-[432px] relative"
                 style={{
                   background: feature.image,
                   backgroundSize: 'cover',

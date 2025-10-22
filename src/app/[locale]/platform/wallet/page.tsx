@@ -13,7 +13,7 @@ export default function WalletPage() {
       {/* Hero Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center lg:items-start lg:pt-8">
             {/* Left: Text Content */}
             <motion.div
               variants={staggerContainer}
@@ -40,7 +40,7 @@ export default function WalletPage() {
 
             {/* Right: Phone Mockup */}
             <motion.div
-              className="relative flex justify-center items-center order-1 lg:order-2"
+              className="relative flex justify-center items-center order-1 lg:order-2 lg:-mt-20"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}

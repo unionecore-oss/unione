@@ -10,9 +10,9 @@ export default function CardShowcase() {
 
   return (
     <section
-      className="pt-0 pb-16 lg:pt-2 lg:pb-40"
+      className="pt-16 pb-16 lg:pt-32 lg:pb-40"
       style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #000000 30%, #1a1a1a 45%, #2a2a2a 55%, #3d3d3d 65%, #808080 75%, #c0c0c0 85%, #f0f0f0 92%, #FFFFFF 100%)'
+        background: 'linear-gradient(to bottom, #000000 0%, #000000 20%, #2a2a2a 45%, #5a5a5a 65%, #a0a0a0 82%, #e8e8e8 94%, #FFFFFF 100%)'
       }}
     >
       <div className="container-custom">
@@ -21,7 +21,7 @@ export default function CardShowcase() {
           <motion.div
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.5 }}
             variants={fadeInUp}
             className="order-2 lg:order-1"
           >
@@ -68,7 +68,7 @@ export default function CardShowcase() {
             className="relative order-1 lg:order-2"
             initial="initial"
             whileInView="animate"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.5 }}
             variants={slideInRight}
           >
             <div className="relative mx-auto flex items-center justify-center">
