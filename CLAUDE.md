@@ -8,6 +8,8 @@ Auto-generated from all feature plans. Last updated: 2025-10-16
 - Browser localStorage for language preference persistence (002-korean-language-support)
 - TypeScript 5.x, Node.js 20+ + Next.js 15.5.4, React 19.1.0, Tailwind CSS 4.x, Framer Motion 12.23, Three.js, React Three Fiber (003-responsive-optimization)
 - N/A (프론트엔드 최적화) (003-responsive-optimization)
+- TypeScript 5 + React 19.1, Next.js 15.5.4 (App Router), Tailwind CSS 4, Framer Motion 12.23 (006-fix-card-hero-mobile)
+- N/A (프론트엔드 UI 조정) (006-fix-card-hero-mobile)
 
 ## Project Structure
 ```
@@ -22,9 +24,9 @@ npm test && npm run lint
 TypeScript 5: Follow standard conventions
 
 ## Recent Changes
+- 006-fix-card-hero-mobile: Added TypeScript 5 + React 19.1, Next.js 15.5.4 (App Router), Tailwind CSS 4, Framer Motion 12.23
 - 003-responsive-optimization: Added TypeScript 5.x, Node.js 20+ + Next.js 15.5.4, React 19.1.0, Tailwind CSS 4.x, Framer Motion 12.23, Three.js, React Three Fiber
 - 002-korean-language-support: Added TypeScript 5, Next.js 15.5.4 (App Router) + next-intl (i18n for Next.js App Router), React 19.1
-- 001-website-ui-refinement: Added TypeScript 5 + Next.js 15.5.4 (App Router), Tailwind CSS 4, Framer Motion 12.23, React 19.1
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

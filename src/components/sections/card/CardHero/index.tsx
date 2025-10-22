@@ -23,10 +23,12 @@ export default function CardHero() {
         <img
           src="/card6.png"
           alt="Unione Card"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover
+            object-[70%_center]
+            md:object-[60%_center]
+            lg:object-center"
           style={{
             filter: CSS_FILTERS.cardPage.heroBackground,
-            objectPosition: 'center center',
           }}
         />
       </motion.div>
