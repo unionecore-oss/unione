@@ -3,52 +3,20 @@
 import { m } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import { FluidGradient } from '@/components/ui/fluid-gradient'
-import { useRef, useState, useEffect } from 'react'
+import AnimatedGradientBackground from '@/components/ui/animated-gradient-background'
 
 export default function RewardSection() {
   const t = useTranslations('pages.reward.hero')
-  const sectionRef = useRef<HTMLElement>(null)
-  const [isVisible, setIsVisible] = useState(true)
-
-  useEffect(() => {
-    const currentRef = sectionRef.current
-    if (!currentRef) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          setIsVisible(entry.isIntersecting)
-        })
-      },
-      {
-        threshold: 0,
-        rootMargin: '100px 0px 100px 0px',
-      }
-    )
-
-    observer.observe(currentRef)
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef)
-      }
-    }
-  }, [])
 
   return (
-    <section ref={sectionRef} className="section-padding relative overflow-hidden min-h-screen flex items-center justify-center">
-      {/* Fluid Gradient Background */}
-      {isVisible && (
-        <div className="absolute inset-0">
-          <FluidGradient />
-        </div>
-      )}
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Animated Gradient Background */}
+      <AnimatedGradientBackground />
 
       {/* Content */}
-      <div className="container-custom relative z-10">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
         <m.div
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl mx-auto"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
@@ -61,7 +29,7 @@ export default function RewardSection() {
           </m.h1>
 
           <m.p
-            className="text-2xl md:text-3xl text-white/90"
+            className="text-lg md:text-xl text-gray-300 max-w-lg mx-auto"
             variants={fadeInUp}
           >
             {t('subtitle')}

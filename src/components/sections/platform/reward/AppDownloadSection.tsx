@@ -9,8 +9,13 @@ export default function AppDownloadSection() {
   const t = useTranslations('pages.reward.appDownload')
 
   return (
-    <section className="section-padding lg:pt-8" style={{ backgroundColor: 'var(--color-background-primary)' }}>
-      <div className="container-custom">
+    <section className="section-padding lg:pt-8 relative overflow-hidden" style={{ backgroundColor: 'var(--color-background-primary)' }}>
+      {/* Subtle gradient overlay for seamless integration */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(ellipse at 30% 40%, rgba(41, 121, 255, 0.08) 0%, transparent 50%)'
+      }} />
+
+      <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <m.div
@@ -22,7 +27,7 @@ export default function AppDownloadSection() {
           >
             <div className="relative w-full max-w-md lg:max-w-2xl mx-auto">
               <Image
-                src="/phone1.png"
+                src="/phone1-removebg-preview.png"
                 alt="UNIONE Mobile App"
                 width={600}
                 height={900}
