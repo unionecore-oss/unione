@@ -169,7 +169,7 @@ export default function WalletPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start px-8 md:px-12 lg:px-16">
           {/* Left: Shader Animation */}
           <motion.div
-            className="order-2 lg:order-1"
+            className="order-1 lg:order-1"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -182,7 +182,7 @@ export default function WalletPage() {
 
           {/* Right: Text Content */}
           <motion.div
-            className="flex flex-col order-1 lg:order-2"
+            className="flex flex-col order-2 lg:order-2"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}

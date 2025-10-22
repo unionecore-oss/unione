@@ -61,7 +61,23 @@ export default function CardHero() {
             className="flex flex-col sm:flex-row gap-4"
             variants={fadeInUp}
           >
-            <Button variant="primary" size="lg">
+            <Button
+              variant="primary"
+              size="lg"
+              style={{
+                background: '#ffffff',
+                color: '#000000',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#f5f5f5'
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.2)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#ffffff'
+                e.currentTarget.style.borderColor = 'rgba(0, 0, 0, 0.1)'
+              }}
+            >
               {t('cta')}
             </Button>
           </motion.div>
