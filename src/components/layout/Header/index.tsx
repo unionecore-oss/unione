@@ -6,7 +6,7 @@ import { Link } from '@/lib/i18n/navigation'
 import Logo from './Logo'
 import Navigation from '../Navigation'
 import MobileMenu from '../MobileMenu'
-import LanguageSwitcher from './LanguageSwitcher'
+// import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const t = useTranslations('header.cta')
