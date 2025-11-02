@@ -22,7 +22,7 @@ export default function TermsPage() {
               This Agreement is subject to binding arbitration and a waiver of class-action rights as set forth in Chapter 8. Please read this Agreement carefully.
             </p>
             <p className="mb-4 leading-relaxed">
-              These Terms of Service (the "Agreement") describe the terms on which you may access and use the "Unione" mobile wallet application provided by Unione Core Co., Ltd. (the "Company," "we," "us," or "our").
+              These Terms of Service (the &quot;Agreement&quot;) describe the terms on which you may access and use the &quot;Unione&quot; mobile wallet application provided by Unione Core Co., Ltd. (the &quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;).
             </p>
             <p className="mb-4 leading-relaxed">
               This Agreement affects your use of the Products, so please read it carefully. By accessing or using the Products, you acknowledge that you have read, understood, and agree to be bound by this Agreement in its entirety. If you do not agree, you are not authorized to access or use our Products, and you must not use them.
@@ -54,7 +54,7 @@ export default function TermsPage() {
                 1.2 Subdomains
               </h3>
               <p className="leading-relaxed">
-                When using the Product, you may claim a subdomain used as a username linked to your wallet address. Usernames and profile information—including, without limitation, your username, profile details, biometrics, profile image, and transaction history—may be displayed publicly. When choosing a username, you must not infringe others' intellectual property or impersonate any person or organization. Buying, selling, or leasing usernames is prohibited. Username squatting is not permitted and usernames may be reassigned. If you change your username, the previous username may become unavailable. We reserve the right, in our discretion and without prior notice, to revoke access to a username if you violate these provisions, violate applicable law, or engage in conduct harmful to our services. Usernames that are inconsistent with our intent to foster positive associations, or that are offensive, may be revoked. We may also remove or reassign a username to comply with legal obligations or court orders.
+                When using the Product, you may claim a subdomain used as a username linked to your wallet address. Usernames and profile information—including, without limitation, your username, profile details, biometrics, profile image, and transaction history—may be displayed publicly. When choosing a username, you must not infringe others&apos; intellectual property or impersonate any person or organization. Buying, selling, or leasing usernames is prohibited. Username squatting is not permitted and usernames may be reassigned. If you change your username, the previous username may become unavailable. We reserve the right, in our discretion and without prior notice, to revoke access to a username if you violate these provisions, violate applicable law, or engage in conduct harmful to our services. Usernames that are inconsistent with our intent to foster positive associations, or that are offensive, may be revoked. We may also remove or reassign a username to comply with legal obligations or court orders.
               </p>
             </div>
 
@@ -63,7 +63,7 @@ export default function TermsPage() {
                 1.3 Third-Party Services and Content
               </h3>
               <p className="mb-4 leading-relaxed">
-                Our Products may include integrations with, links to, or other means of accessing third-party services, websites, technologies, content, or resources (collectively, "Third-Party Services"). Your use of Third-Party Services may be subject to additional terms, privacy policies, or agreements set by the relevant third parties. You may be required to authenticate or create a separate account through those providers' platforms. You are solely responsible for any costs or fees associated with Third-Party Services.
+                Our Products may include integrations with, links to, or other means of accessing third-party services, websites, technologies, content, or resources (collectively, &quot;Third-Party Services&quot;). Your use of Third-Party Services may be subject to additional terms, privacy policies, or agreements set by the relevant third parties. You may be required to authenticate or create a separate account through those providers&apos; platforms. You are solely responsible for any costs or fees associated with Third-Party Services.
               </p>
               <p className="leading-relaxed">
                 Inclusion or integration of Third-Party Services is provided for your convenience and does not constitute any warranty, endorsement, or guarantee. Any interactions, transactions, or dealings you enter into with third parties while using the Products are solely between you and those third parties. The Company disclaims all responsibility and liability for any damages or losses arising from or related to your use of, or reliance on, any Third-Party Services.

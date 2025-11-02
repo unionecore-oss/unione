@@ -25,7 +25,7 @@ export default function PrivacyPage() {
                 Article 1 (Purpose)
               </h3>
               <p className="leading-relaxed">
-                These Terms and Conditions establish the rights and obligations between users of the electronic commerce-related services and other services (hereinafter referred to as the "Services") provided through the 'Unione' internet open market site operated by Unione Core Co., Ltd. (hereinafter referred to as the "Company"), a telecommunications sales intermediary, and the 'Unione' mobile application provided via mobile communication devices such as smartphones. Their purpose is to promote mutual development through the fulfillment of these rights and obligations.
+                These Terms and Conditions establish the rights and obligations between users of the electronic commerce-related services and other services (hereinafter referred to as the &quot;Services&quot;) provided through the &apos;Unione&apos; internet open market site operated by Unione Core Co., Ltd. (hereinafter referred to as the &quot;Company&quot;), a telecommunications sales intermediary, and the &apos;Unione&apos; mobile application provided via mobile communication devices such as smartphones. Their purpose is to promote mutual development through the fulfillment of these rights and obligations.
               </p>
             </div>
 
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
                 Article 2 (Disclosure, Effectiveness, and Amendment of Terms)
               </h3>
               <p className="leading-relaxed">
-                The Company shall post the contents of these Terms on the initial service screen or linked screen of "Unione" so that Members can review them.
+                The Company shall post the contents of these Terms on the initial service screen or linked screen of &quot;Unione&quot; so that Members can review them.
               </p>
             </div>
 
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
                   <strong>ID:</strong> A unique identifier created and assigned by the Company for member identification and service use.
                 </li>
                 <li className="leading-relaxed">
-                  <strong>Password:</strong> A combination of letters and numbers set by the member themselves and registered with the Company to verify the member's identity and protect their rights, interests, and confidentiality.
+                  <strong>Password:</strong> A combination of letters and numbers set by the member themselves and registered with the Company to verify the member&apos;s identity and protect their rights, interests, and confidentiality.
                 </li>
                 <li className="leading-relaxed">
                   <strong>Administrator:</strong> A person selected by the Company to manage and ensure the smooth operation of the services provided by the Company.
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  The Purchase Service Use Agreement (hereinafter referred to as the "Use Agreement") is established when the Company accepts the use application of a person wishing to use the purchase service provided by the Company. The Company shall post its expression of intent to accept use on the relevant service screen or notify it via email or other methods.
+                  The Purchase Service Use Agreement (hereinafter referred to as the &quot;Use Agreement&quot;) is established when the Company accepts the use application of a person wishing to use the purchase service provided by the Company. The Company shall post its expression of intent to accept use on the relevant service screen or notify it via email or other methods.
                 </li>
                 <li className="leading-relaxed">
                   A person wishing to use the purchase service shall agree to these Terms and Conditions and fill in the necessary details according to the membership application form prescribed by the Company.
@@ -123,7 +123,7 @@ export default function PrivacyPage() {
                   Membership registration is available to individuals aged 14 or older and business entities (including sole proprietors and corporations).
                 </li>
                 <li className="leading-relaxed">
-                  Applications for use are processed in the order received, and membership registration is deemed established when the company's approval reaches the member.
+                  Applications for use are processed in the order received, and membership registration is deemed established when the company&apos;s approval reaches the member.
                 </li>
                 <li className="leading-relaxed">
                   The company may refuse or defer approval of an application for use if any of the following circumstances occur:
@@ -149,13 +149,13 @@ export default function PrivacyPage() {
                   Notifications from the Company to a Member shall be deemed delivered upon reaching the e-mail address provided by the Member. Any damages arising from failure to check such notifications shall be borne solely by the Member, and the Company shall bear no responsibility whatsoever in this regard.
                 </li>
                 <li className="leading-relaxed">
-                  The Company may not use information provided by members for purposes other than those agreed upon for operating the Company's services under the User Agreement. Should a new purpose arise or if the information is to be provided to a third party, the Company shall notify the member of the purpose and obtain consent at the time of use or provision. However, this shall not apply where otherwise stipulated by relevant laws and regulations.
+                  The Company may not use information provided by members for purposes other than those agreed upon for operating the Company&apos;s services under the User Agreement. Should a new purpose arise or if the information is to be provided to a third party, the Company shall notify the member of the purpose and obtain consent at the time of use or provision. However, this shall not apply where otherwise stipulated by relevant laws and regulations.
                 </li>
                 <li className="leading-relaxed">
-                  The Company shall not preselect consent boxes regarding the collection, use, or provision of personal information. Furthermore, the Company shall explicitly specify the services restricted when a user refuses consent for the collection, use, or provision of personal information. The Company shall not restrict or refuse service provision, such as membership registration, based on a user's refusal to consent to the collection, use, or provision of non-mandatory personal information required for purchasing services.
+                  The Company shall not preselect consent boxes regarding the collection, use, or provision of personal information. Furthermore, the Company shall explicitly specify the services restricted when a user refuses consent for the collection, use, or provision of personal information. The Company shall not restrict or refuse service provision, such as membership registration, based on a user&apos;s refusal to consent to the collection, use, or provision of non-mandatory personal information required for purchasing services.
                 </li>
                 <li className="leading-relaxed">
-                  To protect members' personal information, when the Company needs to provide a purchasing member's personal information to a third party, it shall obtain the purchasing member's consent by specifying the items of personal information provided at the time of actual subscription, the recipient, the recipient's purpose of use of the personal information, and the retention and use period. When entrusting personal information, the Company shall establish a "Privacy Policy" in accordance with relevant laws and regulations, designate a personal information protection officer, and post and operate it.
+                  To protect members&apos; personal information, when the Company needs to provide a purchasing member&apos;s personal information to a third party, it shall obtain the purchasing member&apos;s consent by specifying the items of personal information provided at the time of actual subscription, the recipient, the recipient&apos;s purpose of use of the personal information, and the retention and use period. When entrusting personal information, the Company shall establish a &quot;Privacy Policy&quot; in accordance with relevant laws and regulations, designate a personal information protection officer, and post and operate it.
                 </li>
               </ol>
             </div>
@@ -190,10 +190,10 @@ export default function PrivacyPage() {
                   A member may terminate the Service Agreement at any time by notifying the Company of their intention to terminate through the designated service screen. However, the member must take all necessary measures to complete all transactions at least 7 days prior to notifying the Company of their intention to terminate.
                 </li>
                 <li className="leading-relaxed">
-                  The Member shall bear responsibility for any disadvantages arising from the Member's expression of intent within the period specified in the preceding paragraph. Upon termination of the Service Agreement, the Company may recover any additional benefits provided to the Member.
+                  The Member shall bear responsibility for any disadvantages arising from the Member&apos;s expression of intent within the period specified in the preceding paragraph. Upon termination of the Service Agreement, the Company may recover any additional benefits provided to the Member.
                 </li>
                 <li className="leading-relaxed">
-                  After terminating the Service Agreement at the Member's request, if the Member wishes to resume use later, service resumption is only possible if the Member notifies the Company of their intent to resume use and the Company consents to it.
+                  After terminating the Service Agreement at the Member&apos;s request, if the Member wishes to resume use later, service resumption is only possible if the Member notifies the Company of their intent to resume use and the Company consents to it.
                 </li>
               </ol>
 
@@ -211,7 +211,7 @@ export default function PrivacyPage() {
                   </ul>
                 </li>
                 <li className="leading-relaxed">
-                  In the event the Company terminates the agreement, it shall notify the member of its intent to terminate via email, stating the reasons for termination. The Service Agreement shall terminate upon the Company's intent to terminate reaching the member. However, in such cases, the Company may grant the member an opportunity to state their opinion regarding the reasons for termination beforehand.
+                  In the event the Company terminates the agreement, it shall notify the member of its intent to terminate via email, stating the reasons for termination. The Service Agreement shall terminate upon the Company&apos;s intent to terminate reaching the member. However, in such cases, the Company may grant the member an opportunity to state their opinion regarding the reasons for termination beforehand.
                 </li>
                 <li className="leading-relaxed">
                   Even if the Company terminates the Service Agreement pursuant to this clause, these Terms shall continue to apply with respect to the completion of any sales contracts already concluded prior to termination.
@@ -220,7 +220,7 @@ export default function PrivacyPage() {
                   Upon termination of the Service Agreement as provided in this clause, the Company may recover any additional benefits provided to the Member.
                 </li>
                 <li className="leading-relaxed">
-                  If the Service Agreement is terminated as stipulated in this clause, the Company may refuse to accept the Member's subsequent application for reinstatement.
+                  If the Service Agreement is terminated as stipulated in this clause, the Company may refuse to accept the Member&apos;s subsequent application for reinstatement.
                 </li>
               </ol>
             </div>
@@ -264,7 +264,7 @@ export default function PrivacyPage() {
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  A sales contract for a product is concluded when a member expresses an offer to purchase in accordance with the seller's stated sales conditions, and the seller expresses acceptance of that offer.
+                  A sales contract for a product is concluded when a member expresses an offer to purchase in accordance with the seller&apos;s stated sales conditions, and the seller expresses acceptance of that offer.
                 </li>
                 <li className="leading-relaxed">
                   The company provides methods for members to settle the purchase price using cards or other means.
@@ -273,7 +273,7 @@ export default function PrivacyPage() {
                   The buyer shall bear full responsibility for any information entered regarding payment settlement and any liabilities or disadvantages arising from such information.
                 </li>
                 <li className="leading-relaxed">
-                  If payment is not settled within a specified period after ordering a product, the Company may cancel the order without the member's consent.
+                  If payment is not settled within a specified period after ordering a product, the Company may cancel the order without the member&apos;s consent.
                 </li>
                 <li className="leading-relaxed">
                   The Company shall enable buyers to review the details of their concluded sales contracts on the purchase history page and shall provide guidance on cancellation methods and procedures.
@@ -293,10 +293,10 @@ export default function PrivacyPage() {
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  The delivery period refers to the time from the day following the confirmation of the buyer's deposit or payment to the completion of delivery.
+                  The delivery period refers to the time from the day following the confirmation of the buyer&apos;s deposit or payment to the completion of delivery.
                 </li>
                 <li className="leading-relaxed">
-                  The Company shall instruct the seller to take necessary delivery measures within 3 business days after receiving the Company's confirmation notice regarding the buyer's deposit or payment.
+                  The Company shall instruct the seller to take necessary delivery measures within 3 business days after receiving the Company&apos;s confirmation notice regarding the buyer&apos;s deposit or payment.
                 </li>
                 <li className="leading-relaxed">
                   Periods affected by force majeure events, such as natural disasters, shall be excluded from the delivery period.
@@ -305,7 +305,7 @@ export default function PrivacyPage() {
                   Disputes arising between the Seller, Buyer, delivery company, financial institution, or other parties related to shipping shall be resolved between the parties involved. The Company shall bear no liability whatsoever.
                 </li>
                 <li className="leading-relaxed">
-                  If the delivery status is delayed due to the buyer failing to confirm receipt after the seller's shipment confirmation, the company may send a request for confirmation within two weeks from the shipment confirmation date. If the buyer still fails to confirm receipt after the company's notification, the status may automatically change to delivery completed after three days. In such cases, if the actual buyer has not received the goods, they may file a non-receipt report.
+                  If the delivery status is delayed due to the buyer failing to confirm receipt after the seller&apos;s shipment confirmation, the company may send a request for confirmation within two weeks from the shipment confirmation date. If the buyer still fails to confirm receipt after the company&apos;s notification, the status may automatically change to delivery completed after three days. In such cases, if the actual buyer has not received the goods, they may file a non-receipt report.
                 </li>
                 <li className="leading-relaxed">
                   For electronic tickets granting rights such as service usage rights or tickets, delivery is deemed complete automatically when the purchaser pays for the product and it becomes available for use on Unione.
@@ -322,10 +322,10 @@ export default function PrivacyPage() {
                   Members may cancel a purchase before the purchased item is shipped. If the item is already in transit, it will be processed according to the return procedure, not cancellation.
                 </li>
                 <li className="leading-relaxed">
-                  After a member completes payment, if the order status is "Waiting for Shipping" or "Shipping Request," cancellation will be processed immediately upon receipt of the cancellation request, unless there are special circumstances.
+                  After a member completes payment, if the order status is &quot;Waiting for Shipping&quot; or &quot;Shipping Request,&quot; cancellation will be processed immediately upon receipt of the cancellation request, unless there are special circumstances.
                 </li>
                 <li className="leading-relaxed">
-                  If a cancellation request is made while the order is in the shipping preparation status and the product has already been shipped, the buyer shall bear the round-trip shipping costs for the shipped product as a general rule, and the order shall be processed according to the return procedure, not cancellation. However, in the case of electronic tickets where a creditor's right is granted, delivery of the item is unnecessary; therefore, when canceling the purchase of such a product, no round-trip shipping costs shall be borne.
+                  If a cancellation request is made while the order is in the shipping preparation status and the product has already been shipped, the buyer shall bear the round-trip shipping costs for the shipped product as a general rule, and the order shall be processed according to the return procedure, not cancellation. However, in the case of electronic tickets where a creditor&apos;s right is granted, delivery of the item is unnecessary; therefore, when canceling the purchase of such a product, no round-trip shipping costs shall be borne.
                 </li>
                 <li className="leading-relaxed">
                   For refunds resulting from cancellations, card payments will be reversed immediately upon completion of the cancellation process.
@@ -345,7 +345,7 @@ export default function PrivacyPage() {
                   General matters concerning returns are governed by the Act on Consumer Protection in Electronic Commerce and other relevant laws, which take precedence over conditions presented by the seller.
                 </li>
                 <li className="leading-relaxed">
-                  Costs associated with returns are generally borne by the party responsible for the return. (e.g., buyer's remorse: buyer's responsibility; product defect: seller's responsibility)
+                  Costs associated with returns are generally borne by the party responsible for the return. (e.g., buyer&apos;s remorse: buyer&apos;s responsibility; product defect: seller&apos;s responsibility)
                 </li>
                 <li className="leading-relaxed">
                   Failure to include the return shipping label number when requesting a return, or failure to accurately notify the seller (verbally or in writing) of the reason for the return, may delay the return processing and refund.
@@ -368,7 +368,7 @@ export default function PrivacyPage() {
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  When a refund reason arises due to the purchaser's cancellation or return, the payment will be canceled for card payments.
+                  When a refund reason arises due to the purchaser&apos;s cancellation or return, the payment will be canceled for card payments.
                 </li>
                 <li className="leading-relaxed">
                   Refunds for purchases made via card payment are, in principle, only possible through card payment cancellation.
@@ -385,11 +385,11 @@ export default function PrivacyPage() {
               </h3>
               <p className="mb-3 leading-relaxed">The purchaser may not request a refund or exchange in the following cases:</p>
               <ol className="list-decimal list-inside space-y-2">
-                <li className="leading-relaxed">If the product is lost or damaged due to the purchaser's fault.</li>
-                <li className="leading-relaxed">If the product's value has significantly decreased due to the purchaser's use or partial consumption.</li>
+                <li className="leading-relaxed">If the product is lost or damaged due to the purchaser&apos;s fault.</li>
+                <li className="leading-relaxed">If the product&apos;s value has significantly decreased due to the purchaser&apos;s use or partial consumption.</li>
                 <li className="leading-relaxed">Where the value of the product has significantly decreased to the extent that resale is difficult due to the passage of time</li>
                 <li className="leading-relaxed">Where the packaging of a reproducible product has been damaged</li>
-                <li className="leading-relaxed">Where the product is custom-made to order or similar, and the seller anticipates irreparable significant damage, provided the seller has separately notified the buyer of this fact for the transaction in advance and obtained the buyer's written consent (including electronic documents)</li>
+                <li className="leading-relaxed">Where the product is custom-made to order or similar, and the seller anticipates irreparable significant damage, provided the seller has separately notified the buyer of this fact for the transaction in advance and obtained the buyer&apos;s written consent (including electronic documents)</li>
               </ol>
             </div>
           </section>
@@ -405,7 +405,7 @@ export default function PrivacyPage() {
                 Article 19 (Representations and Warranties)
               </h3>
               <p className="mb-3 leading-relaxed">
-                Members must be at least 18 years of age and not be a Prohibited Person. "Prohibited Persons" include (a) individuals or entities subject to comprehensive sanctions or embargoes, or designated by the United Nations ("UN"), the European Union, the United Kingdom, or the United States; (b) Persons or entities included in the European Union ("EU") Consolidated Sanctions List, the United Kingdom ("UK") Consolidated List of Persons Subject to Financial Sanctions, the U.S. Department of the Treasury's Specially Designated Nationals List, or the U.S. Department of Commerce's Denied Persons List or Entity List.
+                Members must be at least 18 years of age and not be a Prohibited Person. &quot;Prohibited Persons&quot; include (a) individuals or entities subject to comprehensive sanctions or embargoes, or designated by the United Nations (&quot;UN&quot;), the European Union, the United Kingdom, or the United States; (b) Persons or entities included in the European Union (&quot;EU&quot;) Consolidated Sanctions List, the United Kingdom (&quot;UK&quot;) Consolidated List of Persons Subject to Financial Sanctions, the U.S. Department of the Treasury&apos;s Specially Designated Nationals List, or the U.S. Department of Commerce&apos;s Denied Persons List or Entity List.
               </p>
               <p className="mb-3 leading-relaxed">
                 (c) if the entity is owned or controlled by an individual or organization described in (a) or (b) above; or (d) if the service is used on behalf of entities described in (a) to (c) above. You acknowledge and agree that you are solely responsible for complying with all applicable laws of the jurisdiction in which you reside, are located, or access the Unione Services.
@@ -436,7 +436,7 @@ export default function PrivacyPage() {
                   When taking measures under the preceding paragraph, the Company shall notify the Member in advance. Notification may be made through appropriate means, such as contact information provided by the Member while using the service or contact information and social network accounts that the Company can obtain. However, if contact with the Member is lost or there are urgent reasons, the Company may take action first and notify the Member afterward.
                 </li>
                 <li className="leading-relaxed">
-                  Members may raise objections to the Company's actions under this Article if they have grounds for doing so.
+                  Members may raise objections to the Company&apos;s actions under this Article if they have grounds for doing so.
                 </li>
               </ol>
             </div>
@@ -447,7 +447,7 @@ export default function PrivacyPage() {
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  The Company may assign a predetermined grade to a Member based on the Member's purchase amount, frequency, and other usage records, and may grant certain benefits according to each grade.
+                  The Company may assign a predetermined grade to a Member based on the Member&apos;s purchase amount, frequency, and other usage records, and may grant certain benefits according to each grade.
                 </li>
                 <li className="leading-relaxed">
                   All matters concerning the grades and benefits assigned by the Company to Members, and any changes thereto, may be announced on a separate service screen.
@@ -472,7 +472,7 @@ export default function PrivacyPage() {
                     <li>Content that violates the laws and regulations of the Republic of Korea</li>
                     <li>Posting or advertising illegal products or obscene materials whose sale is prohibited under relevant laws and regulations</li>
                     <li>Content that includes false or exaggerated advertising</li>
-                    <li>Content that infringes upon another person's rights, reputation, credit, or other legitimate interests</li>
+                    <li>Content that infringes upon another person&apos;s rights, reputation, credit, or other legitimate interests</li>
                     <li>Inducing direct transactions or posting links to other sites</li>
                     <li>Containing malicious code or data that may cause malfunction of information and communication devices</li>
                     <li>Violating public order or good morals</li>
@@ -482,7 +482,7 @@ export default function PrivacyPage() {
                   </ul>
                 </li>
                 <li className="leading-relaxed">
-                  The Company may reproduce, distribute, transmit, or display various postings created by members, such as product reviews, on other sites affiliated with the Company for the promotion and advertising of products traded on Unione, provided the Company obtains the member's prior permission for use. The Company may also modify or edit such postings within the scope that does not alter their essential content.
+                  The Company may reproduce, distribute, transmit, or display various postings created by members, such as product reviews, on other sites affiliated with the Company for the promotion and advertising of products traded on Unione, provided the Company obtains the member&apos;s prior permission for use. The Company may also modify or edit such postings within the scope that does not alter their essential content.
                 </li>
               </ol>
             </div>
@@ -497,7 +497,7 @@ export default function PrivacyPage() {
               </h4>
               <ul className="space-y-3 mb-4">
                 <li className="leading-relaxed">
-                  Direct transactions between sellers and buyers without using the Company's provided services are prohibited to ensure transaction safety. Responsibility for all issues arising from direct transactions lies solely with the transacting parties, and the Company shall bear no liability whatsoever for any problems resulting therefrom.
+                  Direct transactions between sellers and buyers without using the Company&apos;s provided services are prohibited to ensure transaction safety. Responsibility for all issues arising from direct transactions lies solely with the transacting parties, and the Company shall bear no liability whatsoever for any problems resulting therefrom.
                 </li>
                 <li className="leading-relaxed">
                   Sellers confirmed to have conducted or induced direct transactions may have their Sales Service Use Agreement terminated. Members may report sellers who conduct or induce direct transactions to the Company.
@@ -515,7 +515,7 @@ export default function PrivacyPage() {
                   Using the service through methods differing from normal usage, such as employing automated access programs, is prohibited.
                 </li>
                 <li className="leading-relaxed">
-                  Collecting or using site information for purposes other than actual use aligned with the site's objectives, such as selling or purchasing goods, is prohibited.
+                  Collecting or using site information for purposes other than actual use aligned with the site&apos;s objectives, such as selling or purchasing goods, is prohibited.
                 </li>
                 <li className="leading-relaxed">
                   If any of the above system fraud is confirmed, the company may take measures against the member, including recovery of some or all benefits provided by the company, restriction of use of specific services, or termination of the service agreement. The company may also claim compensation for any damages incurred as a result.
@@ -527,10 +527,10 @@ export default function PrivacyPage() {
               </h4>
               <ul className="space-y-3 mb-4">
                 <li className="leading-relaxed">
-                  Using another person's name, card information, account information, etc., to use the company's purchase services is prohibited.
+                  Using another person&apos;s name, card information, account information, etc., to use the company&apos;s purchase services is prohibited.
                 </li>
                 <li className="leading-relaxed">
-                  Making abnormal payments through methods prohibited by laws and regulations, such as the Credit Finance Business Act, including obtaining funds under the guise of selling goods or providing services, is prohibited. If such activity is confirmed, the Company may terminate the service agreement, suspend the member's transactions, and notify relevant authorities.
+                  Making abnormal payments through methods prohibited by laws and regulations, such as the Credit Finance Business Act, including obtaining funds under the guise of selling goods or providing services, is prohibited. If such activity is confirmed, the Company may terminate the service agreement, suspend the member&apos;s transactions, and notify relevant authorities.
                 </li>
                 <li className="leading-relaxed">
                   Making purchases without genuine intent to acquire the goods is prohibited. If such activity is confirmed, the Company may cancel the transaction and may impose sanctions depending on the circumstances.
@@ -545,7 +545,7 @@ export default function PrivacyPage() {
                   Members must not engage in acts that cause losses to the Company or disrupt the creation of a fair market environment by concluding an abnormally large number of transactions using discounts, benefits, or other incentives provided by the Company. If such acts are confirmed, the Company may cancel the relevant transaction and may impose sanctions, such as suspending transactions, depending on the circumstances.
                 </li>
                 <li className="leading-relaxed">
-                  The Company may suspend membership, refuse or restrict service provision, or take other necessary measures for legal compliance, protection of others' rights, or site security if a member falls under any of the following:
+                  The Company may suspend membership, refuse or restrict service provision, or take other necessary measures for legal compliance, protection of others&apos; rights, or site security if a member falls under any of the following:
                   <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
                     <li>Exporting or re-exporting Unione or tools in violation of export control laws, posted rules, or restrictions</li>
                     <li>Commercializing information or software related to Unione</li>
@@ -573,7 +573,7 @@ export default function PrivacyPage() {
                   When transactions are conducted through the purchase services provided by the Company, the relevant laws and regulations, such as the Act on Consumer Protection in Electronic Commerce, etc. of the Republic of Korea, shall take precedence over these Terms and Conditions for the parties to such transactions. The parties to the transaction may not invoke the provisions of these Terms and Conditions to claim exemption from liability against the other party.
                 </li>
                 <li className="leading-relaxed">
-                  The Company may establish matters applicable to specific services (hereinafter referred to as "Individual Terms") as necessary and may notify them in advance through the Company's website, etc.
+                  The Company may establish matters applicable to specific services (hereinafter referred to as &quot;Individual Terms&quot;) as necessary and may notify them in advance through the Company&apos;s website, etc.
                 </li>
                 <li className="leading-relaxed">
                   The Company shall notify any changes to the Individual Terms referred to in the preceding paragraph at least 14 days prior to their implementation.
@@ -586,26 +586,26 @@ export default function PrivacyPage() {
 
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 25 (Company's Exemption from Liability)
+                Article 25 (Company&apos;s Exemption from Liability)
               </h3>
               <ol className="list-decimal list-inside space-y-3">
                 <li className="leading-relaxed">
-                  The Company, as a telecommunications sales intermediary, provides only the transaction system based on Unione (mobile, web). All disputes concerning the content of transactions conducted using Unione's transaction system shall be the responsibility of the relevant transaction parties. However, the Company may bear obligations as a telecommunications sales business operator only when it directly sells to purchasers as a seller.
+                  The Company, as a telecommunications sales intermediary, provides only the transaction system based on Unione (mobile, web). All disputes concerning the content of transactions conducted using Unione&apos;s transaction system shall be the responsibility of the relevant transaction parties. However, the Company may bear obligations as a telecommunications sales business operator only when it directly sells to purchasers as a seller.
                 </li>
                 <li className="leading-relaxed">
-                  The Company shall not be liable for any damages incurred by members or third parties due to temporary service suspension under Article 11(2). This exclusion does not apply in cases of the Company's intentional misconduct or gross negligence.
+                  The Company shall not be liable for any damages incurred by members or third parties due to temporary service suspension under Article 11(2). This exclusion does not apply in cases of the Company&apos;s intentional misconduct or gross negligence.
                 </li>
                 <li className="leading-relaxed">
                   The Company shall be exempt from liability for service restrictions or suspensions under Article 11(3) due to force majeure.
                 </li>
                 <li className="leading-relaxed">
-                  The Company shall not be liable for any service disruptions caused by the Member's fault.
+                  The Company shall not be liable for any service disruptions caused by the Member&apos;s fault.
                 </li>
                 <li className="leading-relaxed">
                   The Company shall not be liable for any damages arising from a Member disclosing or providing their personal information to others.
                 </li>
                 <li className="leading-relaxed">
-                  Transactions on Unione may not occur in real time. Transactions on Unione may be restricted or delayed due to the Member's current location, the network of the wireless data service provider used by the Member, or other reasons.
+                  Transactions on Unione may not occur in real time. Transactions on Unione may be restricted or delayed due to the Member&apos;s current location, the network of the wireless data service provider used by the Member, or other reasons.
                 </li>
                 <li className="leading-relaxed">
                   The Company solely provides the platform and application services. The Company is not related in any way to external sales teams, marketing groups, third-party promotional activities, investment solicitations, or product sales conducted outside the platform. The Company shall bear no liability for any agreements, damages, or disputes arising from such external activities.
