@@ -10,10 +10,7 @@ export default function CardShowcase() {
 
   return (
     <section
-      className="pt-16 pb-16 lg:pt-32 lg:pb-40"
-      style={{
-        background: 'linear-gradient(to bottom, #000000 0%, #000000 20%, #2a2a2a 45%, #5a5a5a 65%, #a0a0a0 82%, #e8e8e8 94%, #FFFFFF 100%)'
-      }}
+      className="pt-16 pb-16 lg:pt-32 lg:pb-40 bg-black"
     >
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-center">
@@ -83,11 +80,11 @@ export default function CardShowcase() {
                   top: '50%',
                   left: '50%',
                   transform: 'translate(-50%, -50%)',
-                  width: 'min(800px, 100vw)',
-                  height: 'min(800px, 100vw)',
+                  width: 'min(600px, 90vw)',
+                  height: 'min(600px, 90vw)',
                   maxWidth: '100%',
-                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(168, 85, 247, 0.3) 30%, rgba(124, 58, 237, 0.15) 50%, rgba(99, 102, 241, 0) 70%)',
-                  filter: 'saturate(1.1)',
+                  background: 'radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(168, 85, 247, 0.2) 30%, rgba(124, 58, 237, 0.1) 50%, rgba(99, 102, 241, 0) 70%)',
+                  filter: 'blur(40px)',
                   pointerEvents: 'none'
                 }}
               />
