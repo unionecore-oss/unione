@@ -10,7 +10,7 @@ export function ShaderAnimation() {
     camera: THREE.Camera;
     scene: THREE.Scene;
     renderer: THREE.WebGLRenderer;
-    uniforms: any;
+    uniforms: Record<string, THREE.IUniform<unknown>>;
     animationId: number;
   } | null>(null);
   const [isLoading, setIsLoading] = useState(true);

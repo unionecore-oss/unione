@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import { ShaderAnimation } from '@/components/ui/neno-shader'
 
@@ -46,10 +47,13 @@ export default function WalletPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.05 }}
             >
-              <img
+              <Image
                 src="/123124.png"
                 alt="UNIONE Wallet App"
+                width={800}
+                height={800}
                 className="w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px]"
+                priority
               />
             </motion.div>
           </div>
@@ -99,9 +103,11 @@ export default function WalletPage() {
               {/* 3D Image - Bottom Right */}
               <div className="absolute bottom-4 right-4">
                 <div className="relative">
-                  <img
+                  <Image
                     src="/secure-shield.png"
                     alt="Custodian Protection Shield"
+                    width={350}
+                    height={350}
                     className="w-[175px] md:w-[350px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'
@@ -140,9 +146,11 @@ export default function WalletPage() {
               {/* 3D Image - Bottom Right */}
               <div className="absolute bottom-4 right-4">
                 <div className="relative">
-                  <img
+                  <Image
                     src="/secure-web.png"
                     alt="Wallet Security Box"
+                    width={350}
+                    height={350}
                     className="w-[175px] md:w-[350px] h-auto object-contain relative z-10"
                     style={{
                       filter: 'brightness(1.1) contrast(1.1)'

@@ -4,6 +4,7 @@ import { useRef, useMemo } from 'react';
 import { Canvas, useFrame, extend } from '@react-three/fiber';
 import { shaderMaterial } from '@react-three/drei';
 import * as THREE from 'three';
+import Image from 'next/image';
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -164,13 +165,13 @@ extend({ CPPNShaderMaterial });
 
 function ShaderPlane() {
   const meshRef = useRef<THREE.Mesh>(null!);
-  const materialRef = useRef<any>(null!);
+  const materialRef = useRef<THREE.ShaderMaterial & { iTime?: number; iResolution?: { set: (width: number, height: number) => void } }>(null!);
 
   useFrame((state) => {
     if (!materialRef.current) return;
     materialRef.current.iTime = state.clock.elapsedTime;
     const { width, height } = state.size;
-    materialRef.current.iResolution.set(width, height);
+    materialRef.current.iResolution?.set(width, height);
   });
 
   return (
@@ -345,16 +346,20 @@ export default function Hero({
 
         <div ref={ctaRef} className="flex flex-nowrap gap-2 sm:gap-4 pt-4 justify-center">
           <a href="#" className="inline-block transition-transform hover:scale-105">
-            <img
+            <Image
               src="/images/badges/app-store.svg"
               alt="Download on the App Store"
+              width={156}
+              height={52}
               className="h-10 w-auto sm:h-[52px]"
             />
           </a>
           <a href="#" className="inline-block transition-transform hover:scale-105">
-            <img
+            <Image
               src="/images/badges/google-play.svg"
               alt="Get it on Google Play"
+              width={176}
+              height={52}
               className="h-10 w-auto sm:h-[52px]"
             />
           </a>
@@ -380,6 +385,6 @@ export default function Hero({
 
 declare module '@react-three/fiber' {
   interface ThreeElements {
-    cPPNShaderMaterial: any;
+    cPPNShaderMaterial: object;
   }
 }

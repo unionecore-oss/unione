@@ -228,6 +228,7 @@ const CardSwap = ({
   const renderedChildren = childArr.map((child, i) => {
     if (!isValidElement(child)) return child;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const childElement = child as React.ReactElement<any>;
     return cloneElement(childElement, {
       key: i,

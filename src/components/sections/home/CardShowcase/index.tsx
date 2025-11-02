@@ -41,9 +41,11 @@ export default function CardShowcase() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
-                <img
+                <Image
                   src="/images/badges/app-store.svg"
                   alt={t('appStore')}
+                  width={156}
+                  height={52}
                   className="h-10 w-auto sm:h-[52px]"
                 />
               </motion.a>
@@ -54,9 +56,11 @@ export default function CardShowcase() {
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.2 }}
               >
-                <img
+                <Image
                   src="/images/badges/google-play.svg"
                   alt={t('googlePlay')}
+                  width={176}
+                  height={52}
                   className="h-10 w-auto sm:h-[52px]"
                 />
               </motion.a>

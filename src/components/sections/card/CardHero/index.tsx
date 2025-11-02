@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import Button from '@/components/common/Button'
 import { CSS_FILTERS } from '@/lib/constants'
@@ -20,16 +21,18 @@ export default function CardHero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <img
+        <Image
           src="/card6.png"
           alt="Unione Card"
-          className="w-full h-full object-cover
+          fill
+          className="object-cover
             object-[70%_center]
             md:object-[60%_center]
             lg:object-center"
           style={{
             filter: CSS_FILTERS.cardPage.heroBackground,
           }}
+          priority
         />
       </motion.div>
 

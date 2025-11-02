@@ -4,10 +4,11 @@ import { Suspense } from 'react'
 import Spline from '@splinetool/react-spline'
 
 export default function Premium3DLogo() {
-  const onLoad = (spline: any) => {
+  const onLoad = (spline: unknown) => {
     // 배경을 투명하게 설정
-    if (spline?.scene) {
-      spline.scene.background = null
+    const app = spline as { scene?: { background: unknown } }
+    if (app?.scene) {
+      app.scene.background = null
     }
     // canvas 배경도 투명하게
     const canvas = document.querySelector('canvas')
