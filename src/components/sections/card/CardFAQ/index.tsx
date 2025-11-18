@@ -58,7 +58,7 @@ export default function CardFAQ() {
           <div className="grid grid-cols-12 h-full">
             <div className="col-span-5 flex items-start pt-[9rem]">
               <motion.h2
-                className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1] pl-12"
+                className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1] pl-32"
                 initial="initial"
                 whileInView="animate"
                 viewport={{ once: true, amount: 0.1 }}
