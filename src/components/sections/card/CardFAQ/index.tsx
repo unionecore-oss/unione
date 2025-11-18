@@ -30,6 +30,28 @@ export default function CardFAQ() {
 
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white">
+      {/* Mobile Title */}
+      <div className="container-custom mb-12 lg:hidden">
+        <motion.h2
+          className="text-5xl md:text-6xl font-bold leading-[0.9]"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={fadeInUp}
+          style={{
+            color: 'rgba(200, 200, 200, 0.4)',
+            letterSpacing: '-0.02em',
+          }}
+        >
+          {titleWords.map((word, i) => (
+            <span key={i}>
+              {word}
+              {i < titleWords.length - 1 && <br />}
+            </span>
+          ))}
+        </motion.h2>
+      </div>
+
       {/* FAQ List - full width */}
       <div className="lg:relative">
         <motion.div
