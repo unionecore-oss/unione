@@ -39,7 +39,7 @@ export default function CardFAQ() {
           viewport={{ once: true, amount: 0.1 }}
           variants={fadeInUp}
           style={{
-            color: 'rgba(200, 200, 200, 0.4)',
+            color: '#1a1a1a',
             letterSpacing: '-0.02em',
           }}
         >
@@ -69,12 +69,12 @@ export default function CardFAQ() {
               <div className="container-custom">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
                   {/* Left Column - Title Word (first 3 items only) */}
-                  <div className="lg:col-span-5 hidden lg:flex lg:items-center lg:justify-start">
+                  <div className="lg:col-span-5 hidden lg:flex lg:items-center lg:justify-end">
                     {index < titleWords.length && (
                       <h2
-                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] -ml-12"
+                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] mr-20"
                         style={{
-                          color: 'rgba(200, 200, 200, 0.4)',
+                          color: '#1a1a1a',
                           letterSpacing: '-0.02em',
                         }}
                       >

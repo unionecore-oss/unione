@@ -151,11 +151,11 @@
         }
       },
       "faq": {
-        "title": "Frequently\nAsked\nQuestions",
+        "title": "UniOne\nFAQs",
         "items": {
           "whatIsUnione": {
             "question": "What is Unione?",
-            "answer": "Unione is a fintech platform that combines traditional banking with digital assets (crypto). It is designed to enable users worldwide to jointly hold, manage, and use digital assets (crypto) through app-connected cards and wallets."
+            "answer": "Unione is a fintech platform that combines traditional banking with digital assets. It is designed to enable users worldwide to jointly hold, manage, and use digital assets through app-connected cards and wallets."
           },
           "cardTypes": {
             "question": "What types of cards are offered?",
