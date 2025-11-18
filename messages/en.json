@@ -149,6 +149,47 @@
           "title": "Easy-to-Use App",
           "description": "Control your entire financial experience from one intuitive app. Easily top up, monitor spending, manage your card, and explore features all from a clean dashboard available on both iOS and Android."
         }
+      },
+      "faq": {
+        "title": "Frequently\nAsked\nQuestions",
+        "items": {
+          "whatIsUnione": {
+            "question": "What is Unione?",
+            "answer": "Unione is a fintech platform that combines traditional banking with digital assets (crypto). It is designed to enable users worldwide to jointly hold, manage, and use digital assets (crypto) through app-connected cards and wallets."
+          },
+          "cardTypes": {
+            "question": "What types of cards are offered?",
+            "answer": "Two types are available: Physical and Virtual cards. They can be used for various purposes, including online payments, offline payments, and ATM withdrawals."
+          },
+          "whereToUse": {
+            "question": "Where can I use the card?",
+            "answer": "Cards issued by Unione can be used anywhere Visa is accepted. This includes over 150 countries and more than 150 million merchants worldwide."
+          },
+          "appAvailability": {
+            "question": "Is there an app?",
+            "answer": "Yes. The Unione app is available on both iOS and Android platforms, allowing you to manage your wallet, cards, transaction history, and settings within the app."
+          },
+          "lostCard": {
+            "question": "What should I do if I lose my card?",
+            "answer": "You can immediately freeze or disable your card through the app and order a replacement card."
+          },
+          "features": {
+            "question": "What features does it offer?",
+            "answer": "1. Create a wallet and link digital assets\n2. Card issuance and payments (domestic and international)\n3. Withdrawal and transfer functions\n4. Potential for linking customized financial products"
+          },
+          "usageProcedure": {
+            "question": "What is the usage procedure?",
+            "answer": "1. Sign up for UNIONE → Create a member account\n2. Complete requirements such as KYC/identity verification and address verification\n3. Apply for card issuance and activation (availability varies by country/region)\n4. Create or link a wallet within the UNIONE platform\n5. Start using payment/withdrawal/transfer functions"
+          },
+          "support": {
+            "question": "Where should I contact if I encounter issues?",
+            "answer": "Please contact the UNIONE Customer Support Center first. Providing your \"Member Name, Account ID, Transaction ID (if available), Date/Time of Issue, and Detailed Description\" when inquiring will facilitate smoother processing."
+          },
+          "precautions": {
+            "question": "Are there any precautions when using the service?",
+            "answer": "1. When linking digital assets or creating a wallet, be sure to strengthen your security settings (2FA, password, certificate, etc.).\n2. When making international payments via card or wallet, exchange rate fluctuations and fees may apply, so please check the advance notice.\n3. In case of incidents such as card/wallet loss or password leakage, please report it immediately to customer support."
+          }
+        }
       }
     },
     "wallet": {
