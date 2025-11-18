@@ -29,7 +29,7 @@ export default function CardFAQ() {
   const titleWords = t('title').split('\n')
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-white">
+    <section className="py-16 md:py-24 lg:py-32 bg-white relative">
       {/* Mobile Title */}
       <div className="container-custom mb-12 lg:hidden pl-4">
         <motion.h2
@@ -52,8 +52,37 @@ export default function CardFAQ() {
         </motion.h2>
       </div>
 
+      {/* Desktop Fixed Title Background */}
+      <div className="hidden lg:block absolute left-0 top-0 h-full pointer-events-none">
+        <div className="container-custom h-full">
+          <div className="grid grid-cols-12 h-full">
+            <div className="col-span-5 flex items-start pt-[9rem]">
+              <motion.h2
+                className="text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1] pl-12"
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true, amount: 0.1 }}
+                variants={fadeInUp}
+                style={{
+                  color: '#1a1a1a',
+                  letterSpacing: '-0.02em',
+                  opacity: 0.08,
+                }}
+              >
+                {titleWords.map((word, i) => (
+                  <span key={i}>
+                    {word}
+                    {i < titleWords.length - 1 && <br />}
+                  </span>
+                ))}
+              </motion.h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* FAQ List - full width */}
-      <div className="lg:relative">
+      <div className="relative">
         <motion.div
           variants={staggerContainer}
           initial="initial"
@@ -67,25 +96,14 @@ export default function CardFAQ() {
               className="w-full border-b border-gray-200/60"
             >
               <div className="container-custom">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 lg:items-baseline">
-                  {/* Left Column - Title Word (first 3 items only) */}
-                  <div className="lg:col-span-5 hidden lg:flex lg:justify-start lg:pl-12">
-                    {index < titleWords.length && (
-                      <h2
-                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] mr-20 text-left"
-                        style={{
-                          color: '#1a1a1a',
-                          letterSpacing: '-0.02em',
-                        }}
-                      >
-                        {titleWords[index]}
-                      </h2>
-                    )}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                  {/* Empty space for left column */}
+                  <div className="lg:col-span-5 hidden lg:block">
                   </div>
                   <div className="lg:col-span-7">
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="w-full py-5 md:py-6 flex items-center justify-between gap-8 text-left group transition-colors"
+                      className="w-full lg:pt-16 pb-4 flex items-center justify-between gap-8 text-left group transition-colors"
                       aria-expanded={openIndex === index}
                     >
                       <span
