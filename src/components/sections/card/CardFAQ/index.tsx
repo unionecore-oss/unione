@@ -31,9 +31,9 @@ export default function CardFAQ() {
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-white">
       {/* Mobile Title */}
-      <div className="container-custom mb-12 lg:hidden">
+      <div className="container-custom mb-12 lg:hidden pl-4">
         <motion.h2
-          className="text-5xl md:text-6xl font-bold leading-[0.9]"
+          className="text-5xl md:text-6xl font-bold leading-[0.9] text-left"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.1 }}
@@ -67,12 +67,12 @@ export default function CardFAQ() {
               className="w-full border-b border-gray-200/60"
             >
               <div className="container-custom">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 lg:items-baseline">
                   {/* Left Column - Title Word (first 3 items only) */}
-                  <div className="lg:col-span-5 hidden lg:flex lg:items-center lg:justify-end">
+                  <div className="lg:col-span-5 hidden lg:flex lg:justify-start lg:pl-12">
                     {index < titleWords.length && (
                       <h2
-                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] mr-20"
+                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9] mr-20 text-left"
                         style={{
                           color: '#1a1a1a',
                           letterSpacing: '-0.02em',
