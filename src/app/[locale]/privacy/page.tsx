@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy - UNIONE',
-  description: 'Privacy Policy and Terms and Conditions for Unione',
+  description: 'Privacy Policy for Unione',
 }
 
 export default function PrivacyPage() {
@@ -14,633 +14,310 @@ export default function PrivacyPage() {
         </h1>
 
         <div className="prose prose-lg max-w-none" style={{ color: 'var(--color-text-secondary)' }}>
-          {/* Chapter 1: General Provisions */}
+          {/* Introduction */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
-              Chapter 1: General Provisions
-            </h2>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 1 (Purpose)
-              </h3>
-              <p className="leading-relaxed">
-                These Terms and Conditions establish the rights and obligations between users of the electronic commerce-related services and other services (hereinafter referred to as the &quot;Services&quot;) provided through the &apos;Unione&apos; internet open market site operated by Unione Core Co., Ltd. (hereinafter referred to as the &quot;Company&quot;), a telecommunications sales intermediary, and the &apos;Unione&apos; mobile application provided via mobile communication devices such as smartphones. Their purpose is to promote mutual development through the fulfillment of these rights and obligations.
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 2 (Disclosure, Effectiveness, and Amendment of Terms)
-              </h3>
-              <p className="leading-relaxed">
-                The Company shall post the contents of these Terms on the initial service screen or linked screen of &quot;Unione&quot; so that Members can review them.
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 3 (Definition of Terms)
-              </h3>
-              <p className="mb-3 leading-relaxed">The definitions of terms used in these Terms are as follows:</p>
-              <ol className="list-decimal list-inside space-y-2 mb-4">
-                <li className="leading-relaxed">
-                  <strong>Member:</strong> An individual or corporation that has provided personal information to the Company and completed membership registration, categorized as either a General Member or a Sales Member as follows:
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>General Member (Buyer): An individual or corporation aged 14 or older who can use the purchasing services provided by the Company.</li>
-                    <li>Sales Member (Seller): An individual or corporation aged 14 or older who can use both the purchasing and selling services provided by the Company.</li>
-                  </ul>
-                </li>
-                <li className="leading-relaxed">
-                  <strong>ID:</strong> A unique identifier created and assigned by the Company for member identification and service use.
-                </li>
-                <li className="leading-relaxed">
-                  <strong>Password:</strong> A combination of letters and numbers set by the member themselves and registered with the Company to verify the member&apos;s identity and protect their rights, interests, and confidentiality.
-                </li>
-                <li className="leading-relaxed">
-                  <strong>Administrator:</strong> A person selected by the Company to manage and ensure the smooth operation of the services provided by the Company.
-                </li>
-              </ol>
-              <p className="mb-2 leading-relaxed">
-                The meaning of terms in these Terms not defined in Paragraph 1 shall be determined according to general commercial practices.
-              </p>
-              <p className="leading-relaxed">
-                All laws referenced in these Terms are laws of the Republic of Korea.
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 4 (Types of Services)
-              </h3>
-              <p className="mb-3 leading-relaxed">The services provided by the Company are as follows:</p>
-              <ul className="list-disc list-inside space-y-2 mb-4">
-                <li>E-Commerce Platform Development and Operation Services</li>
-                <li>Advertising Execution and Promotion Services</li>
-              </ul>
-              <p className="leading-relaxed">
-                The services provided by the Company under the preceding paragraph are intended to permit Members to use the cyber mall to trade goods, etc., or to facilitate mail-order sales. The Company assumes no responsibility whatsoever regarding products registered on Unione by individual selling Members (sellers).
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 5 (Disclaimer of Agency)
-              </h3>
-              <p className="leading-relaxed">
-                The Company, acting as an intermediary for mail-order sales between buyers and sellers, bears only the responsibility for operating and managing the system to provide efficient services. It does not act as an agent for buyers or sellers in transactions involving goods or services. Members shall bear direct responsibility for transactions concluded between themselves and for the information they provide and register. However, the Company may bear obligations as a mail-order business operator only when it directly conducts mail-order sales to buyers as a seller.
-              </p>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 6 (Disclaimer of Warranties)
-              </h3>
-              <p className="leading-relaxed">
-                The Company disclaims all warranties, express or implied, with respect to transactions between buyers and sellers conducted through the systems provided by the Company, including but not limited to: stability, legality, and non-infringement of third-party rights, the truthfulness or legality of information entered by buyers or sellers, or materials posted on URLs linked through such information. All risks and responsibilities related thereto shall be borne solely by the relevant member. However, this shall not apply where the Company is liable under applicable laws and regulations.
-              </p>
-            </div>
+            <p className="leading-relaxed mb-6">
+              UnioneCore Inc. (&quot;Unione,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) provides this Privacy Policy to explain how we process personal information in connection with the Unione mobile application and related services (collectively, the &quot;Services&quot;). This Privacy Policy is designed to comply with general standards under global privacy regulations, including Google Play and Apple App Store policies. By using the Services, you are deemed to have agreed to this Privacy Policy.
+            </p>
           </section>
 
-          {/* Chapter 2: Service Agreement and Information Protection */}
+          {/* 1. Information We Collect */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
-              Chapter 2: Service Agreement and Information Protection
+              1. Information We Collect
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 7 (Establishment of the Purchase Service Use Agreement)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Purchase Service Use Agreement (hereinafter referred to as the &quot;Use Agreement&quot;) is established when the Company accepts the use application of a person wishing to use the purchase service provided by the Company. The Company shall post its expression of intent to accept use on the relevant service screen or notify it via email or other methods.
-                </li>
-                <li className="leading-relaxed">
-                  A person wishing to use the purchase service shall agree to these Terms and Conditions and fill in the necessary details according to the membership application form prescribed by the Company.
-                </li>
-                <li className="leading-relaxed">
-                  Membership registration is available to individuals aged 14 or older and business entities (including sole proprietors and corporations).
-                </li>
-                <li className="leading-relaxed">
-                  Applications for use are processed in the order received, and membership registration is deemed established when the company&apos;s approval reaches the member.
-                </li>
-                <li className="leading-relaxed">
-                  The company may refuse or defer approval of an application for use if any of the following circumstances occur:
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>If a reapplication for use is made within two months of the date the service agreement was terminated by the company</li>
-                    <li>When a member who has received measures such as suspension of membership status from the Company arbitrarily terminates the service agreement during the suspension period and applies for re-use</li>
-                    <li>When there is insufficient capacity in the facilities or technical impediments exist</li>
-                    <li>When it is confirmed that the application violates these Terms, is illegal, or constitutes improper use, or when the Company reasonably deems it necessary</li>
-                  </ul>
-                </li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-4">
+              Unione is a community-based social platform built on a non-custodial wallet structure and operates under a principle of minimizing personal data collection. We never collect or store private keys, secret recovery phrases, or any information that grants access to a user&apos;s digital wallet.
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 8 (Modification and Protection of Personal Information)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Member ID (a unique identifier created and assigned by the Company) cannot be modified.
-                </li>
-                <li className="leading-relaxed">
-                  Notifications from the Company to a Member shall be deemed delivered upon reaching the e-mail address provided by the Member. Any damages arising from failure to check such notifications shall be borne solely by the Member, and the Company shall bear no responsibility whatsoever in this regard.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may not use information provided by members for purposes other than those agreed upon for operating the Company&apos;s services under the User Agreement. Should a new purpose arise or if the information is to be provided to a third party, the Company shall notify the member of the purpose and obtain consent at the time of use or provision. However, this shall not apply where otherwise stipulated by relevant laws and regulations.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall not preselect consent boxes regarding the collection, use, or provision of personal information. Furthermore, the Company shall explicitly specify the services restricted when a user refuses consent for the collection, use, or provision of personal information. The Company shall not restrict or refuse service provision, such as membership registration, based on a user&apos;s refusal to consent to the collection, use, or provision of non-mandatory personal information required for purchasing services.
-                </li>
-                <li className="leading-relaxed">
-                  To protect members&apos; personal information, when the Company needs to provide a purchasing member&apos;s personal information to a third party, it shall obtain the purchasing member&apos;s consent by specifying the items of personal information provided at the time of actual subscription, the recipient, the recipient&apos;s purpose of use of the personal information, and the retention and use period. When entrusting personal information, the Company shall establish a &quot;Privacy Policy&quot; in accordance with relevant laws and regulations, designate a personal information protection officer, and post and operate it.
-                </li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-4">
+              We collect personal information in the following ways:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed">When you voluntarily provide information directly to us.</li>
+              <li className="leading-relaxed">Through automated technologies when you visit or use our Site, social media, or communications.</li>
+              <li className="leading-relaxed">From third-party sources such as service providers, analytics partners, and social media companies.</li>
+            </ul>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 9 (Management of ID and Password)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The responsibility for managing the ID and password lies with the member. Under no circumstances may a member transfer or lend their ID or password to another person.
-                </li>
-                <li className="leading-relaxed">
-                  Members and users shall bear responsibility for any loss or damage arising from the leakage, transfer, or lending of their ID or password, provided such loss or damage occurs through no fault of the Company.
-                </li>
-                <li className="leading-relaxed">
-                  If a member becomes aware that their ID or password has been stolen or is being used without authorization by a third party, they must immediately notify the Company. The Company shall make its best efforts to handle such matters promptly.
-                </li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-6">
+              We may fully utilize information that is de-identified, aggregated, or otherwise non-identifiable. We may also combine data obtained from third-party sources.
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 10 (Termination of the Service Agreement)
-              </h3>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              Information You Provide Directly
+            </h3>
+            <p className="leading-relaxed mb-3">Information we may collect from you includes:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed"><strong>Contact and identification information:</strong> name, phone number, email address, username, etc.</li>
+              <li className="leading-relaxed"><strong>User-generated content:</strong> chat messages, comments, likes/dislikes, artwork, graphics, and other content posted in chats, forums, and social features.</li>
+              <li className="leading-relaxed"><strong>Social / community activity information:</strong> community participation logs, friend invites, posts, comments, and other engagement activities.</li>
+              <li className="leading-relaxed"><strong>Feedback and correspondence:</strong> survey responses, participation in community research, reports of issues, customer support inquiries, and any communication exchanged with us.</li>
+              <li className="leading-relaxed"><strong>Marketing preference information:</strong> your choices regarding promotional messages and details about how you interact with marketing content.</li>
+            </ul>
 
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                1. Member Termination
-              </h4>
-              <ol className="list-decimal list-inside space-y-3 mb-4">
-                <li className="leading-relaxed">
-                  A member may terminate the Service Agreement at any time by notifying the Company of their intention to terminate through the designated service screen. However, the member must take all necessary measures to complete all transactions at least 7 days prior to notifying the Company of their intention to terminate.
-                </li>
-                <li className="leading-relaxed">
-                  The Member shall bear responsibility for any disadvantages arising from the Member&apos;s expression of intent within the period specified in the preceding paragraph. Upon termination of the Service Agreement, the Company may recover any additional benefits provided to the Member.
-                </li>
-                <li className="leading-relaxed">
-                  After terminating the Service Agreement at the Member&apos;s request, if the Member wishes to resume use later, service resumption is only possible if the Member notifies the Company of their intent to resume use and the Company consents to it.
-                </li>
-              </ol>
-
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                2. Company Termination
-              </h4>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company may terminate the Service Agreement if any of the following reasons occur or are confirmed:
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>Infringing upon the rights, reputation, credit, or other legitimate interests of other members or third parties, or engaging in acts violating relevant laws, regulations, or public order and morals.</li>
-                    <li>Engaging in or attempting acts that interfere with the smooth operation of the services provided by the Company.</li>
-                    <li>Confirmation of the existence of grounds for refusal of consent as stipulated in Article 7, Paragraph 5.</li>
-                    <li>Other acts by the member that violate these Terms and Conditions, or the occurrence of grounds for termination specified in these Terms and Conditions.</li>
-                  </ul>
-                </li>
-                <li className="leading-relaxed">
-                  In the event the Company terminates the agreement, it shall notify the member of its intent to terminate via email, stating the reasons for termination. The Service Agreement shall terminate upon the Company&apos;s intent to terminate reaching the member. However, in such cases, the Company may grant the member an opportunity to state their opinion regarding the reasons for termination beforehand.
-                </li>
-                <li className="leading-relaxed">
-                  Even if the Company terminates the Service Agreement pursuant to this clause, these Terms shall continue to apply with respect to the completion of any sales contracts already concluded prior to termination.
-                </li>
-                <li className="leading-relaxed">
-                  Upon termination of the Service Agreement as provided in this clause, the Company may recover any additional benefits provided to the Member.
-                </li>
-                <li className="leading-relaxed">
-                  If the Service Agreement is terminated as stipulated in this clause, the Company may refuse to accept the Member&apos;s subsequent application for reinstatement.
-                </li>
-              </ol>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 11 (Service Period and Suspension)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The service period under these Terms shall be from the date of service application until the termination of the service agreement.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may temporarily suspend service provision due to reasons such as maintenance, inspection, replacement, or malfunction of computer or other information and communications equipment, or disruption of communications. In such cases, the Company shall notify users of the temporary suspension and its reason on the Unione initial screen.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may restrict or temporarily suspend service provision if it becomes impossible to provide the service due to force majeure, such as natural disasters or similar unforeseeable circumstances.
-                </li>
-              </ol>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 12 (Service Fees)
-              </h3>
-              <p className="leading-relaxed">
-                The Company provides various services necessary for free electronic commerce between members and may charge usage fees (service fees) for such services in accordance with its internal policies.
-              </p>
-            </div>
+            <p className="leading-relaxed">
+              Providing the above information is optional, and you may continue to use the core Services even if you choose not to provide certain optional data.
+            </p>
           </section>
 
-          {/* Chapter 3: Use of the Unione Purchase Service */}
+          {/* 2. How We Use Information */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
-              Chapter 3: Use of the Unione Purchase Service
+              2. How We Use Information
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 13 (Conclusion of Sales Contracts and Payment Settlement)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  A sales contract for a product is concluded when a member expresses an offer to purchase in accordance with the seller&apos;s stated sales conditions, and the seller expresses acceptance of that offer.
-                </li>
-                <li className="leading-relaxed">
-                  The company provides methods for members to settle the purchase price using cards or other means.
-                </li>
-                <li className="leading-relaxed">
-                  The buyer shall bear full responsibility for any information entered regarding payment settlement and any liabilities or disadvantages arising from such information.
-                </li>
-                <li className="leading-relaxed">
-                  If payment is not settled within a specified period after ordering a product, the Company may cancel the order without the member&apos;s consent.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall enable buyers to review the details of their concluded sales contracts on the purchase history page and shall provide guidance on cancellation methods and procedures.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may verify whether the buyer possesses legitimate authorization for the payment method used to settle the purchase price. The Company may suspend the transaction until such verification is complete or cancel the transaction if verification is impossible.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall pay the settlement amount to the seller within 21 business days starting from the day after the member pays for the product. However, the Company may withhold payment of the settlement amount if the buyer expresses intent to cancel, return, exchange, or request a refund before the settlement amount is paid.
-                </li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-3">We use collected data solely for the following purposes:</p>
+            <ul className="list-disc list-inside space-y-2 mb-6">
+              <li className="leading-relaxed">Providing and maintaining the Services</li>
+              <li className="leading-relaxed">Enabling and optimizing community/social features</li>
+              <li className="leading-relaxed">Improving the Services and diagnosing issues</li>
+              <li className="leading-relaxed">Preventing abuse and enhancing security</li>
+              <li className="leading-relaxed">Responding to customer inquiries</li>
+              <li className="leading-relaxed">Complying with legal obligations</li>
+            </ul>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 14 (Delivery)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The delivery period refers to the time from the day following the confirmation of the buyer&apos;s deposit or payment to the completion of delivery.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall instruct the seller to take necessary delivery measures within 3 business days after receiving the Company&apos;s confirmation notice regarding the buyer&apos;s deposit or payment.
-                </li>
-                <li className="leading-relaxed">
-                  Periods affected by force majeure events, such as natural disasters, shall be excluded from the delivery period.
-                </li>
-                <li className="leading-relaxed">
-                  Disputes arising between the Seller, Buyer, delivery company, financial institution, or other parties related to shipping shall be resolved between the parties involved. The Company shall bear no liability whatsoever.
-                </li>
-                <li className="leading-relaxed">
-                  If the delivery status is delayed due to the buyer failing to confirm receipt after the seller&apos;s shipment confirmation, the company may send a request for confirmation within two weeks from the shipment confirmation date. If the buyer still fails to confirm receipt after the company&apos;s notification, the status may automatically change to delivery completed after three days. In such cases, if the actual buyer has not received the goods, they may file a non-receipt report.
-                </li>
-                <li className="leading-relaxed">
-                  For electronic tickets granting rights such as service usage rights or tickets, delivery is deemed complete automatically when the purchaser pays for the product and it becomes available for use on Unione.
-                </li>
-              </ol>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 15 (Cancellation)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  Members may cancel a purchase before the purchased item is shipped. If the item is already in transit, it will be processed according to the return procedure, not cancellation.
-                </li>
-                <li className="leading-relaxed">
-                  After a member completes payment, if the order status is &quot;Waiting for Shipping&quot; or &quot;Shipping Request,&quot; cancellation will be processed immediately upon receipt of the cancellation request, unless there are special circumstances.
-                </li>
-                <li className="leading-relaxed">
-                  If a cancellation request is made while the order is in the shipping preparation status and the product has already been shipped, the buyer shall bear the round-trip shipping costs for the shipped product as a general rule, and the order shall be processed according to the return procedure, not cancellation. However, in the case of electronic tickets where a creditor&apos;s right is granted, delivery of the item is unnecessary; therefore, when canceling the purchase of such a product, no round-trip shipping costs shall be borne.
-                </li>
-                <li className="leading-relaxed">
-                  For refunds resulting from cancellations, card payments will be reversed immediately upon completion of the cancellation process.
-                </li>
-              </ol>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 16 (Returns)
-              </h3>
-              <ul className="space-y-3">
-                <li className="leading-relaxed">
-                  Members may request a return within 7 days after the delivery completion date, as stipulated by relevant laws and regulations, starting from the date the seller shipped the product.
-                </li>
-                <li className="leading-relaxed">
-                  General matters concerning returns are governed by the Act on Consumer Protection in Electronic Commerce and other relevant laws, which take precedence over conditions presented by the seller.
-                </li>
-                <li className="leading-relaxed">
-                  Costs associated with returns are generally borne by the party responsible for the return. (e.g., buyer&apos;s remorse: buyer&apos;s responsibility; product defect: seller&apos;s responsibility)
-                </li>
-                <li className="leading-relaxed">
-                  Failure to include the return shipping label number when requesting a return, or failure to accurately notify the seller (verbally or in writing) of the reason for the return, may delay the return processing and refund.
-                </li>
-                <li className="leading-relaxed">
-                  Refunds for returns will be processed immediately upon cancellation of the card payment once the returned item arrives at the seller and the reason for return and the party responsible for return shipping costs are confirmed.
-                </li>
-                <li className="leading-relaxed">
-                  If the buyer is responsible for return shipping costs, refunds may be delayed if the additional payment for these costs is not made.
-                </li>
-                <li className="leading-relaxed">
-                  For electronic tickets with assigned rights, physical delivery is unnecessary; therefore, no return shipping costs apply when returning such items.
-                </li>
-              </ul>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 17 (Refunds)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  When a refund reason arises due to the purchaser&apos;s cancellation or return, the payment will be canceled for card payments.
-                </li>
-                <li className="leading-relaxed">
-                  Refunds for purchases made via card payment are, in principle, only possible through card payment cancellation.
-                </li>
-                <li className="leading-relaxed">
-                  This Article may be applied differently depending on the individual service, and detailed information will be provided separately for each individual service.
-                </li>
-              </ol>
-            </div>
-
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 18 (Exclusions from Returns/Exchanges/Refunds)
-              </h3>
-              <p className="mb-3 leading-relaxed">The purchaser may not request a refund or exchange in the following cases:</p>
-              <ol className="list-decimal list-inside space-y-2">
-                <li className="leading-relaxed">If the product is lost or damaged due to the purchaser&apos;s fault.</li>
-                <li className="leading-relaxed">If the product&apos;s value has significantly decreased due to the purchaser&apos;s use or partial consumption.</li>
-                <li className="leading-relaxed">Where the value of the product has significantly decreased to the extent that resale is difficult due to the passage of time</li>
-                <li className="leading-relaxed">Where the packaging of a reproducible product has been damaged</li>
-                <li className="leading-relaxed">Where the product is custom-made to order or similar, and the seller anticipates irreparable significant damage, provided the seller has separately notified the buyer of this fact for the transaction in advance and obtained the buyer&apos;s written consent (including electronic documents)</li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-3">We do not use personal information for the following purposes:</p>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="leading-relaxed">Targeted advertising</li>
+              <li className="leading-relaxed">Selling personal information</li>
+              <li className="leading-relaxed">Automated decision-making that produces legal effects</li>
+              <li className="leading-relaxed">Offering financial products or inducing investments</li>
+            </ul>
           </section>
 
-          {/* Chapter 4: User Management and Protection */}
+          {/* 3. Sharing of Personal Information */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
-              Chapter 4: User Management and Protection
+              3. Sharing of Personal Information
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 19 (Representations and Warranties)
-              </h3>
-              <p className="mb-3 leading-relaxed">
-                Members must be at least 18 years of age and not be a Prohibited Person. &quot;Prohibited Persons&quot; include (a) individuals or entities subject to comprehensive sanctions or embargoes, or designated by the United Nations (&quot;UN&quot;), the European Union, the United Kingdom, or the United States; (b) Persons or entities included in the European Union (&quot;EU&quot;) Consolidated Sanctions List, the United Kingdom (&quot;UK&quot;) Consolidated List of Persons Subject to Financial Sanctions, the U.S. Department of the Treasury&apos;s Specially Designated Nationals List, or the U.S. Department of Commerce&apos;s Denied Persons List or Entity List.
-              </p>
-              <p className="mb-3 leading-relaxed">
-                (c) if the entity is owned or controlled by an individual or organization described in (a) or (b) above; or (d) if the service is used on behalf of entities described in (a) to (c) above. You acknowledge and agree that you are solely responsible for complying with all applicable laws of the jurisdiction in which you reside, are located, or access the Unione Services.
-              </p>
-              <p className="mb-3 leading-relaxed">
-                You agree and acknowledge that, based on our geographic location controls, your IP address may be screened and blocked by us if you are likely located in any of the following areas: (a) Sanctioned Jurisdictions, (b) Jurisdictions identified or enforced by specific countries, governments, or international authorities as high-risk for sanctions, or (c) Jurisdictions deemed high-risk for using Unione. Members agree and understand that the list of prohibited jurisdictions may be changed arbitrarily at our sole discretion without prior notice.
-              </p>
-              <p className="leading-relaxed">
-                The Member represents and warrants that they are not (i) a Prohibited Person (as defined above), (ii) acting directly or indirectly on behalf of a Prohibited Person, (iii) residing in or accessing the Service from a Sanctioned Jurisdiction, and (iv) a U.S. national.
-              </p>
-            </div>
+            <p className="leading-relaxed mb-6">
+              The Company does not sell or arbitrarily share personal information with third parties. However, information may be shared in the following limited circumstances:
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 20 (User Management)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company may take the following measures against Members who violate this Agreement, relevant laws and regulations, or general principles of commerce:
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>Recovery of some or all benefits provided by the Company</li>
-                    <li>Restriction of use of specific services</li>
-                    <li>Termination of the Service Agreement</li>
-                    <li>Claim for damages</li>
-                  </ul>
-                </li>
-                <li className="leading-relaxed">
-                  When taking measures under the preceding paragraph, the Company shall notify the Member in advance. Notification may be made through appropriate means, such as contact information provided by the Member while using the service or contact information and social network accounts that the Company can obtain. However, if contact with the Member is lost or there are urgent reasons, the Company may take action first and notify the Member afterward.
-                </li>
-                <li className="leading-relaxed">
-                  Members may raise objections to the Company&apos;s actions under this Article if they have grounds for doing so.
-                </li>
-              </ol>
-            </div>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.1 Service Providers (Data Processing/Outsourcing)
+            </h3>
+            <p className="leading-relaxed mb-3">We may share information with trusted external service providers for:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed">App analytics / crash analytics (e.g., Firebase)</li>
+              <li className="leading-relaxed">Cloud infrastructure and hosting</li>
+              <li className="leading-relaxed">Security monitoring</li>
+              <li className="leading-relaxed">Customer support</li>
+              <li className="leading-relaxed">Email delivery services</li>
+              <li className="leading-relaxed">KYC / AML / CTF identity verification providers</li>
+              <li className="leading-relaxed">Legal, financial, auditing, and insurance advisors</li>
+            </ul>
+            <p className="leading-relaxed mb-6">
+              These service providers are prohibited from using the information for purposes beyond the contracted service.
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 21 (Member Credit Management)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company may assign a predetermined grade to a Member based on the Member&apos;s purchase amount, frequency, and other usage records, and may grant certain benefits according to each grade.
-                </li>
-                <li className="leading-relaxed">
-                  All matters concerning the grades and benefits assigned by the Company to Members, and any changes thereto, may be announced on a separate service screen.
-                </li>
-              </ol>
-            </div>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.2 Legal Requirements
+            </h3>
+            <p className="leading-relaxed mb-6">
+              Information may be disclosed when required by law, regulation, law enforcement, or court order, or when necessary to protect the rights or safety of the Company, our users, or others.
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 22 (Responsibility for Copyrighted Works)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company shall endeavor to protect the copyrights of copyright holders in the use of the Service, and Members shall comply with copyright-related laws and regulations.
-                </li>
-                <li className="leading-relaxed">
-                  The copyright for various postings, such as product reviews, created by Members while using the purchase services provided by the Company belongs to the Member who created them. If such postings infringe upon the copyright of others, the Member shall bear responsibility for such infringement.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may delete a post or take measures against the poster, such as restricting use of specific services or terminating the service agreement, if the post falls under any of the following categories. In such cases, the Company shall notify the relevant Member in advance via email. However, this shall not apply if otherwise stipulated by law or if urgent restriction of use is necessary.
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>Content that violates the laws and regulations of the Republic of Korea</li>
-                    <li>Posting or advertising illegal products or obscene materials whose sale is prohibited under relevant laws and regulations</li>
-                    <li>Content that includes false or exaggerated advertising</li>
-                    <li>Content that infringes upon another person&apos;s rights, reputation, credit, or other legitimate interests</li>
-                    <li>Inducing direct transactions or posting links to other sites</li>
-                    <li>Containing malicious code or data that may cause malfunction of information and communication devices</li>
-                    <li>Violating public order or good morals</li>
-                    <li>Being judged to interfere with the smooth operation of the Unione service provided by the Company</li>
-                    <li>Containing content related to criminal acts</li>
-                    <li>Containing content that may cause political or economic disputes</li>
-                  </ul>
-                </li>
-                <li className="leading-relaxed">
-                  The Company may reproduce, distribute, transmit, or display various postings created by members, such as product reviews, on other sites affiliated with the Company for the promotion and advertising of products traded on Unione, provided the Company obtains the member&apos;s prior permission for use. The Company may also modify or edit such postings within the scope that does not alter their essential content.
-                </li>
-              </ol>
-            </div>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.3 Protection of Rights
+            </h3>
+            <p className="leading-relaxed mb-6">
+              We may share information when necessary to protect the safety, rights, property, or security of users or the Company.
+            </p>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 23 (Prohibited Acts)
-              </h3>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.4 Aggregated or De-identified Data
+            </h3>
+            <p className="leading-relaxed mb-6">
+              We may share aggregated or de-identified data that cannot reasonably identify any individual.
+            </p>
 
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                1. Direct Transactions
-              </h4>
-              <ul className="space-y-3 mb-4">
-                <li className="leading-relaxed">
-                  Direct transactions between sellers and buyers without using the Company&apos;s provided services are prohibited to ensure transaction safety. Responsibility for all issues arising from direct transactions lies solely with the transacting parties, and the Company shall bear no liability whatsoever for any problems resulting therefrom.
-                </li>
-                <li className="leading-relaxed">
-                  Sellers confirmed to have conducted or induced direct transactions may have their Sales Service Use Agreement terminated. Members may report sellers who conduct or induce direct transactions to the Company.
-                </li>
-              </ul>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.5 Business Transfers
+            </h3>
+            <p className="leading-relaxed mb-6">
+              In the event of a merger, acquisition, restructuring, bankruptcy, or asset transfer, user information may be transferred to the new entity. In such cases, users will be notified, and the same level of data protection will be maintained.
+            </p>
 
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                2. System Misconduct
-              </h4>
-              <ul className="space-y-3 mb-4">
-                <li className="leading-relaxed">
-                  Using the service or accessing the system through abnormal methods not provided by the company is prohibited.
-                </li>
-                <li className="leading-relaxed">
-                  Using the service through methods differing from normal usage, such as employing automated access programs, is prohibited.
-                </li>
-                <li className="leading-relaxed">
-                  Collecting or using site information for purposes other than actual use aligned with the site&apos;s objectives, such as selling or purchasing goods, is prohibited.
-                </li>
-                <li className="leading-relaxed">
-                  If any of the above system fraud is confirmed, the company may take measures against the member, including recovery of some or all benefits provided by the company, restriction of use of specific services, or termination of the service agreement. The company may also claim compensation for any damages incurred as a result.
-                </li>
-              </ul>
-
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                3. Payment Fraud
-              </h4>
-              <ul className="space-y-3 mb-4">
-                <li className="leading-relaxed">
-                  Using another person&apos;s name, card information, account information, etc., to use the company&apos;s purchase services is prohibited.
-                </li>
-                <li className="leading-relaxed">
-                  Making abnormal payments through methods prohibited by laws and regulations, such as the Credit Finance Business Act, including obtaining funds under the guise of selling goods or providing services, is prohibited. If such activity is confirmed, the Company may terminate the service agreement, suspend the member&apos;s transactions, and notify relevant authorities.
-                </li>
-                <li className="leading-relaxed">
-                  Making purchases without genuine intent to acquire the goods is prohibited. If such activity is confirmed, the Company may cancel the transaction and may impose sanctions depending on the circumstances.
-                </li>
-              </ul>
-
-              <h4 className="text-lg font-medium mb-2 mt-4" style={{ color: 'var(--color-text-primary)' }}>
-                4. Other Prohibited Acts
-              </h4>
-              <ul className="space-y-3">
-                <li className="leading-relaxed">
-                  Members must not engage in acts that cause losses to the Company or disrupt the creation of a fair market environment by concluding an abnormally large number of transactions using discounts, benefits, or other incentives provided by the Company. If such acts are confirmed, the Company may cancel the relevant transaction and may impose sanctions, such as suspending transactions, depending on the circumstances.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may suspend membership, refuse or restrict service provision, or take other necessary measures for legal compliance, protection of others&apos; rights, or site security if a member falls under any of the following:
-                  <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>Exporting or re-exporting Unione or tools in violation of export control laws, posted rules, or restrictions</li>
-                    <li>Commercializing information or software related to Unione</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
+              3.6 With User Consent
+            </h3>
+            <p className="leading-relaxed">
+              Information may be shared with specific third parties if the user explicitly agrees. In such cases, the third party&apos;s privacy policy will apply.
+            </p>
           </section>
 
-          {/* Chapter 5: Miscellaneous */}
+          {/* 4. Data Retention */}
           <section className="mb-12">
             <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
-              Chapter 5: Miscellaneous
+              4. Data Retention
             </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 24 (Relationship with Supplementary Rules and Related Laws)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  Matters not specified in these Terms shall be governed by the provisions of relevant laws, such as the Act on Consumer Protection in Electronic Commerce, etc. of the Republic of Korea, and general commercial practices. In case of any dispute regarding the interpretation of these Terms, the Korean version shall prevail.
-                </li>
-                <li className="leading-relaxed">
-                  When transactions are conducted through the purchase services provided by the Company, the relevant laws and regulations, such as the Act on Consumer Protection in Electronic Commerce, etc. of the Republic of Korea, shall take precedence over these Terms and Conditions for the parties to such transactions. The parties to the transaction may not invoke the provisions of these Terms and Conditions to claim exemption from liability against the other party.
-                </li>
-                <li className="leading-relaxed">
-                  The Company may establish matters applicable to specific services (hereinafter referred to as &quot;Individual Terms&quot;) as necessary and may notify them in advance through the Company&apos;s website, etc.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall notify any changes to the Individual Terms referred to in the preceding paragraph at least 14 days prior to their implementation.
-                </li>
-                <li className="leading-relaxed">
-                  Members shall monitor whether there are any changes to the contents of these Terms and the Individual Terms, and shall confirm any notified changes.
-                </li>
-              </ol>
-            </div>
+            <p className="leading-relaxed mb-4">
+              We retain personal information only for as long as necessary to fulfill the purposes described in this Privacy Policy.
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="leading-relaxed"><strong>Account and profile data:</strong> until the user deletes their account</li>
+              <li className="leading-relaxed"><strong>Community activity logs:</strong> retained as needed for service operation</li>
+              <li className="leading-relaxed"><strong>Analytics and error logs:</strong> typically deleted within 30-180 days</li>
+              <li className="leading-relaxed"><strong>Customer support records:</strong> retained until the inquiry is fully resolved</li>
+            </ul>
+          </section>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 25 (Company&apos;s Exemption from Liability)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company, as a telecommunications sales intermediary, provides only the transaction system based on Unione (mobile, web). All disputes concerning the content of transactions conducted using Unione&apos;s transaction system shall be the responsibility of the relevant transaction parties. However, the Company may bear obligations as a telecommunications sales business operator only when it directly sells to purchasers as a seller.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall not be liable for any damages incurred by members or third parties due to temporary service suspension under Article 11(2). This exclusion does not apply in cases of the Company&apos;s intentional misconduct or gross negligence.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall be exempt from liability for service restrictions or suspensions under Article 11(3) due to force majeure.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall not be liable for any service disruptions caused by the Member&apos;s fault.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall not be liable for any damages arising from a Member disclosing or providing their personal information to others.
-                </li>
-                <li className="leading-relaxed">
-                  Transactions on Unione may not occur in real time. Transactions on Unione may be restricted or delayed due to the Member&apos;s current location, the network of the wireless data service provider used by the Member, or other reasons.
-                </li>
-                <li className="leading-relaxed">
-                  The Company solely provides the platform and application services. The Company is not related in any way to external sales teams, marketing groups, third-party promotional activities, investment solicitations, or product sales conducted outside the platform. The Company shall bear no liability for any agreements, damages, or disputes arising from such external activities.
-                </li>
-              </ol>
-            </div>
+          {/* 5. Your Rights */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              5. Your Rights
+            </h2>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 26 (Jurisdiction)
-              </h3>
-              <p className="leading-relaxed">
-                Any lawsuit involving the Company, its officers, or employees as a party concerning these Terms, the Service Agreement, or disputes between Members shall be subject to the exclusive jurisdiction of the Seoul Central District Court of the Republic of Korea.
-              </p>
-            </div>
+            <p className="leading-relaxed mb-4">Users have the following rights regarding their personal information:</p>
+            <ul className="list-disc list-inside space-y-2">
+              <li className="leading-relaxed"><strong>Opt-out:</strong> Request to stop receiving marketing or promotional communications (non-marketing, service-essential notices will continue).</li>
+              <li className="leading-relaxed"><strong>Access:</strong> Request details on how personal data is processed and access copies of the data.</li>
+              <li className="leading-relaxed"><strong>Correction:</strong> Request updates or corrections to inaccurate or outdated information.</li>
+              <li className="leading-relaxed"><strong>Deletion:</strong> Request deletion of personal information within legally permitted scope.</li>
+              <li className="leading-relaxed"><strong>Transfer / Portability:</strong> Request a machine-readable copy of personal data or have it transferred to a designated third party.</li>
+              <li className="leading-relaxed"><strong>Restriction:</strong> Request limitations on how personal data is processed.</li>
+              <li className="leading-relaxed"><strong>Objection:</strong> Object to processing based on legitimate interests if the processing infringes on your rights.</li>
+            </ul>
+          </section>
 
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--color-text-primary)' }}>
-                Article 27 (Miscellaneous Provisions)
-              </h3>
-              <ol className="list-decimal list-inside space-y-3">
-                <li className="leading-relaxed">
-                  The Company may temporarily or permanently modify or suspend all or part of specific services as necessary.
-                </li>
-                <li className="leading-relaxed">
-                  Neither the Company nor the Member may assign any rights or obligations under these Terms to a third party without the express consent of the other party.
-                </li>
-                <li className="leading-relaxed">
-                  Any additional agreements, contracts, notices, or other documents created by mutual consent between the parties in connection with these Terms, as well as any content the Company notifies Members of through Unione due to changes in Company policy, enactment or amendment of laws and regulations, or public agency notices or guidelines, shall also constitute part of these Terms.
-                </li>
-                <li className="leading-relaxed">
-                  The Company shall provide guidance in the sorting method display area regarding the primary criteria determining the order in which products are displayed when Members search for products.
-                </li>
-              </ol>
-            </div>
+          {/* 6. Security of Information */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              6. Security of Information
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              We retain personal information only for the period necessary to fulfill the purposes described in this Privacy Policy, and additionally when required by law, to prevent fraud, resolve disputes, troubleshoot issues, support investigations, or comply with our Terms of Service.
+            </p>
+
+            <p className="leading-relaxed mb-3">To determine appropriate retention periods, we consider:</p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed">The type and sensitivity of the personal information</li>
+              <li className="leading-relaxed">Potential risks of unauthorized disclosure</li>
+              <li className="leading-relaxed">The purposes of data processing and the availability of alternatives</li>
+              <li className="leading-relaxed">Legal requirements</li>
+            </ul>
+
+            <p className="leading-relaxed mb-4">
+              We may anonymize personal information so it can no longer be associated with you. Anonymized information may be stored and used indefinitely.
+            </p>
+
+            <p className="leading-relaxed mb-4">
+              We implement industry-standard technical and administrative security measures. However, data transmission over the internet cannot be guaranteed to be completely secure. We are not responsible for interception, interruption, alteration, or loss of data during transmission.
+            </p>
+
+            <p className="leading-relaxed">
+              Users are responsible for safeguarding their passwords, biometrics, user IDs, and other authentication credentials. If a security breach is suspected, we may temporarily suspend access to the Services without prior notice to protect users.
+            </p>
+          </section>
+
+          {/* 7. Children */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              7. Children
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              Our Services are not intended for children under 13, and we do not knowingly collect personal information from children under that age.
+            </p>
+
+            <p className="leading-relaxed mb-3">
+              In accordance with COPPA and other applicable laws, if we discover that a child under 16 has provided personal information without verified parental consent, we will:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed">Contact the child or the parent/legal guardian to inform them that the Service cannot be used.</li>
+              <li className="leading-relaxed">Immediately delete the corresponding personal information.</li>
+              <li className="leading-relaxed">Apply additional measures to prevent recurrence.</li>
+            </ul>
+
+            <p className="leading-relaxed">
+              Parents or legal guardians may request deletion of their child&apos;s information at any time.
+            </p>
+          </section>
+
+          {/* 8. International Data Transfers */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              8. International Data Transfers
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              Your personal information may be transferred to, processed, and stored in the United States. U.S. data protection laws may differ from those in your country of residence.
+            </p>
+
+            <p className="leading-relaxed mb-4">
+              By accessing or using the Services, you consent to the transfer of your personal information outside the EEA, including to the United States.
+            </p>
+
+            <p className="leading-relaxed mb-3">
+              When transferring data to countries that are not recognized by the European Commission as providing adequate protection, we rely on:
+            </p>
+            <ul className="list-disc list-inside space-y-2 mb-4">
+              <li className="leading-relaxed">Standard Contractual Clauses (SCCs) approved by the European Commission</li>
+              <li className="leading-relaxed">Other legally recognized data transfer mechanisms</li>
+            </ul>
+
+            <p className="leading-relaxed">
+              You may contact us for more information regarding our data transfer safeguards.
+            </p>
+          </section>
+
+          {/* 9. Third-Party Links and External Activities */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              9. Third-Party Links and External Activities
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              Some courts, government authorities, partners, and third-party service providers we work with may be located outside the EU. In such cases, we utilize Standard Contractual Clauses or other legally approved measures to ensure adequate data protection.
+            </p>
+
+            <p className="leading-relaxed">
+              Users may request details about specific transfer mechanisms at any time.
+            </p>
+          </section>
+
+          {/* 10. Changes to This Privacy Policy */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              10. Changes to This Privacy Policy
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              We may revise this Privacy Policy due to changes in applicable laws, updates to our Services, or internal policy adjustments.
+            </p>
+
+            <p className="leading-relaxed mb-4">
+              If changes are made, we will notify users at least 7 days in advance (or 30 days for material changes, such as updates to data collection practices, expanded use purposes, or sharing with new third parties).
+            </p>
+
+            <p className="leading-relaxed mb-4">
+              When legally required, we may request additional consent for major updates.
+            </p>
+
+            <p className="leading-relaxed">
+              The revised Privacy Policy becomes effective on the announced effective date, and continued use of the Services constitutes acceptance of the changes.
+            </p>
+          </section>
+
+          {/* 11. Contact Information */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: 'var(--color-text-primary)' }}>
+              11. Contact Information
+            </h2>
+
+            <p className="leading-relaxed mb-4">
+              If you have questions regarding this Privacy Policy or data-related matters, please contact:
+            </p>
+            <ul className="list-none space-y-2">
+              <li className="leading-relaxed"><strong>Email:</strong> uniofficial@unione.me</li>
+              <li className="leading-relaxed"><strong>Company:</strong> UnioneCore Inc.</li>
+              <li className="leading-relaxed"><strong>Website:</strong> https://unione.im</li>
+            </ul>
           </section>
         </div>
       </div>
