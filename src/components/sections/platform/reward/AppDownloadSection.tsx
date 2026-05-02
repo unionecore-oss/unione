@@ -64,7 +64,12 @@ export default function AppDownloadSection() {
               variants={fadeInUp}
               className="flex flex-nowrap gap-2 sm:gap-4 pt-4"
             >
-              <a href="#" className="inline-block transition-transform hover:scale-105">
+              <a
+                href="https://apps.apple.com/kr/app/%EC%9C%A0%EB%8B%88%EC%9B%90/id6754313962"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+              >
                 <Image
                   src="/images/badges/app-store.svg"
                   alt="Download on the App Store"
@@ -73,7 +78,12 @@ export default function AppDownloadSection() {
                   className="h-10 w-auto sm:h-[52px]"
                 />
               </a>
-              <a href="#" className="inline-block transition-transform hover:scale-105">
+              <a
+                href="https://play.google.com/store/apps/details?id=me.unione.a"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block transition-transform hover:scale-105"
+              >
                 <Image
                   src="/images/badges/google-play.svg"
                   alt="Get it on Google Play"
